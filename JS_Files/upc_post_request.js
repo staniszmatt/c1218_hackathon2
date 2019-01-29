@@ -1,4 +1,5 @@
 class UPC_post_request{
+  
   constructor(){
     this.upcSerialNumber = null; 
     this.errors = null;
