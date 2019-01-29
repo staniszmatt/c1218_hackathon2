@@ -4,15 +4,19 @@ class UPC_post_request{
     this.errors = null;
     this.returnedScanData = null; 
   }
+  setScanedData(getScanedSerialNumber){
+    this.upcSerialNumber = getScanedSerialNumber;
+    this.postData();
+  }
   getScanedData(){
-    return this.returnedScanData; 
+    return this.returnedScanData;
   }
   postData(){
     console.log("Made it to post request")
 		// console.log("student ID is ", this.getData.id) 
 		var requestScannedInformation = {
-			method: "post",
-			url: "https://api.upcitemdb.com/prod/trial/lookup?upc=" + this.upcSerialNumber,
+			method: "get",
+			url: "proxy.php?upc=" + this.upcSerialNumber,
 			error: this.errorHandler,
 			success: this.handleData, 
 			dataType: "json"
