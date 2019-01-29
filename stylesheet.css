@@ -1,0 +1,58 @@
+body{
+    background:#fff;
+
+}
+h1{
+    color:red;
+    font-size:red;
+    text-align:center;
+    position:relative;
+    top:100px;
+
+}
+
+.bg-dark {
+    background-color: #343a40!important;
+    position: relative;
+    bottom: 47px;
+    margin: 0 auto;
+}
+#penguin-icon{
+    color:white;
+}
+/*main-section*/
+.scanner-image{
+    height: 300px;
+    width: 500px;
+    border: 5px black solid;
+    position: relative;
+    margin: 0 auto;
+    top: 250px;
+  }
+
+  .image-scanner-container{
+      position:relative;
+      bottom:50%;
+  }
+
+  /*search-bar*/
+  .search-bar-container{
+    position: relative;
+    border: 9px solid red;
+    border-radius: 5%;
+    width: 22%;
+    top: 288px;
+    margin: 0 auto;
+    background: #fff;
+
+}
+    
+
+  .search-bar {
+    background-image: url(./icons/iconfinder.png);
+    background-repeat: no-repeat;
+    background-position: 84%;
+    background-size: contain;
+    font-size: 1.5rem;
+}
+  

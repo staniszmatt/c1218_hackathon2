@@ -4,6 +4,8 @@
 *, *:before, *:after {
   box-sizing: inherit;
 } */
+
+/* nav bar styling */
 .navBarContainer{
     height: 80px;
     width: 400px;
@@ -24,4 +26,23 @@
 
 .imageAlign{
     align-items: center;
+}
+/* about product page styling */
+.container{
+    height: 800px;
+    width: 400px;
+}
+.imageContainer{
+    height: 30%;
+    background-color: yellow;
+}
+
+.infoContainer1{
+    height: 40%;
+    background-color: blue; 
+}
+
+.infoContainer2{
+    height: 40%;
+    background-color: red; 
 }
