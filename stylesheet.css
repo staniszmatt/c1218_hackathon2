@@ -85,13 +85,13 @@ h1{
 }
 /*Buttons*/
 
-.navBarContainer{
+.nav-bar-container{
     height: 10vh;
     margin: 0px auto;
     padding: 2px;
 }
     
-.iconContainer{
+.icon-container{
     height: 100%;
     
 }
@@ -100,12 +100,12 @@ h1{
     background-color: blue; 
 }
 
-.homeIcon, .mapIcon, .youtubeIcon{
+.home-icon, .reviews-icon, .map-icon, .youtube-icon{
     height:94%;
     width:94%;
 }
 
-.imageAlign{
+.image-align{
     align-items: center;
 }
 /* about product page styling */
@@ -113,17 +113,17 @@ h1{
    height: 100vh;
 }
 
-.imageContainer{
+.image-container{
     height: 20vh;
     background-color: yellow;
 }
 
-.infoContainer1{
+.info-container1{
     height: 38vh;
     background-color: blue; 
 }
 
-.infoContainer2{
+.info-container2{
     height: 38vh;
     background-color: red; 
 }
@@ -223,4 +223,10 @@ article:hover{
 
 .details {
 	padding: 8px 22px;
+}
+
+/* Reviews Page */
+.reviews-content{
+    height: 90vh;
+    background-color: chartreuse;
 }
