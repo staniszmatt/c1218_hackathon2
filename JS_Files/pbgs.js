@@ -10,17 +10,24 @@ class PBGS_init{
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
+    this.cancleScan = this.cancleScan.bind(this);
   }
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
-    this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode)
+    this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
+    this.domInformation.cancleScanButton.click(this.cancleScan);
   }
   initScanner(){
-    this.upcScanner.initScanner;
+    console.log("Clicked InitScanner");
+    this.upcScanner.initScanner();
   }
   submitBarcode(){
+    console.log("Clicked Submitt");
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     this.upcScanner.processedCallBack(this.barcodeInputValue);
+  }
+  cancleScan(){
+    this.upcScanner.stopScanning();
   }
 }
