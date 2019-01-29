@@ -14,7 +14,7 @@ h1{
 .bg-dark {
     position: relative;
     bottom: 47px;
-    background-color: #f8f9fa;
+    background-color: #1c2024;
     position: fixed;
     width: 100%;
 }
@@ -52,7 +52,7 @@ h1{
     margin: 0 auto;
     background: #fff;
     display: inline-block;
-    left: 25%;
+    left: 10%;
 }
 
   .search-bar {
@@ -63,12 +63,159 @@ h1{
     font-size: 1.5rem;
 }
   
-.camera-btn{
+/* .camera-btn{
     position:relative;
     width:40%;
     display:inline-block;
     margin: 0 auto;
     left: 25%;
-    bottom:200px;
+    bottom:200px; */
 
+/* } */
+#camera-button {
+    width: 14%;
+    position: relative;
+    right: 37%;
+    top: 211px;
+}
+/*Buttons*/
+
+.navBarContainer{
+    height: 10vh;
+    margin: 0px auto;
+    padding: 2px;
+}
+    
+.iconContainer{
+    height: 100%;
+    
+}
+.square{
+    height: 100%;
+    background-color: blue; 
+}
+
+.homeIcon, .mapIcon, .youtubeIcon{
+    height:94%;
+    width:94%;
+}
+
+.imageAlign{
+    align-items: center;
+}
+/* about product page styling */
+.container{
+   height: 100vh;
+}
+
+.imageContainer{
+    height: 20vh;
+    background-color: yellow;
+}
+
+.infoContainer1{
+    height: 38vh;
+    background-color: blue; 
+}
+
+.infoContainer2{
+    height: 38vh;
+    background-color: red; 
+}
+ /*Youtube Page*/
+ @mixin font-base {
+	padding: 0;
+	margin: 0;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+h4 {
+	@include font-base;
+}
+
+p {
+	@include font-base;
+	color: grey;
+	font-size: 0.7rem;
+}
+
+/* body {
+	background-color: #eee;
+} */
+
+.container {
+	width: 560px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+/* header, */
+section {
+	position: fixed;
+	text-align: center;
+	width: 560px;
+	background-color: #fff;
+}
+
+section {
+	top: 50px;
+}
+
+.logo {
+    width: 26%;
+    position: relative;
+    right: 5%;
+    padding: 12px;
+    margin: 16px;
+}
+/* .youtube-search-bar{
+    position: relative;
+    border: 9px solid red;
+    border-radius: 5%;
+    top: 288px;
+    margin: 0 auto;
+    background: #fff;
+    display: inline-block;
+    left: 10%;
+} */
+.youtube-header-container{
+    width:86%;
+}
+.youtube-search-bar {
+    background-image: url(./icons/search_bar.PNG);
+    background-repeat: no-repeat;
+    background-position: 101%;
+    background-size: contain;
+    font-size: 1.5rem;
+    position: relative;
+    left: 14%;
+    bottom: 38px;
+}
+
+main {
+	padding: 370px 18px 10px;
+}
+
+article {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	border: 2px solid white;
+	border-radius: 8px;
+	margin: 0 auto;
+	
+}
+
+article:hover{
+    border:2px solid #ff9999;
+}
+
+.thumb {
+	height: 70px;
+	border-radius: 4px;
+}
+
+.details {
+	padding: 8px 22px;
 }
