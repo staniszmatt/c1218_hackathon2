@@ -10,13 +10,14 @@
     height: 100vh;
 }
 .notNavBarContainer{
-    height: 90vh; 
+    height: 88vh; 
 }
 .navBarContainer{
-    /* height: 80px;
-    width: 400px; */
-    height: 10vh
+    height: 10vh;
+    margin: 0px auto;
+    padding: 4px;
 }
+    
 .iconContainer{
     height: 100%;
     
@@ -27,7 +28,8 @@
 }
 
 .homeIcon, .mapIcon, .youtubeIcon{
-    height: 100%;
+    height:94%;
+    width:94%;
 }
 
 .imageAlign{
