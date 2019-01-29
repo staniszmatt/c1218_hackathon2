@@ -1,14 +1,14 @@
+
 body{
     background:#fff;
 
 }
-h1{
-    color:red;
-    font-size:red;
-    text-align:center;
-    position:relative;
-    top:100px;
-
+h1 {
+    color: red;
+    font-size: red;
+    text-align: center;
+    position: relative;
+    top: 20px;
 }
 
 .bg-dark {
@@ -22,15 +22,14 @@ h1{
     color:white;
 }
 /*main-section*/
-.scanner-image{
+.scanner-image {
     /* height: 300px; */
-    width: 100%;
+    width: 93%;
     border: 5px black solid;
     position: relative;
     margin: 0 auto;
-    top: 250px;
-  }
-
+    top: 174px;
+}
   video{
       width:100%;
   }
@@ -48,13 +47,12 @@ h1{
     position: relative;
     border: 9px solid red;
     border-radius: 5%;
-    top: 288px;
+    top: 202px;
     margin: 0 auto;
     background: #fff;
     display: inline-block;
-    left: 25%;
+    left: 16%;
 }
-
   .search-bar {
     background-image: url(./icons/iconfinder.png);
     background-repeat: no-repeat;
