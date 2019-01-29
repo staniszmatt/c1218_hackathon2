@@ -36,10 +36,11 @@ class UPC_Scanner{
    * @param {Object} returnData - the scanned barcode data 
    */
   processedCallBack(returnData){
-    this.barcodeNumber = returnData; 
     console.log("Process Data ", returnData);
+    this.barcodeNumber = "610370565025"//returnData.codeResult.code;
     Quagga.offDetected();
     Quagga.stop();
+    this.upc_post_request.setScanedData(this.barcodeNumber);
   }
   /** 
    * @param {Object} err - If scanner errors, will return error object information 
