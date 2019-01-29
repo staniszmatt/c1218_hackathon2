@@ -15,7 +15,7 @@ class UPC_Scanner{
       inputStream : {
         name : "Live",
         type : "LiveStream",
-        target: document.querySelector('.scanner')  //TODO: target area for video scanning
+        target: document.querySelector('.scanner-image')  //TODO: target area for video scanning
       },
       decoder : {
         readers : ["upc_reader"]
