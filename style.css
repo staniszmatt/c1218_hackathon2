@@ -1,0 +1,24 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.navBarContainer{
+    height: 80px;
+    width: 400px;
+
+}
+.iconContainer{
+    height: 100%;
+    
+}
+.square{
+    height: 100%;
+    background-color: blue; 
+}
+
+.homeIcon, .mapIcon, .youtubeIcon{
+    height: 100%;
+}
+
