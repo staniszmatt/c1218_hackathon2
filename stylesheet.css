@@ -1,3 +1,4 @@
+
 body{
     background:#fff;
 
@@ -12,24 +13,32 @@ h1{
 }
 
 .bg-dark {
-    background-color: #343a40!important;
     position: relative;
     bottom: 47px;
-    margin: 0 auto;
+    background-color: #f8f9fa;
+    position: fixed;
+    width: 100%;
 }
 #penguin-icon{
     color:white;
 }
 /*main-section*/
 .scanner-image{
-    height: 300px;
-    width: 500px;
+    /* height: 300px; */
+    width: 100%;
     border: 5px black solid;
     position: relative;
     margin: 0 auto;
     top: 250px;
   }
 
+  video{
+      width:100%;
+  }
+
+  canvas{
+      display:none;
+  }
   .image-scanner-container{
       position:relative;
       bottom:50%;
@@ -44,7 +53,7 @@ h1{
     margin: 0 auto;
     background: #fff;
     display: inline-block;
-    left: 45%;
+    left: 25%;
 }
 
   .search-bar {
@@ -55,3 +64,12 @@ h1{
     font-size: 1.5rem;
 }
   
+.camera-btn{
+    position:relative;
+    width:40%;
+    display:inline-block;
+    margin: 0 auto;
+    left: 25%;
+    bottom:200px;
+
+}
