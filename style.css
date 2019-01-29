@@ -1,9 +1,9 @@
-html{
+/* html{
     box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
-}
+} */
 .navBarContainer{
     height: 80px;
     width: 400px;
@@ -22,3 +22,6 @@ html{
     height: 100%;
 }
 
+.imageAlign{
+    align-items: center;
+}
