@@ -6,10 +6,16 @@
 } */
 
 /* nav bar styling */
+.pageContainer{
+    height: 100vh;
+}
+.notNavBarContainer{
+    height: 90vh; 
+}
 .navBarContainer{
-    height: 80px;
-    width: 400px;
-
+    /* height: 80px;
+    width: 400px; */
+    height: 10vh
 }
 .iconContainer{
     height: 100%;
@@ -29,20 +35,25 @@
 }
 /* about product page styling */
 .container{
-    height: 800px;
-    width: 400px;
+   height: 100vh;
+}
+
+
+.penguinHamburgerContainer{
+    height: 10vh;
+    background-color: aliceblue;
 }
 .imageContainer{
-    height: 30%;
+    height: 20vh;
     background-color: yellow;
 }
 
 .infoContainer1{
-    height: 40%;
+    height: 35vh;
     background-color: blue; 
 }
 
 .infoContainer2{
-    height: 40%;
+    height: 35vh;
     background-color: red; 
 }
