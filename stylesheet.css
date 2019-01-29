@@ -36,17 +36,16 @@ h1{
   }
 
   /*search-bar*/
-  .search-bar-container{
+  .search-bar-container {
     position: relative;
     border: 9px solid red;
     border-radius: 5%;
-    width: 22%;
     top: 288px;
     margin: 0 auto;
     background: #fff;
-
+    display: inline-block;
+    left: 45%;
 }
-    
 
   .search-bar {
     background-image: url(./icons/iconfinder.png);
