@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css"> 
     <!--JS Files-->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script>
@@ -16,6 +16,7 @@
     <script src="JS_Files/currentlocation.js"></script>
     <script src="JS_Files/maplocation.js"></script>
     <script src="JS_Files/upc_post_request.js"></script>
+    <script src="JS_Files/modal.js"></script>
     <script src="JS_Files/pbgs.js"></script>
     <script src="JS_Files/main.js"></script>
    <script src="./JS_Files/landing_page.js"></script>
@@ -23,12 +24,15 @@
   </head>
   <body>
     <!-- Main Page -->
-    <div class="scanning-front-page">
+<div id="main-container">
+
+
     <div class="top-container">
       <div class="head-container">
       <header>
           <div class="penguin-logo">
-                <img id="penguin-icon"src="./icons/penguin_logo.png" width="50" height="50" alt="">
+                <img id="penguin-icon"src="./icons/penguin_logo.png" alt="">
+                <h2>Penguin Board Games Scanner</h2>
           </div> 
       </header>
       <h1 class="header"></h1>
@@ -48,10 +52,40 @@
         </div>
           <div class="search-bar-container">
                 <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
-                <img id="search-bar-button-image" src="icons/search_bar.PNG">
+                <div class="search-image-container">
+                    <img id="search-bar-button-image" src="icons/search.PNG">
+                </div>
             </div>
         </div>
       </main>
     </div>
+    <div class="row navBar-Container">
+        <div class="col-3 iconContainer text-center home-page-button">
+            <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
+
+        </div>
+        <div class="col-3 iconContainer text-center reviews-page-button">
+            <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
+
+        </div>
+        <div class="col-3 iconContainer text-center map-page-button">
+            <a href="googleMapPage.html"><img src="icons/google_map.png" class="mapIcon"></a>
+
+        </div>
+        <div class="col-3 iconContainer text-center youtube-page-button">
+            <a href="youtubeProductPage.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
+
+        </div>
+    </div>
+
+
+</div>
+  </div>
+  <div id="modal-shadow"></div>
+  <div id="modal-body">
+    <output class="modal-message"></output>
+    <button type="button" class="btn-modal" id="modal-button">OK</button>
+ 
+  </div>
   </body>
 </html>

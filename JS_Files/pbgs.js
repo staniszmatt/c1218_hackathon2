@@ -6,19 +6,25 @@ class PBGS_init{
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
     this.barcodeInputValue = null;
+    this.modalErrors = new Modal_error_message;
+    // this.modalErrors.hideModal();	
+    this.modalErrors.show('barcode could not be read');
+    
     //bindings
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
-    this.cancleScan = this.cancleScan.bind(this);
+    this.cancelScan = this.cancelScan.bind(this);
+    // this.domInformation.modalButton = this.domInformation.modalButton.bind(this);
+
     
   }
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
-    this.domInformation.cancleScanButton.click(this.cancleScan);
-    this.domInformation.homeButton.click(handleHomeButton);
+    this.domInformation.cancelScanButton.click(this.cancelScan);
+    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
   }
   initScanner(){
     console.log("Clicked InitScanner");
@@ -27,9 +33,11 @@ class PBGS_init{
   submitBarcode(){
     console.log("Clicked Submitt");
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
+    //if the value of the barcode cannot be read, call modal
+    // this.modalErrors.show('barcode could not be read');
     this.upcScanner.processedCallBack(this.barcodeInputValue);
   }
-  cancleScan(){
+  cancelScan(){
     this.upcScanner.stopScanning();
   }
 

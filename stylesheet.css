@@ -15,7 +15,12 @@ body{
     height: 80vh;
     width: 100vw; 
 }
-
+#main-container{
+    height:100vh;
+    width:90%;
+    margin:0 auto;
+    overflow: hidden;
+}
 h1{
     color:red;
     font-size:red;
@@ -51,7 +56,7 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      height: 50vh;
+      
   }
 
   .scan-bar-container{
@@ -60,19 +65,21 @@ h1{
 
   /*search-bar*/
   .search-bar-container {
-    height:10vh;
+    height: 6vh;
+    left: 11%;
     position: relative;
     border: 1px solid black;
     display: inline-flex;
 }
 
-  .search-bar {
-    /* background-image: url(./icons/iconfinder.png); */
+.search-bar {
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
+    width: 59vw;
 }
+
 .cancel-container{
     height: 10vh;
     width: 10vh;
@@ -87,18 +94,18 @@ h1{
 
   
 #camera-button {
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 85%;
     object-fit: contain;
     cursor: pointer;
 }
 
 .cancel-scan {
-    height: 100%;
-    width: 100%;
+    height: 86%;
+    width: 71%;
     object-fit: contain;
     cursor: pointer;
-    display:inline-block;
+    display: inline-block;
 }
 .submit-input {
     cursor: pointer;
@@ -112,9 +119,14 @@ h1{
     position:fixed; */
 }
 .row{
-    /* position:fixed; */
+    position:fixed;
+    margin-right: -8px;
+    margin-left: -22px;
 }
  
+.row:hover{
+
+}
 .icon-container{
     height: 100%;
 }
@@ -132,24 +144,34 @@ h1{
     align-items: center;
 }
 /* Products Page*/
-.productsContainer{
-   height: 100vh;
+.product-page {
+    width: 100vw;
+    height: 100vh;
 }
-
+.product-container{
+    height: 85%;
+}
+.navBar-container {
+    text-align: center;
+    bottom: 10px;
+}
 .image-container{
-    height: 20vh;
-    background-color: yellow;
+    height: 50%;
+}
+.product-icon {
+    height: 80%;
+    width: 80%;
+}
+#product-image-placeholder {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .info-container1{
-    height: 20vh;
-    background-color: blue; 
+    height: 50%;
 }
 
-.info-container2{
-    height: 20vh;
-    background-color: red; 
-}
  /*Youtube Page*/
  @mixin font-base {
 	padding: 0;
@@ -190,8 +212,7 @@ section {
 	top: 50px;
 }
 #youtube-video{
-    position:fixed;
-    margin:0 auto;
+ 
 }
 .logo {
     width: 26%;
@@ -202,12 +223,12 @@ section {
 }
 
 #video {
-    display: flex;
-    height: 215px;
-    justify-content: center;
-    align-items: center;
+    padding-top:20px;
 }
-
+.youtube-container{
+    overflow:scroll;
+    margin-top: 327px;
+}
 .youtube-header-container{
     width:86%;
 }
@@ -221,13 +242,17 @@ section {
     left: 24%;
     bottom: 58px;
 }
-#search-bar-button-image{
-    width: 11%;
-    right: 3%;
+#search-bar-button-image {
+    width: 12vw;
+    height: 6vh;
+    right: 134%;
     margin: 8px;
-    padding: -3px;
-    bottom: 7px;
+    bottom: 9px;
     position: relative;
+}
+.search-image-container{
+    height: 1vh;
+    width: 4vw;
 }
 
 article {
@@ -255,21 +280,16 @@ article:hover{
 /* Google Page */
 
 .google-page-container{
-        height: 100vh;
-        width: 100vw;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+
 }
 .google-header-container{
-    height: 15vh;
-    width: 25vw;
+position: fixed;
+background:white;
 }
 .google-logo{
     height: 100%;
-    width: 100%;
-    object-fit: contain
+    width: 15%;
+    object-fit: contain;
 }
 
 #google-search{
@@ -279,44 +299,92 @@ article:hover{
     background-size: contain;
     font-size: 1.5rem;
     position: relative;
-    left: 14%;
-    bottom: 38px;
+    top: 12px;
+    width: 65%;
 }
-
+.search-icon{
+    width:12%;
+    margin-top:12px;
+}
 
 /* Reviews Page */
 .reviews-content{
     height: 90vh;
     background-color: chartreuse;
 }
-
-
-
-/* Buttonss to Navigate through Pages */
-.scanning-front-page.active{
-    display: inline;
+/*Nav Page */
+.navBar-Container{
+    z-index: 100;
+    position: fixed;
+    padding: 2rem 0.5rem;
+    text-align: center;
+    background:white;
+    bottom:0;
+    box-shadow: 3px 3px 10px black;
 }
-.scanning-front-page{
-    display:none
+.iconContainer img{
+    width:80%;
 }
-
-.google-page-container.active{
-  display:inline;
+.penguin-logo #penguin-icon{
+    padding: 10px 0px 0px;
 }
-
-.google-page-container{
-    display:none;
-}
-.about-product-page.active{
-    display:inline;
-}
-.about-product-page{
-    display:none;
-}
-.youtube-page.active{
-    display:inline;
+.penguin-logo h2{
+    text-align:center;
 }
 
-.youtube-page{
-    display:none;
+/* Modal Styling */
+#modal-shadow{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+    opacity: .4;
+}
+#modal-body{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	min-height: 10vmin;
+	min-width: 70vmin;
+	transform: translate(-50%, -50%);
+	background-color: white;
+    display: flex;
+    border: 1px solid black;
+    justify-content: flex-end;
+}
+#modal-message{
+    font-size: 2rem;
+    margin: auto;
+}
+
+#modal-button {
+    background-color: #cc0300;
+    font-size: 2rem;
+    width: 25%;
+    border: 1px solid black;
+}
+#modal-button:hover {
+    background-color: red;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 25%;
+    border: 1px solid black;
+}
+
+#modal-button:active {
+    background-color: rgb(126, 0, 0);
+    cursor: pointer;
+    font-size: 2rem;
+    width: 25%;
+    border: 1px solid black;
+}
+
+.modal-message {
+    padding: 1%;
+    align-self: center;
+    font-size: 21px;
+    color: red;
+    font-weight: 500;
 }
