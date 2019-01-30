@@ -1,48 +1,10 @@
 
 var map, infoWindow, service;
 
-function placesList(){
-  var service = new google.maps.places.PlacesService(map);
-        var getNextPage = null;
-        var moreButton = document.getElementById('more');
-        moreButton.onclick = function() {
-          moreButton.disabled = true;
-          if (getNextPage) getNextPage();
-         
-        };
-        
-        // Perform a nearby search.
-        service.textSearch(
-          {
-            location: location, 
-            radius: 14000, 
-            type: ['store'], 
-          query: "monopoly game" //The title of the board game
-          },
-            function(results, status, pagination) {
-              if (status !== 'OK') return;
-
-              createMarkers(results);
-              moreButton.disabled = !pagination.hasNextPage;
-              getNextPage = pagination.hasNextPage && function() {
-                pagination.nextPage();
-              };
-            });
-            service.findPlaceFromQuery(request, function(results, status) {
-              if (status === google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length; i++) {
-                  createMarker(results[i]);
-                }
-    
-                map.setCenter(results[0].geometry.location);
-              }
-            });
-}
-
       function initMap(pos) {
         // Create the map.
         var currentLocation = pos;
-        var location = pos || {lat: 33.699, lng: -117.829};
+        var location = pos || {lat: 33.699, lng: -120.829};
         map = new google.maps.Map(document.getElementById('map'), {
           center: location,
           zoom: 10
@@ -107,6 +69,7 @@ function placesList(){
                 }
     
                 map.setCenter(results[0].geometry.location);
+                console.log(results[0].geometry.location)
               }
             });
       }
