@@ -65,19 +65,21 @@ h1{
 
   /*search-bar*/
   .search-bar-container {
-    height:10vh;
+    height: 6vh;
+    left: 11%;
     position: relative;
     border: 1px solid black;
     display: inline-flex;
 }
 
-  .search-bar {
-    /* background-image: url(./icons/iconfinder.png); */
+.search-bar {
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
+    width: 59vw;
 }
+
 .cancel-container{
     height: 10vh;
     width: 10vh;
@@ -92,18 +94,18 @@ h1{
 
   
 #camera-button {
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 85%;
     object-fit: contain;
     cursor: pointer;
 }
 
 .cancel-scan {
-    height: 100%;
-    width: 100%;
+    height: 86%;
+    width: 71%;
     object-fit: contain;
     cursor: pointer;
-    display:inline-block;
+    display: inline-block;
 }
 .submit-input {
     cursor: pointer;
@@ -123,7 +125,7 @@ h1{
 }
  
 .row:hover{
-    
+
 }
 .icon-container{
     height: 100%;
@@ -230,13 +232,17 @@ section {
     left: 24%;
     bottom: 58px;
 }
-#search-bar-button-image{
-    width: 11%;
-    right: 3%;
+#search-bar-button-image {
+    width: 12vw;
+    height: 6vh;
+    right: 134%;
     margin: 8px;
-    padding: -3px;
-    bottom: 7px;
+    bottom: 9px;
     position: relative;
+}
+.search-image-container{
+    height: 1vh;
+    width: 4vw;
 }
 
 article {
