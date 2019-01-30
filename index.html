@@ -1,94 +1,59 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheet.css">
-    
     <!--JS Files-->
-    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js“></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="dist/quagga.js"></script>
     <script src="dist/quagga.min.js"></script>
     <script src="JS_Files/upc_scanner.js"></script>
+    <script src="JS_Files/currentlocation.js"></script>
+    <script src="JS_Files/maplocation.js"></script>
     <script src="JS_Files/upc_post_request.js"></script>
+    <script src="JS_Files/pbgs.js"></script>
     <script src="JS_Files/main.js"></script>
    <script src="./JS_Files/landing_page.js"></script>
-
-
-
     <title>Penguin Board Game Scanner</title>
   </head>
   <body>
+    <!-- Main Page -->
+    <div class="top-container">
+      <div class="head-container">
       <header>
-          <div class="nav-container">
-              <nav class="navbar navbar-default ">
-                  <a class="navbar-brand" href="#">
-                      <img id="penguin-icon"src="./icons/penguin.png" width="50" height="50" alt="">
-                 </a>
-              </nav>
-            </div>
+          <div class="penguin-logo">
+                <img id="penguin-icon"src="./icons/penguin_logo.png" width="50" height="50" alt="">
+          </div> 
       </header>
-
-        <h1 class="header"></h1>
-        
-     
-
+      <h1 class="header"></h1>
+    </div>
       <main>
         <div class="image-scanner-container">
-            <div class='scanner-image'></div>
+          <div class='scanner-image'></div>
         </div>
-        <div class="search-bar-container">
-            <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
-            <img id="search-bar-button-image" src="icons/search_bar.PNG">
+        <div class="scan-bar-container">
+                <div class="image-first-container">
+                        <img id="camera-button" src="icons/camera.PNG">
+
+                      </div>
+                <div class="cancel-container">
+                        <img class="cancel-scan" src="icons/cancel.png" >
+</div>
         </div>
-        <img id="camera-button" src="icons/camera.PNG">
+        <!-- <div class="search-bar-container">
+          <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
+          <button class="submit-input">Submit Number</button> -->
+          <div class="search-bar-container">
+                <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
+                <img id="search-bar-button-image" src="icons/search_bar.PNG">
+            </div>
+        </div>
       </main>
-    <!--Product Page-->
-
-
-      <!--Button -->
-        
-
-
-
-
-
-    <header>
-
-
-
-
-    </header>
-
-    <main>
-
-
-
-
-
-    </main>
-
-
-
-
-
-
-
-    <!--YouTube Page-->
-
-
-
-
-
-
-
-
-
+    </div>
   </body>
 </html>
