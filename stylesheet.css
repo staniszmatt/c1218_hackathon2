@@ -2,13 +2,20 @@ body{
     background:#fff;
 
 }
+
+.main-container {
+    height: 80vh;
+    width: 100vw; 
+}
+
 h1{
     color:red;
     font-size:red;
     text-align:center;
     position:relative;
-    top:100px;
-
+}
+.top-container {
+    height: 20vh;
 }
 
 .bg-dark {
@@ -23,12 +30,9 @@ h1{
 }
 /*main-section*/
 .scanner-image{
-    /* height: 300px; */
+    height: 100%;
     width: 100%;
-    border: 5px black solid;
-    position: relative;
-    margin: 0 auto;
-    top: 250px;
+    object-fit: contain;
   }
 
   video{
@@ -39,20 +43,14 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      position:relative;
-      bottom:50%;
+      height: 50vh;
   }
 
   /*search-bar*/
   .search-bar-container {
     position: relative;
-    border: 9px solid red;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
+    border: 1px solid black;
+    display: inline-flex;
 }
 
   .search-bar {
@@ -61,6 +59,15 @@ h1{
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
+}
+
+.image-first-container {
+    height: 10vh;
+    width: 10vh;
+}
+
+button {
+
 }
   
 /* .camera-btn{
@@ -73,10 +80,9 @@ h1{
 
 /* } */
 #camera-button {
-    width: 14%;
-    position: relative;
-    right: 37%;
-    top: 211px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
     cursor: pointer;
 }
 
@@ -196,10 +202,6 @@ section {
     position: relative;
     left: 14%;
     bottom: 38px;
-}
-
-main {
-	padding: 370px 18px 10px;
 }
 
 article {
