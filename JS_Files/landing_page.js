@@ -9,7 +9,7 @@ function initializeApp(){
 //Header Title
 var counterLetter= 0;
 function typeWriter() {
-  var text = "Penguin Board Game Scanner";
+  var text = "GameBoard Scanner";
   var speed = 210;
   if (counterLetter < text.length) {
     var newChar=$('.header').text()+(text.charAt(counterLetter));

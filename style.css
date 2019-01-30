@@ -1,0 +1,61 @@
+/* html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+/* nav bar styling */
+.pageContainer{
+    height: 100vh;
+}
+.notNavBarContainer{
+    height: 88vh; 
+}
+.navBarContainer{
+    height: 10vh;
+    margin: 0px auto;
+    padding: 4px;
+}
+    
+.iconContainer{
+    height: 100%;
+    
+}
+.square{
+    height: 100%;
+    background-color: blue; 
+}
+
+.homeIcon, .mapIcon, .youtubeIcon{
+    height:94%;
+    width:94%;
+}
+
+.imageAlign{
+    align-items: center;
+}
+/* about product page styling */
+.container{
+   height: 100vh;
+}
+
+
+.penguinHamburgerContainer{
+    height: 10vh;
+    background-color: aliceblue;
+}
+.imageContainer{
+    height: 20vh;
+    background-color: yellow;
+}
+
+.infoContainer1{
+    height: 35vh;
+    background-color: blue; 
+}
+
+.infoContainer2{
+    height: 35vh;
+    background-color: red; 
+}
