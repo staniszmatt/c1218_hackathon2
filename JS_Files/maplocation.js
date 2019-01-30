@@ -1,8 +1,47 @@
 
 var map, infoWindow, service;
 
+function placesList(){
+  var service = new google.maps.places.PlacesService(map);
+        var getNextPage = null;
+        var moreButton = document.getElementById('more');
+        moreButton.onclick = function() {
+          moreButton.disabled = true;
+          if (getNextPage) getNextPage();
+         
+        };
+        
+        // Perform a nearby search.
+        service.textSearch(
+          {
+            location: location, 
+            radius: 14000, 
+            type: ['store'], 
+          query: "monopoly game" //The title of the board game
+          },
+            function(results, status, pagination) {
+              if (status !== 'OK') return;
+
+              createMarkers(results);
+              moreButton.disabled = !pagination.hasNextPage;
+              getNextPage = pagination.hasNextPage && function() {
+                pagination.nextPage();
+              };
+            });
+            service.findPlaceFromQuery(request, function(results, status) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                  createMarker(results[i]);
+                }
+    
+                map.setCenter(results[0].geometry.location);
+              }
+            });
+}
+
       function initMap(pos) {
         // Create the map.
+        var currentLocation = pos;
         var location = pos || {lat: 33.699, lng: -117.829};
         map = new google.maps.Map(document.getElementById('map'), {
           center: location,
@@ -20,7 +59,8 @@ var map, infoWindow, service;
             };
 
             initMap(pos);
-
+            placesList();
+            createMarkers(places);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
@@ -44,8 +84,13 @@ var map, infoWindow, service;
         };
         
         // Perform a nearby search.
-        service.nearbySearch(
-            {location: location, radius: 14000, type: ['store']},
+        service.textSearch(
+          {
+            location: location, 
+            radius: 14000, 
+            type: ['store'], 
+          query: "monopoly game" //The title of the board game
+          },
             function(results, status, pagination) {
               if (status !== 'OK') return;
 
@@ -71,6 +116,7 @@ var map, infoWindow, service;
         var placesList = document.getElementById('places');
 
         for (var i = 0, place; place = places[i]; i++) {
+          console.log(place);
           var image = {
             url: place.icon,
             size: new google.maps.Size(71, 71),
@@ -87,7 +133,9 @@ var map, infoWindow, service;
           });
 
           var li = document.createElement('li');
-          li.textContent = place.name;
+          li.textContent = place.name +" - "+ place.formatted_address;
+           
+          console.log(li.textContent);
           placesList.appendChild(li);
 
           bounds.extend(place.geometry.location);
