@@ -1,4 +1,4 @@
-class productPage {
+class product_page {
     constructor(image, data,){
         
         
