@@ -2,13 +2,20 @@ body{
     background:#fff;
 
 }
+
+.main-container {
+    height: 80vh;
+    width: 100vw; 
+}
+
 h1{
     color:red;
     font-size:red;
     text-align:center;
     position:relative;
-    top:100px;
-
+}
+.top-container {
+    height: 20vh;
 }
 
 .bg-dark {
@@ -23,12 +30,9 @@ h1{
 }
 /*main-section*/
 .scanner-image{
-    /* height: 300px; */
+    height: 100%;
     width: 100%;
-    border: 5px black solid;
-    position: relative;
-    margin: 0 auto;
-    top: 250px;
+    object-fit: contain;
   }
 
   video{
@@ -39,19 +43,14 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      position:relative;
-      bottom:50%;
+      height: 50vh;
   }
 
   /*search-bar*/
   .search-bar-container {
     position: relative;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
+    border: 1px solid black;
+    display: inline-flex;
 }
 
   .search-bar {
@@ -60,6 +59,15 @@ h1{
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
+}
+
+.image-first-container {
+    height: 10vh;
+    width: 10vh;
+}
+
+button {
+
 }
   
 /* .camera-btn{
@@ -72,14 +80,18 @@ h1{
 
 /* } */
 #camera-button {
-    width: 14%;
-    position: relative;
-    right: 37%;
-    top: 211px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.submit-input {
+    cursor: pointer;
 }
 /*Buttons*/
 
-.navBarContainer{
+.nav-bar-container{
     height: 10vh;
     margin: 0px auto;
     padding: 2px;
@@ -88,21 +100,21 @@ h1{
 .row{
     position:fixed;
 }
-.iconContainer{
+ 
+.icon-container{
     height: 100%;
-    
 }
 .square{
     height: 100%;
     background-color: blue; 
 }
 
-.homeIcon, .mapIcon, .youtubeIcon{
+.home-icon, .reviews-icon, .map-icon, .youtube-icon{
     height:94%;
     width:94%;
 }
 
-.imageAlign{
+.image-align{
     align-items: center;
 }
 /* about product page styling */
@@ -110,17 +122,17 @@ h1{
    height: 100vh;
 }
 
-.imageContainer{
+.image-container{
     height: 20vh;
     background-color: yellow;
 }
 
-.infoContainer1{
+.info-container1{
     height: 38vh;
     background-color: blue; 
 }
 
-.infoContainer2{
+.info-container2{
     height: 38vh;
     background-color: red; 
 }
@@ -203,9 +215,6 @@ section {
     bottom: 7px;
     position: relative;
 }
-main {
-	padding: 370px 18px 10px;
-}
 
 article {
 	display: flex;
@@ -227,4 +236,10 @@ article:hover{
 
 .details {
 	padding: 0px 22px;
+}
+
+/* Reviews Page */
+.reviews-content{
+    height: 90vh;
+    background-color: chartreuse;
 }
