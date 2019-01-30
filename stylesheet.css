@@ -77,6 +77,11 @@ h1{
     position: relative;
     right: 37%;
     top: 211px;
+    cursor: pointer;
+}
+
+.submit-input {
+    cursor: pointer;
 }
 /*Buttons*/
 
