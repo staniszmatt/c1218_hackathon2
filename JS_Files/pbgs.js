@@ -18,11 +18,11 @@ class PBGS_init{
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.cancleScanButton.click(this.cancleScan);
   }
-  initScanner(){
+  initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
   }
-  submitBarcode(){
+  submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     this.upcScanner.processedCallBack(this.barcodeInputValue);

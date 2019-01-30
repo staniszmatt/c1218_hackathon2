@@ -1,6 +1,6 @@
 class UPC_Scanner{
   
-  constructor(){
+  constructor(){ 
     this.barcodeNumber = null;
     this.barCodeInput = null; 
     this.upc_post_request = new UPC_post_request();
@@ -42,10 +42,10 @@ class UPC_Scanner{
         console.log("Input a number!") //TODO: Add to error modal
       }else {
       this.barcodeNumber = returnData;
+      this.upc_post_request.setScanedData(this.barcodeNumber);
       }
     } else {
     this.barcodeNumber = returnData.codeResult.code;//"610370565025"
-    this.upc_post_request.setScanedData(this.barcodeNumber);
     }  
     this.stopScanning();
   }
