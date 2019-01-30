@@ -142,24 +142,34 @@ h1{
     align-items: center;
 }
 /* Products Page*/
-.container{
-   height: 100vh;
+.product-page {
+    width: 100vw;
+    height: 100vh;
 }
-
+.product-container{
+    height: 85%;
+}
+.navBar-container {
+    text-align: center;
+    bottom: 10px;
+}
 .image-container{
-    height: 20vh;
-    background-color: yellow;
+    height: 50%;
+}
+.product-icon {
+    height: 80%;
+    width: 80%;
+}
+#product-image-placeholder {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .info-container1{
-    height: 38vh;
-    background-color: blue; 
+    height: 50%;
 }
 
-.info-container2{
-    height: 38vh;
-    background-color: red; 
-}
  /*Youtube Page*/
  @mixin font-base {
 	padding: 0;
