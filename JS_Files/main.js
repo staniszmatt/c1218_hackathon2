@@ -6,7 +6,7 @@ function startWhenloaded(){
     initScanButton: $("#camera-button"),
     submitBarcodeNumberButton: $(".submit-input"),
     submitNumberInput: $(".search-bar"),
-    cancleScanButton: $(".cancle-scan")
+    cancleScanButton: $(".cancel-scan")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();

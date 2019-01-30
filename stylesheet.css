@@ -1,3 +1,11 @@
+/* Table of contents:
+                Products Page               Line 128
+                youTube Page                Line 149
+                Google Maps
+                Reviews Page                Line 232s
+
+
+*/
 body{
     background:#fff;
 
@@ -46,39 +54,38 @@ h1{
       height: 50vh;
   }
 
+  .scan-bar-container{
+      text-align:center;
+  }
+
   /*search-bar*/
   .search-bar-container {
+    height:10vh;
     position: relative;
     border: 1px solid black;
     display: inline-flex;
 }
 
   .search-bar {
-    background-image: url(./icons/iconfinder.png);
+    /* background-image: url(./icons/iconfinder.png); */
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
 }
-
+.cancel-container{
+    height: 10vh;
+    width: 10vh;
+    display:inline-block;
+}
 .image-first-container {
     height: 10vh;
     width: 10vh;
-}
-
-button {
-
-}
-  
-/* .camera-btn{
-    position:relative;
-    width:40%;
     display:inline-block;
-    margin: 0 auto;
-    left: 25%;
-    bottom:200px; */
+}
 
-/* } */
+
+  
 #camera-button {
     height: 100%;
     width: 100%;
@@ -86,6 +93,13 @@ button {
     cursor: pointer;
 }
 
+.cancel-scan {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    display:inline-block;
+}
 .submit-input {
     cursor: pointer;
 }
@@ -117,7 +131,7 @@ button {
 .image-align{
     align-items: center;
 }
-/* about product page styling */
+/* Products Page*/
 .container{
    height: 100vh;
 }
@@ -154,8 +168,6 @@ p {
 	font-size: 0.7rem;
 }
 
-
-
 .container {
 	width: 560px;
 	background-color: #fff;
@@ -188,6 +200,7 @@ section {
     padding: 12px;
     margin: 16px;
 }
+
 #video {
     display: flex;
     height: 215px;
