@@ -46,7 +46,6 @@ h1{
   /*search-bar*/
   .search-bar-container {
     position: relative;
-    border: 9px solid red;
     border-radius: 5%;
     top: 288px;
     margin: 0 auto;
@@ -84,8 +83,11 @@ h1{
     height: 10vh;
     margin: 0px auto;
     padding: 2px;
+    position:fixed;
 }
-    
+.row{
+    position:fixed;
+}
 .iconContainer{
     height: 100%;
     
@@ -140,9 +142,7 @@ p {
 	font-size: 0.7rem;
 }
 
-/* body {
-	background-color: #eee;
-} */
+
 
 .container {
 	width: 560px;
@@ -151,17 +151,24 @@ p {
 }
 
 /* header, */
+#youtube-header{
+    position:fixed;
+}
 section {
-	position: fixed;
-	text-align: center;
-	width: 560px;
-	background-color: #fff;
+  
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
 }
 
 section {
 	top: 50px;
 }
-
+#youtube-video{
+    position:fixed;
+    margin:0 auto;
+}
 .logo {
     width: 26%;
     position: relative;
@@ -169,16 +176,12 @@ section {
     padding: 12px;
     margin: 16px;
 }
-/* .youtube-search-bar{
-    position: relative;
-    border: 9px solid red;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
-} */
+#video {
+    display: flex;
+    height: 215px;
+    justify-content: center;
+    align-items: center;
+}
 .youtube-header-container{
     width:86%;
 }
@@ -189,10 +192,17 @@ section {
     background-size: contain;
     font-size: 1.5rem;
     position: relative;
-    left: 14%;
-    bottom: 38px;
+    left: 24%;
+    bottom: 58px;
 }
-
+#search-bar-button-image{
+    width: 11%;
+    right: 3%;
+    margin: 8px;
+    padding: -3px;
+    bottom: 7px;
+    position: relative;
+}
 main {
 	padding: 370px 18px 10px;
 }
@@ -201,7 +211,6 @@ article {
 	display: flex;
 	align-items: center;
 	padding: 8px 12px;
-	border: 2px solid white;
 	border-radius: 8px;
 	margin: 0 auto;
 	
@@ -212,10 +221,10 @@ article:hover{
 }
 
 .thumb {
-	height: 70px;
-	border-radius: 4px;
+	/* height: 70px; */
+	border-radius: 8px;
 }
 
 .details {
-	padding: 8px 22px;
+	padding: 0px 22px;
 }
