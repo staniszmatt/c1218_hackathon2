@@ -19,59 +19,42 @@
     <title>Penguin Board Game Scanner</title>
   </head>
   <body>
-      <div class="container">
-            <header>
-                    <div class="nav-container">
-                        <nav class="navbar navbar-default ">
-                            <a class="navbar-brand" href="#">
-                                <img id="penguin-icon"src="./icons/penguin.png" width="50" height="50" alt="">
-                           </a>
-                        </nav>
+    <!-- Main Page -->
+    <div class="top-container">
+      <div class="head-container">
+      <header>
+        <div class="nav-container">
+          <nav class="navbar navbar-default ">
+            <a class="navbar-brand" href="#">
+              <img id="penguin-icon"src="./icons/penguin.png" width="50" height="50" alt="">
+            </a>
+          </nav>
+        </div>
+      </header>
+      <h1 class="header"></h1>
+    </div>
+      <main>
+        <div class="image-scanner-container">
+          <div class='scanner-image'></div>
+        </div>
+        <div class="scan-bar-container">
+                <div class="image-first-container">
+                        <img id="camera-button" src="icons/camera.PNG">
+                       
                       </div>
-                </header>
-                  <h1 class="header"></h1>
-                <main>
-                  <div class="image-scanner-container">
-                    <button class="submit-input">Submit Number</button>
-                      <div class='scanner-image'></div>
-                  </div>
-                  <div class="search-bar-container">
-                      <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
-                  </div>
-                  <img id="camera-button" src="icons/camera.PNG">
-                </main>
-              <!--Product Page-->
-          
-          
-                <!--Button -->
-              <header>
-              </header>
-          
-              <main>
-          
-          
-          
-          
-          
-              </main>
-          
-          
-          
-          
-          
-          
-          
-              <!--YouTube Page-->
-          
-          
-          
-          
-          
-          
-          
-          
-      </div>
-  
-
+                <div class="cancel-container">
+                        <img class="cancel-scan" src="icons/cancel.png" >
+                     </div>
+        </div>
+        <!-- <div class="search-bar-container">
+          <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
+          <button class="submit-input">Submit Number</button> -->
+          <div class="search-bar-container">
+                <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
+                <img id="search-bar-button-image" src="icons/search_bar.PNG">
+            </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

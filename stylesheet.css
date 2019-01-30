@@ -1,14 +1,29 @@
+/* Table of contents:
+                Products Page               Line 128
+                youTube Page                Line 149
+                Google Maps
+                Reviews Page                Line 232s
+
+
+*/
 body{
     background:#fff;
 
 }
+
+.main-container {
+    height: 80vh;
+    width: 100vw; 
+}
+
 h1{
     color:red;
     font-size:red;
     text-align:center;
     position:relative;
-    top:8vh;
-
+}
+.top-container {
+    height: 20vh;
 }
 
 .bg-dark {
@@ -23,12 +38,9 @@ h1{
 }
 /*main-section*/
 .scanner-image{
-    /* height: 300px; */
+    height: 100%;
     width: 100%;
-    border: 5px black solid;
-    position: relative;
-    margin: 0 auto;
-    top: 250px;
+    object-fit: contain;
   }
 
   video{
@@ -39,47 +51,55 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      position:relative;
-      bottom:50%;
+      height: 50vh;
+  }
+
+  .scan-bar-container{
+      text-align:center;
   }
 
   /*search-bar*/
   .search-bar-container {
+    height:10vh;
     position: relative;
-    border: 9px solid red;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
+    border: 1px solid black;
+    display: inline-flex;
 }
 
   .search-bar {
-    background-image: url(./icons/iconfinder.png);
+    /* background-image: url(./icons/iconfinder.png); */
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
 }
-  
-/* .camera-btn{
-    position:relative;
-    width:40%;
+.cancel-container{
+    height: 10vh;
+    width: 10vh;
     display:inline-block;
-    margin: 0 auto;
-    left: 25%;
-    bottom:200px; */
+}
+.image-first-container {
+    height: 10vh;
+    width: 10vh;
+    display:inline-block;
+}
 
-/* } */
+
+  
 #camera-button {
-    width: 14%;
-    position: relative;
-    right: 37%;
-    top: 211px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
     cursor: pointer;
 }
 
+.cancel-scan {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    display:inline-block;
+}
 .submit-input {
     cursor: pointer;
 }
@@ -108,7 +128,7 @@ h1{
 .image-align{
     align-items: center;
 }
-/* about product page styling */
+/* Products Page*/
 .container{
    height: 100vh;
 }
@@ -145,9 +165,6 @@ p {
 	font-size: 0.7rem;
 }
 
-/* body {
-	background-color: #eee;
-} */
 
 .container {
 	width: 560px;
@@ -174,16 +191,7 @@ section {
     padding: 12px;
     margin: 16px;
 }
-/* .youtube-search-bar{
-    position: relative;
-    border: 9px solid red;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
-} */
+/
 .youtube-header-container{
     width:86%;
 }
@@ -196,10 +204,6 @@ section {
     position: relative;
     left: 14%;
     bottom: 38px;
-}
-
-main {
-	padding: 370px 18px 10px;
 }
 
 article {
