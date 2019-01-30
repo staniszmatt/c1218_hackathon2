@@ -245,6 +245,7 @@ section {
     margin: 8px;
     bottom: 9px;
     position: relative;
+    cursor: pointer;
 }
 .search-image-container{
     height: 1vh;

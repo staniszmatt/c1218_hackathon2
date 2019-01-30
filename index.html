@@ -17,6 +17,7 @@
     <!-- <script src="JS_Files/maplocation.js"></script> -->
     <script src="JS_Files/upc_post_request.js"></script>
     <script src="JS_Files/pbgs.js"></script>
+    <script src="JS_Files/about_product_page.js"></script>
     <script src="JS_Files/main.js"></script>
    <script src="./JS_Files/landing_page.js"></script>
     <title>Penguin Board Game Scanner</title>
@@ -47,9 +48,6 @@
                         <img class="cancel-scan" src="icons/cancel.png" >
                      </div>
         </div>
-        <!-- <div class="search-bar-container">
-          <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
-          <button class="submit-input">Submit Number</button> -->
           <div class="search-bar-container">
                 <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
                 <div class="search-image-container">
@@ -59,13 +57,15 @@
         </div>
       </main>
     </div>
+
+    
     <div class="row navBar-Container">
         <div class="col-3 iconContainer text-center home-page-button">
             <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
 
         </div>
         <div class="col-3 iconContainer text-center reviews-page-button">
-            <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
+            <a id="product-page-link" href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
 
         </div>
         <div class="col-3 iconContainer text-center map-page-button">
@@ -77,6 +77,33 @@
         </div>
     </div>
 
+
+    <div class="product-page">
+        <div class="product-container">
+          <div class="col-12 image-container text-center">
+            <img id="product-image-placeholder" src="icons/placeHolderImage.png" class="homeIcon">
+          </div>
+          <div class="col-12 info-container1"></div>
+        </div>
+        <div class="row navBar-Container">
+            <div class="col-3 iconContainer text-center home-page-button">
+                <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
+    
+            </div>
+            <div class="col-3 iconContainer text-center reviews-page-button">
+                <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
+    
+            </div>
+            <div class="col-3 iconContainer text-center map-page-button">
+                <a href="google_map_page.html"><img src="icons/GoogleMapsLogo.png" class="mapIcon"></a>
+    
+            </div>
+            <div class="col-3 iconContainer text-center youtube-page-button">
+                <a href="youtube_product_page.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
+    
+            </div>
+        </div>
+      </div>
 
 </div>
   </div>
