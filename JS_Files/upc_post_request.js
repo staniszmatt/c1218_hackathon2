@@ -4,7 +4,7 @@ class UPC_post_request{
     this.upcSerialNumber = null; 
     this.errors = null;
     this.returnedScanData = null; 
-    this.upcPostData = new U
+    this.productData = new Product_page();
 
     this.tempData = {
       "code": "OK",
@@ -182,6 +182,7 @@ class UPC_post_request{
   handleData(returnedData){
     console.log("Returned Data ", returnedData);
     this.returnedScanData = returnedData;
+    
   }
   /**
   * @param {Object} errorData - if errored, returns error data. 

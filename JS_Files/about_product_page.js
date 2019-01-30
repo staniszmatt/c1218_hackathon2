@@ -1,5 +1,5 @@
-class product_page {
-    constructor(image, data,){
+class Product_page {
+    constructor(){
         
         
     }
