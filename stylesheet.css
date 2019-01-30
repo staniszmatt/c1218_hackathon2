@@ -3,24 +3,29 @@
                 youTube Page                Line 149
                 Google Maps
                 Reviews Page                Line 232s
+
+
 */
-body {
-    background: #fff;
+body{
+    background:#fff;
 
 }
+
 .main-container {
     height: 80vh;
-    width: 100vw;
+    width: 100vw; 
 }
-h1 {
-    color: red;
-    font-size: red;
-    text-align: center;
-    position: relative;
+
+h1{
+    color:red;
+    font-size:red;
+    text-align:center;
+    position:relative;
 }
 .top-container {
     height: 20vh;
 }
+
 .bg-dark {
     position: relative;
     bottom: 47px;
@@ -28,171 +33,165 @@ h1 {
     position: fixed;
     width: 100%;
 }
-#penguin-icon {
-    color: white;
+#penguin-icon{
+    color:white;
 }
 /*main-section*/
-.scanner-image {
+.scanner-image{
     height: 100%;
     width: 100%;
     object-fit: contain;
-}
-video {
-    width: 100%;
-}
-canvas {
-    display: none;
-}
-.image-scanner-container {
-    height: 50vh;
-}
-.scan-bar-container {
-    text-align: center;
-}
-/*search-bar*/
-.search-bar-container {
-    height: 10vh;
+  }
+
+  video{
+      width:100%;
+  }
+
+  canvas{
+      display:none;
+  }
+  .image-scanner-container{
+      height: 50vh;
+  }
+
+  .scan-bar-container{
+      text-align:center;
+  }
+
+  /*search-bar*/
+  .search-bar-container {
+    height:10vh;
     position: relative;
     border: 1px solid black;
     display: inline-flex;
 }
-.search-bar {
+
+  .search-bar {
     /* background-image: url(./icons/iconfinder.png); */
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
 }
-.cancel-container {
+.cancel-container{
     height: 10vh;
     width: 10vh;
-    display: inline-block;
+    display:inline-block;
 }
 .image-first-container {
     height: 10vh;
     width: 10vh;
-    display: inline-block;
+    display:inline-block;
 }
+
+
+  
 #camera-button {
     height: 100%;
     width: 100%;
     object-fit: contain;
     cursor: pointer;
 }
+
 .cancel-scan {
     height: 100%;
     width: 100%;
     object-fit: contain;
     cursor: pointer;
-    display: inline-block;
+    display:inline-block;
 }
 .submit-input {
     cursor: pointer;
 }
 /*Buttons*/
-.nav-bar-container {
+
+.nav-bar-container{
     height: 10vh;
     margin: 0px auto;
     padding: 2px;
-    position: fixed;
+    position:fixed;
 }
-.row {
-    position: fixed;
+.row{
+    position:fixed;
 }
-.icon-container {
+ 
+.icon-container{
     height: 100%;
 }
-.square {
+.square{
     height: 100%;
-    background-color: blue;
+    background-color: blue; 
 }
-.home-icon,
-.reviews-icon,
-.map-icon,
-.youtube-icon {
-    height: 94%;
-    width: 94%;
+
+.home-icon, .reviews-icon, .map-icon, .youtube-icon{
+    height:94%;
+    width:94%;
 }
-.image-align {
+
+.image-align{
     align-items: center;
 }
 /* Products Page*/
-.product-page {
-    display: block;
-    height: 100vh;
-    width: 100vw;
-}
-.product-container {
-    height: 75vh;
+.container{
+   height: 100vh;
 }
 
-.image-container {
-    height: 50%;
-    width: 100vw;
-    margin: auto;
+.image-container{
+    height: 20vh;
+    background-color: yellow;
 }
 
-#product-image-placeholder {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.product-icon {
-    height: 95%;
-    width: 75%;
-    object-fit: contain;
-}
-.navBar-container {
-    bottom: 15px;
+.info-container1{
+    height: 38vh;
+    background-color: blue; 
 }
 
-/* .info-container1 { //Remvoved since It is now set to fill in as you go. 
-    height: 25%;        Setup divs as data is added. 
-    background-color: blue;
+.info-container2{
+    height: 38vh;
+    background-color: red; 
+}
+ /*Youtube Page*/
+ @mixin font-base {
+	padding: 0;
+	margin: 0;
+	line-height: 1.3;
+	font-weight: 600;
 }
 
-.info-container2 {
-    height: 25%;
-    background-color: red;
-} */
-
-/*Youtube Page*/
-@mixin font-base {
-    padding: 0;
-    margin: 0;
-    line-height: 1.3;
-    font-weight: 600;
-}
 h4 {
-    @include font-base;
+	@include font-base;
 }
+
 p {
-    @include font-base;
-    color: grey;
-    font-size: 0.7rem;
+	@include font-base;
+	color: grey;
+	font-size: 0.7rem;
 }
+
 .container {
-    width: 560px;
-    background-color: #fff;
-    margin: 0 auto;
+	width: 560px;
+	background-color: #fff;
+	margin: 0 auto;
 }
+
 /* header, */
-#youtube-header {
-    position: fixed;
+#youtube-header{
+    position:fixed;
 }
 section {
-
+  
     left: 0;
     text-align: center;
     width: 100%;
     background-color: #fff;
 }
+
 section {
-    top: 50px;
+	top: 50px;
 }
-#youtube-video {
-    position: fixed;
-    margin: 0 auto;
+#youtube-video{
+    position:fixed;
+    margin:0 auto;
 }
 .logo {
     width: 26%;
@@ -201,6 +200,7 @@ section {
     padding: 12px;
     margin: 16px;
 }
+
 #video {
     display: flex;
     height: 215px;
@@ -221,7 +221,7 @@ section {
     left: 24%;
     bottom: 58px;
 }
-#search-bar-button-image {
+#search-bar-button-image{
     width: 11%;
     right: 3%;
     margin: 8px;
@@ -229,23 +229,27 @@ section {
     bottom: 7px;
     position: relative;
 }
-article {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    border-radius: 8px;
-    margin: 0 auto;
 
+article {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 8px;
+	margin: 0 auto;
+	
 }
-article:hover {
-    border: 2px solid #ff9999;
+
+article:hover{
+    border:2px solid #ff9999;
 }
+
 .thumb {
-    /* height: 70px; */
-    border-radius: 8px;
+	/* height: 70px; */
+	border-radius: 8px;
 }
+
 .details {
-    padding: 0px 22px;
+	padding: 0px 22px;
 }
 
 /* Google Page */
@@ -281,7 +285,7 @@ article:hover {
 
 
 /* Reviews Page */
-.reviews-content {
+.reviews-content{
     height: 90vh;
     background-color: chartreuse;
 }
