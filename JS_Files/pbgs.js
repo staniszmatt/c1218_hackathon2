@@ -11,12 +11,14 @@ class PBGS_init{
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancleScan = this.cancleScan.bind(this);
+    
   }
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.cancleScanButton.click(this.cancleScan);
+    this.domInformation.homeButton.click(t//function);
   }
   initScanner(){
     console.log("Clicked InitScanner");
@@ -30,4 +32,13 @@ class PBGS_init{
   cancleScan(){
     this.upcScanner.stopScanning();
   }
+
+
+//NavBar Buttons
+  $('.home-icon').click(function(){
+
 }
+
+
+
+
