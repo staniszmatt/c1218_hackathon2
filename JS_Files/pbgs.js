@@ -18,7 +18,7 @@ class PBGS_init{
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.cancleScanButton.click(this.cancleScan);
-    this.domInformation.homeButton.click(t//function);
+    this.domInformation.homeButton.click(handleHomeButton);
   }
   initScanner(){
     console.log("Clicked InitScanner");
@@ -33,12 +33,15 @@ class PBGS_init{
     this.upcScanner.stopScanning();
   }
 
-
-//NavBar Buttons
-  $('.home-icon').click(function(){
-
 }
-
+//NavBar Button
+// function handleHomeButton(){
+//   $('.scanning-front-page').click(function(){
+//     $('.google-page-container').removeClass('active');
+//     $('.about-product-page').removeClass('active');
+//     $('.youtube-page.active').removeClass('active');
+//   })
+// }
 
 
 

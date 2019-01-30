@@ -299,3 +299,24 @@ article:hover{
 .scanning-front-page{
     display:none
 }
+
+.google-page-container.active{
+  display:inline;
+}
+
+.google-page-container{
+    display:none;
+}
+.about-product-page.active{
+    display:inline;
+}
+.about-product-page{
+    display:none;
+}
+.youtube-page.active{
+    display:inline;
+}
+
+.youtube-page{
+    display:none;
+}
