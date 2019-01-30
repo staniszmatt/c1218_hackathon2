@@ -11,3 +11,8 @@ function startWhenloaded(){
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
 }
+
+$("#camera-button").on("click", ()=>{
+  console.log("penguin")
+  $(".penguin-logo").slideUp();
+});

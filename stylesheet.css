@@ -15,7 +15,12 @@ body{
     height: 80vh;
     width: 100vw; 
 }
-
+#main-container{
+    height:100vh;
+    width:90%;
+    margin:0 auto;
+    overflow: hidden;
+}
 h1{
     color:red;
     font-size:red;
@@ -51,7 +56,7 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      height: 50vh;
+      
   }
 
   .scan-bar-container{
@@ -113,8 +118,13 @@ h1{
 }
 .row{
     position:fixed;
+    margin-right: -8px;
+    margin-left: -22px;
 }
  
+.row:hover{
+    
+}
 .icon-container{
     height: 100%;
 }
@@ -190,8 +200,7 @@ section {
 	top: 50px;
 }
 #youtube-video{
-    position:fixed;
-    margin:0 auto;
+ 
 }
 .logo {
     width: 26%;
@@ -202,12 +211,12 @@ section {
 }
 
 #video {
-    display: flex;
-    height: 215px;
-    justify-content: center;
-    align-items: center;
+    padding-top:20px;
 }
-
+.youtube-container{
+    overflow:scroll;
+    margin-top: 327px;
+}
 .youtube-header-container{
     width:86%;
 }
@@ -255,21 +264,16 @@ article:hover{
 /* Google Page */
 
 .google-page-container{
-        height: 100vh;
-        width: 100vw;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+
 }
 .google-header-container{
-    height: 15vh;
-    width: 25vw;
+position: fixed;
+background:white;
 }
 .google-logo{
     height: 100%;
-    width: 100%;
-    object-fit: contain
+    width: 15%;
+    object-fit: contain;
 }
 
 #google-search{
@@ -279,13 +283,35 @@ article:hover{
     background-size: contain;
     font-size: 1.5rem;
     position: relative;
-    left: 14%;
-    bottom: 38px;
+    top: 12px;
+    width: 65%;
 }
-
+.search-icon{
+    width:12%;
+    margin-top:12px;
+}
 
 /* Reviews Page */
 .reviews-content{
     height: 90vh;
     background-color: chartreuse;
+}
+/*Nav Page */
+.navBar-Container{
+    z-index: 100;
+    position: fixed;
+    padding: 2rem 0.5rem;
+    text-align: center;
+    background:white;
+    bottom:0;
+    box-shadow: 3px 3px 10px black;
+}
+.iconContainer img{
+    width:80%;
+}
+.penguin-logo #penguin-icon{
+    padding: 10px 0px 0px;
+}
+.penguin-logo h2{
+    text-align:center;
 }
