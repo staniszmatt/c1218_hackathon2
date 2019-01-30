@@ -1,6 +1,6 @@
-class product_page {
-  constructor(scanedData) {
-    this.scanedData = scanedData;
-
-  }
+class productPage {
+    constructor(image, data,){
+        
+        
+    }
 }

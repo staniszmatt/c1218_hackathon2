@@ -1,4 +1,5 @@
 class UPC_Scanner{
+  
   constructor(){
     this.barcodeNumber = null;
     this.barCodeInput = null; 
@@ -7,6 +8,7 @@ class UPC_Scanner{
     this.processedCallBack = this.processedCallBack.bind(this);
     this.initScanner = this.initScanner.bind(this);
   }
+
   initScanner(){  //Initialize Quagga scanner and request access to camera
     console.log("Init Scanner");
     Quagga.init({
@@ -38,7 +40,7 @@ class UPC_Scanner{
     if(!isNaN(returnData)){
       if(returnData === ""){
         console.log("Input a number!") //TODO: Add to error modal
-      } else {
+      }else {
       this.barcodeNumber = returnData;
       }
     } else {
