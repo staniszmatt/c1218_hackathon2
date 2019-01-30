@@ -15,3 +15,8 @@ function startWhenloaded(){
   testAjax();
   returnData(response);
 }
+
+$("#camera-button").on("click", ()=>{
+  console.log("penguin")
+  $(".penguin-logo").slideUp();
+});

@@ -15,7 +15,12 @@ body{
     height: 80vh;
     width: 100vw; 
 }
-
+#main-container{
+    height:100vh;
+    width:90%;
+    margin:0 auto;
+    overflow: hidden;
+}
 h1{
     color:red;
     font-size:red;
@@ -51,7 +56,7 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      height: 50vh;
+      
   }
 
   .scan-bar-container{
@@ -60,19 +65,21 @@ h1{
 
   /*search-bar*/
   .search-bar-container {
-    height:10vh;
+    height: 6vh;
+    left: 11%;
     position: relative;
     border: 1px solid black;
     display: inline-flex;
 }
 
-  .search-bar {
-    /* background-image: url(./icons/iconfinder.png); */
+.search-bar {
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
+    width: 59vw;
 }
+
 .cancel-container{
     height: 10vh;
     width: 10vh;
@@ -87,18 +94,18 @@ h1{
 
   
 #camera-button {
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 85%;
     object-fit: contain;
     cursor: pointer;
 }
 
 .cancel-scan {
-    height: 100%;
-    width: 100%;
+    height: 86%;
+    width: 71%;
     object-fit: contain;
     cursor: pointer;
-    display:inline-block;
+    display: inline-block;
 }
 .submit-input {
     cursor: pointer;
@@ -113,8 +120,13 @@ h1{
 }
 .row{
     position:fixed;
+    margin-right: -8px;
+    margin-left: -22px;
 }
  
+.row:hover{
+
+}
 .icon-container{
     height: 100%;
 }
@@ -132,24 +144,34 @@ h1{
     align-items: center;
 }
 /* Products Page*/
-.container{
-   height: 100vh;
+.product-page {
+    width: 100vw;
+    height: 100vh;
 }
-
+.product-container{
+    height: 85%;
+}
+.navBar-container {
+    text-align: center;
+    bottom: 10px;
+}
 .image-container{
-    height: 20vh;
-    background-color: yellow;
+    height: 50%;
+}
+.product-icon {
+    height: 80%;
+    width: 80%;
+}
+#product-image-placeholder {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .info-container1{
-    height: 38vh;
-    background-color: blue; 
+    height: 50%;
 }
 
-.info-container2{
-    height: 38vh;
-    background-color: red; 
-}
  /*Youtube Page*/
  @mixin font-base {
 	padding: 0;
@@ -190,8 +212,7 @@ section {
 	top: 50px;
 }
 #youtube-video{
-    position:fixed;
-    margin:0 auto;
+ 
 }
 .logo {
     width: 26%;
@@ -202,10 +223,11 @@ section {
 }
 
 #video {
-    display: flex;
-    height: 215px;
-    justify-content: center;
-    align-items: center;
+    padding-top:20px;
+}
+.youtube-container{
+    overflow:scroll;
+    margin-top: 327px;
 }
 .youtube-header-container{
     width:86%;
@@ -220,13 +242,17 @@ section {
     left: 24%;
     bottom: 58px;
 }
-#search-bar-button-image{
-    width: 11%;
-    right: 3%;
+#search-bar-button-image {
+    width: 12vw;
+    height: 6vh;
+    right: 134%;
     margin: 8px;
-    padding: -3px;
-    bottom: 7px;
+    bottom: 9px;
     position: relative;
+}
+.search-image-container{
+    height: 1vh;
+    width: 4vw;
 }
 
 article {
@@ -251,8 +277,57 @@ article:hover{
 	padding: 0px 22px;
 }
 
+/* Google Page */
+
+.google-page-container{
+
+}
+.google-header-container{
+position: fixed;
+background:white;
+}
+.google-logo{
+    height: 100%;
+    width: 15%;
+    object-fit: contain;
+}
+
+#google-search{
+    background-image: url(./icons/search_bar.PNG);
+    background-repeat: no-repeat;
+    background-position: 101%;
+    background-size: contain;
+    font-size: 1.5rem;
+    position: relative;
+    top: 12px;
+    width: 65%;
+}
+.search-icon{
+    width:12%;
+    margin-top:12px;
+}
+
 /* Reviews Page */
 .reviews-content{
     height: 90vh;
     background-color: chartreuse;
+}
+/*Nav Page */
+.navBar-Container{
+    z-index: 100;
+    position: fixed;
+    padding: 2rem 0.5rem;
+    text-align: center;
+    background:white;
+    bottom:0;
+    box-shadow: 3px 3px 10px black;
+}
+.iconContainer img{
+    width:80%;
+}
+.penguin-logo #penguin-icon{
+    padding: 10px 0px 0px;
+}
+.penguin-logo h2{
+    text-align:center;
 }
