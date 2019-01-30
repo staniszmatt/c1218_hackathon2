@@ -22,7 +22,6 @@ class Product_page {
     this.dataToDisplay.highestPrice = dataToDisplay.items[0].highest_recorded_price;
     this.dataToDisplay.lowestPrice = dataToDisplay.items[0].lowest_recorded_price;
     this.dataToDisplay.images = dataToDisplay.items[0].images;
-
     this.domSetupForDisplay();
   }
 
@@ -37,7 +36,6 @@ class Product_page {
         this.displayElmToAppend.append(tempPelm);
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
-    window.location.href = "about_product_page.html";
   }
   getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

@@ -149,6 +149,8 @@ let tempData = {
     ],
     "elid": "123608912826"
   }]}
+var latt = 0;
+var long = 0;
 function startWhenloaded(){
   //TODO: Insert Click Handlers and editing of the DOM elements 
   let domInformation = {
@@ -160,4 +162,13 @@ function startWhenloaded(){
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
+  
+  // testAjax();
+  // returnData(response);
 }
+$("#main-container").show();
+$(".product-page").hide();
+$("#camera-button").on("click", ()=>{
+  console.log("penguin")
+  $(".penguin-logo").slideUp();
+});

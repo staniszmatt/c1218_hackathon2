@@ -17,10 +17,6 @@ function typeWriter() {
     counterLetter++;
     setTimeout(typeWriter,speed);
   } 
-  // else {
-  //     counterLetter=0;
-  //    $('.header').text("");
-  //     setTimeout(typeWriter,speed)
-  // }
+
 }
 

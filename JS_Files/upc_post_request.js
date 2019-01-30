@@ -32,6 +32,7 @@ class UPC_post_request{
   */
   handleData(returnedData){
     console.log("Returned Data ", returnedData);
+    
     this.returnedScanData = returnedData;
     this.productData.displayData(this.returnedScanData); //TODO: change to recived data once testing is finsihed
     

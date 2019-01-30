@@ -1,86 +1,65 @@
-class Map_location{
-  constructor(){
-    this.pyrmont = null;
-    this.map;
-    this.service;
-    this.infowindow = {};
-    this.getNextPage = null;
-    this.moreButton = null;
-    this.bounds = null;
-    this.placesList = null;
-    this.marker = null;
-  }
 
-  startApp(){
-    this.initMap();
-    this.createMarkers(places); 
-  }
+var map;
 
-  initMap() {
-    // Create the map.
-    this.pyrmont = {lat: 33.636, lng: -117.746};
-  //   infowindow = new google.maps.InfoWindow({content: "Dan's Play Room" //to be filled with content from google places
-  // }); //TODO: Load the data for locations
-    this.map = new google.maps.Map(document.getElementById('map'), {
-      center: this.pyrmont,
-      zoom: 10
-    });
-
-    // Create the places service.
-    this.service = new google.maps.places.PlacesService(this.map);
-    this.moreButton = document.getElementById('more');
-    this.moreButton.onclick = function() {
-      this.moreButton.disabled = true;
-      if (this.getNextPage) getNextPage();
-    };
-
-    // Perform a nearby search.
-    this.service.nearbySearch(
-        {location: this.pyrmont, radius: 16000, type: ['store'], query: 'target'},
-        function(results, status, pagination) {
-          if (status !== 'OK') return;
-
-          createMarkers(results);
-          this.moreButton.disabled = !pagination.hasNextPage;
-          this.getNextPage = pagination.hasNextPage && function() {
-            pagination.nextPage();
-          };
+      function initMap() {
+        // Create the map.
+        var latt = 34.499;
+        var long = -117.789;
+        var pyrmont = {lat: latt, lng: -117.789};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 10
         });
-        this.createMarkers(places)
-  }
 
-  createMarkers(places) {
-    this.bounds = new google.maps.LatLngBounds();
-    this.placesList = document.getElementById('places');
+        // Create the places service.
+        var service = new google.maps.places.PlacesService(map);
+        var getNextPage = null;
+        var moreButton = document.getElementById('more');
+        moreButton.onclick = function() {
+          moreButton.disabled = true;
+          if (getNextPage) getNextPage();
+        };
 
-    for (var i = 0, place; place = places[i]; i++) {
-      var image = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
+        // Perform a nearby search.
+        service.nearbySearch(
+            {location: pyrmont, radius: 16000, type: ['store'], query: "Monopoly Game"},
+            function(results, status, pagination) {
+              if (status !== 'OK') return;
 
-      this.marker = new google.maps.Marker({
-        map: this.map,
-        icon: image,
-        title: place.name,
-        position: place.geometry.location
-      });
-      
+              createMarkers(results);
+              moreButton.disabled = !pagination.hasNextPage;
+              getNextPage = pagination.hasNextPage && function() {
+                pagination.nextPage();
+              };
+            });
+      }
 
-      google.maps.event.addListener(this.marker, 'click', function() {
-        this.infowindow.setContent(place.name);
-        this.infowindow.open(this.map, this);
-      });
+      function createMarkers(places) {
+        var bounds = new google.maps.LatLngBounds();
+        var placesList = document.getElementById('places');
 
-      var li = document.createElement('li');
-      li.textContent = place.name;
-      this.placesList.appendChild(li);
+        for (var i = 0, place; place = places[i]; i++) {
+          var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
 
-      this.bounds.extend(place.geometry.location);
-    }
-    this.map.fitBounds(this.bounds);
-  }
-}
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
+          });
+
+          var li = document.createElement('li');
+          li.textContent = place.name;
+          placesList.appendChild(li);
+
+          bounds.extend(place.geometry.location);
+        }
+        map.fitBounds(bounds);
+      }
+  

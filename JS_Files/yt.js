@@ -28,7 +28,7 @@ function loadAndReady() {
         var id = $(this).attr('data-key');
         mainVid(id);
     });
- 
+
 }
 
 
@@ -46,6 +46,7 @@ function mainVid(id) {
 
 function resultsLoop(data) {
     $.each(data.items, function (i, item) {
+        console.log("our data from the parameter", data);
         var thumb = item.snippet.thumbnails.medium.url;
         var title = item.snippet.title;
         var desc = item.snippet.description.substring(0, 100);
@@ -61,12 +62,3 @@ function resultsLoop(data) {
                           `);
     });
 }
-
- 
-     
-  
-  
-
-
-  
- 

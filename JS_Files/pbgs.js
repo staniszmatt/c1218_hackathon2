@@ -23,7 +23,9 @@ class PBGS_init{
     this.upcScanner.initScanner();
   }
   submitBarcode(){ //calls with submitted by hand. 
-    console.log("Clicked Submitt");
+    console.log("Clicked Submitt");//TODO: Go back to home screen if errors
+    $("#main-container").hide();
+    $(".product-page").show();
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     this.upcScanner.processedCallBack(this.barcodeInputValue);
   }
