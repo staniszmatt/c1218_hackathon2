@@ -1,9 +1,8 @@
 class UPC_Scanner{
-
-  constructor(domSelectors){
+  
+  constructor(){
     this.barcodeNumber = null;
     this.barCodeInput = null; 
-    this.domSelectors = domSelectors; //Input dome elements to use for scanner
     this.upc_post_request = new UPC_post_request();
     //Binding Section
     this.processedCallBack = this.processedCallBack.bind(this);
@@ -11,6 +10,7 @@ class UPC_Scanner{
   }
 
   initScanner(){  //Initialize Quagga scanner and request access to camera
+    console.log("Init Scanner");
     Quagga.init({
       inputStream : {
         name : "Live",
@@ -37,10 +37,21 @@ class UPC_Scanner{
    */
   processedCallBack(returnData){
     console.log("Process Data ", returnData);
-    this.barcodeNumber = "610370565025"//returnData.codeResult.code;
+    if(!isNaN(returnData)){
+      if(returnData === ""){
+        console.log("Input a number!") //TODO: Add to error modal
+      }else {
+      this.barcodeNumber = returnData;
+      }
+    } else {
+    this.barcodeNumber = returnData.codeResult.code;//"610370565025"
+    this.upc_post_request.setScanedData(this.barcodeNumber);
+    }  
+    this.stopScanning();
+  }
+  stopScanning(){
     Quagga.offDetected();
     Quagga.stop();
-    this.upc_post_request.setScanedData(this.barcodeNumber);
   }
   /** 
    * @param {Object} err - If scanner errors, will return error object information 

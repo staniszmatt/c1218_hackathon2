@@ -1,14 +1,29 @@
+/* Table of contents:
+                Products Page               Line 128
+                youTube Page                Line 149
+                Google Maps
+                Reviews Page                Line 232s
+
+
+*/
 body{
     background:#fff;
 
 }
+
+.main-container {
+    height: 80vh;
+    width: 100vw; 
+}
+
 h1{
     color:red;
     font-size:red;
     text-align:center;
     position:relative;
-    top:100px;
-
+}
+.top-container {
+    height: 20vh;
 }
 
 .bg-dark {
@@ -23,12 +38,9 @@ h1{
 }
 /*main-section*/
 .scanner-image{
-    /* height: 300px; */
+    height: 100%;
     width: 100%;
-    border: 5px black solid;
-    position: relative;
-    margin: 0 auto;
-    top: 250px;
+    object-fit: contain;
   }
 
   video{
@@ -39,86 +51,102 @@ h1{
       display:none;
   }
   .image-scanner-container{
-      position:relative;
-      bottom:50%;
+      height: 50vh;
+  }
+
+  .scan-bar-container{
+      text-align:center;
   }
 
   /*search-bar*/
   .search-bar-container {
+    height:10vh;
     position: relative;
-    border: 9px solid red;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
+    border: 1px solid black;
+    display: inline-flex;
 }
 
   .search-bar {
-    background-image: url(./icons/iconfinder.png);
+    /* background-image: url(./icons/iconfinder.png); */
     background-repeat: no-repeat;
     background-position: 84%;
     background-size: contain;
     font-size: 1.5rem;
 }
-  
-/* .camera-btn{
-    position:relative;
-    width:40%;
+.cancel-container{
+    height: 10vh;
+    width: 10vh;
     display:inline-block;
-    margin: 0 auto;
-    left: 25%;
-    bottom:200px; */
+}
+.image-first-container {
+    height: 10vh;
+    width: 10vh;
+    display:inline-block;
+}
 
-/* } */
+
+  
 #camera-button {
-    width: 14%;
-    position: relative;
-    right: 37%;
-    top: 211px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.cancel-scan {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    display:inline-block;
+}
+.submit-input {
+    cursor: pointer;
 }
 /*Buttons*/
 
-.navBarContainer{
+.nav-bar-container{
     height: 10vh;
     margin: 0px auto;
     padding: 2px;
+    position:fixed;
 }
-    
-.iconContainer{
+.row{
+    position:fixed;
+}
+ 
+.icon-container{
     height: 100%;
-    
 }
 .square{
     height: 100%;
     background-color: blue; 
 }
 
-.homeIcon, .mapIcon, .youtubeIcon{
+.home-icon, .reviews-icon, .map-icon, .youtube-icon{
     height:94%;
     width:94%;
 }
 
-.imageAlign{
+.image-align{
     align-items: center;
 }
-/* about product page styling */
+/* Products Page*/
 .container{
    height: 100vh;
 }
 
-.imageContainer{
+.image-container{
     height: 20vh;
     background-color: yellow;
 }
 
-.infoContainer1{
+.info-container1{
     height: 38vh;
     background-color: blue; 
 }
 
-.infoContainer2{
+.info-container2{
     height: 38vh;
     background-color: red; 
 }
@@ -140,10 +168,6 @@ p {
 	font-size: 0.7rem;
 }
 
-/* body {
-	background-color: #eee;
-} */
-
 .container {
 	width: 560px;
 	background-color: #fff;
@@ -151,17 +175,24 @@ p {
 }
 
 /* header, */
+#youtube-header{
+    position:fixed;
+}
 section {
-	position: fixed;
-	text-align: center;
-	width: 560px;
-	background-color: #fff;
+  
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
 }
 
 section {
 	top: 50px;
 }
-
+#youtube-video{
+    position:fixed;
+    margin:0 auto;
+}
 .logo {
     width: 26%;
     position: relative;
@@ -169,16 +200,13 @@ section {
     padding: 12px;
     margin: 16px;
 }
-/* .youtube-search-bar{
-    position: relative;
-    border: 9px solid red;
-    border-radius: 5%;
-    top: 288px;
-    margin: 0 auto;
-    background: #fff;
-    display: inline-block;
-    left: 10%;
-} */
+
+#video {
+    display: flex;
+    height: 215px;
+    justify-content: center;
+    align-items: center;
+}
 .youtube-header-container{
     width:86%;
 }
@@ -189,19 +217,22 @@ section {
     background-size: contain;
     font-size: 1.5rem;
     position: relative;
-    left: 14%;
-    bottom: 38px;
+    left: 24%;
+    bottom: 58px;
 }
-
-main {
-	padding: 370px 18px 10px;
+#search-bar-button-image{
+    width: 11%;
+    right: 3%;
+    margin: 8px;
+    padding: -3px;
+    bottom: 7px;
+    position: relative;
 }
 
 article {
 	display: flex;
 	align-items: center;
 	padding: 8px 12px;
-	border: 2px solid white;
 	border-radius: 8px;
 	margin: 0 auto;
 	
@@ -212,10 +243,16 @@ article:hover{
 }
 
 .thumb {
-	height: 70px;
-	border-radius: 4px;
+	/* height: 70px; */
+	border-radius: 8px;
 }
 
 .details {
-	padding: 8px 22px;
+	padding: 0px 22px;
+}
+
+/* Reviews Page */
+.reviews-content{
+    height: 90vh;
+    background-color: chartreuse;
 }
