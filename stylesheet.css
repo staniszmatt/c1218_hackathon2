@@ -191,7 +191,6 @@ section {
     padding: 12px;
     margin: 16px;
 }
-/
 .youtube-header-container{
     width:86%;
 }
@@ -228,6 +227,38 @@ article:hover{
 .details {
 	padding: 8px 22px;
 }
+
+/* Google Page */
+
+.google-page-container{
+        height: 100vh;
+        width: 100vw;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+}
+.google-header-container{
+    height: 15vh;
+    width: 25vw;
+}
+.google-logo{
+    height: 100%;
+    width: 100%;
+    object-fit: contain
+}
+
+#google-search{
+    background-image: url(./icons/search_bar.PNG);
+    background-repeat: no-repeat;
+    background-position: 101%;
+    background-size: contain;
+    font-size: 1.5rem;
+    position: relative;
+    left: 14%;
+    bottom: 38px;
+}
+
 
 /* Reviews Page */
 .reviews-content{
