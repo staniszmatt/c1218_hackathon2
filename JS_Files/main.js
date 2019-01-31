@@ -7,16 +7,21 @@ function startWhenloaded(){
   let domInformation = {
     initScanButton: $("#camera-button"),
     submitBarcodeNumberButton: $(".submit-input"),
-    submitNumberInput: $(".search-bar"),
-    cancleScanButton: $(".cancel-scan")
+    cancleScanButton: $(".cancel-scan"),
+    homeIcon:$(".homeIcon"),
+    reviewIcon:$(".reviewIcon"),
+    mapIcon:$(".mapIcon"),
+    youtubeIcon:$(".youtubeIcon")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
   testAjax();
   returnData(response);
+  whenCameraIsClick();
+  whenIndexClicked();
+  whenyouTubeClicked();
+  whenGoogleClicked();
 }
 
-$("#camera-button").on("click", ()=>{
-  console.log("penguin")
-  $(".penguin-logo").slideUp();
-});
+
+

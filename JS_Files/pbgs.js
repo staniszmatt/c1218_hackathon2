@@ -11,12 +11,19 @@ class PBGS_init{
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancleScan = this.cancleScan.bind(this);
+
   }
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.cancleScanButton.click(this.cancleScan);
+    this.domInformation.camera-button.click(this.whenCameraIsClick);
+    this.domInformation.homeIcon.click(this. whenIndexClicked);
+    this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
+    this.domInformation.mapIcon.click(this. whenGoogleClicked);
+
+
   }
   initScanner(){
     console.log("Clicked InitScanner");
@@ -30,4 +37,37 @@ class PBGS_init{
   cancleScan(){
     this.upcScanner.stopScanning();
   }
+
+
+ whenCameraIsClick(){
+    $("#camera-button").on("click", ()=>{
+      console.log("penguin")
+      $(".penguin-logo").slideUp();
+  })
+  }
+
+ whenIndexClicked(){
+    $('.index-page').click(function(){
+        $('.youtube-page').hide();
+        $('.product-page').hide();
+        $('.google-page').hide();
+    })
+  }
+
+  whenyouTubeClicked(){
+    $('.youtube-page').click(function(){
+        $('.index-page').hide();
+        $('.google-page').hide();
+        $('.product-page').hide();
+    })
+  }
+  
+  whenGoogleClicked(){
+    $('.google-page').click(function(){
+      $('.index-page').hide();
+      $('.youtube-page').hide();
+      $('.product-page').hide();
+    }
+  }
+
 }
