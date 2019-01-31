@@ -4,7 +4,8 @@ class Product_page {
       title: "",
       upc: "",
       highestPrice: "",
-      lowestPrice: ""
+      lowestPrice: "",
+      brand: ""
     };
     this.images = [];
     this.displayTitleArray = ["Title: ", "UPC: ", "Highest Sold Price: ", "Lowest Sold Price: "];
@@ -24,6 +25,7 @@ class Product_page {
     this.dataToDisplay.upc = dataToDisplay.items[0].upc;
     this.dataToDisplay.highestPrice = dataToDisplay.items[0].highest_recorded_price;
     this.dataToDisplay.lowestPrice = dataToDisplay.items[0].lowest_recorded_price;
+    this.dataToDisplay.brand = dataToDisplay.items[0].brand;
     this.images = dataToDisplay.items[0].images;
     this.domSetupForDisplay();
   }
