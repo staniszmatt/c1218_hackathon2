@@ -8,7 +8,7 @@ class Product_page {
       images: []
     };
     this.displayTitleArray = ["Title: ", "UPC: ", "Highest Sold Price: ", "Lowest Sold Price: "];
-    this.displayElmToAppend = $("<div>").addClass("display-p-conatiner"); 
+    this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
     this.displayData = this.displayData.bind(this);
   }
   /**
@@ -30,7 +30,7 @@ class Product_page {
     const displayData = Object.values(this.dataToDisplay);
 
     for (let dataIndex = 0; dataIndex < displayData.length-1; dataIndex++){
-      let tempKeyName = this.getKeyByValue(this.dataToDisplay, displayData[dataIndex])
+      let tempKeyName = this.getKeyByValue(this.dataToDisplay, displayData[dataIndex]).toUpperCase();
       let tempPelm = $("<p>")
         .addClass("product-display")
         .text(`${tempKeyName}: ${displayData[dataIndex]}`)

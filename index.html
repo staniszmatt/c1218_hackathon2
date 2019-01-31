@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css"> 
     <!--JS Files-->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script>
@@ -16,6 +16,7 @@
     <script src="JS_Files/currentlocation.js"></script>
     <script src="JS_Files/maplocation.js"></script>
     <script src="JS_Files/upc_post_request.js"></script>
+    <script src="JS_Files/modal.js"></script>
     <script src="JS_Files/pbgs.js"></script>
     <script src="JS_Files/about_product_page.js"></script>
     <script src="JS_Files/main.js"></script>
@@ -149,8 +150,12 @@
 
 
 </div>
+  </div>
+  <div id="modal-shadow"></div>
+  <div id="modal-body">
+    <output class="modal-message"></output>
+    <button type="button" class="btn-modal" id="modal-button">OK</button>
  
+  </div>
   </body>
 </html>
-
-

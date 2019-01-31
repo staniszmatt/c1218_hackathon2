@@ -4,6 +4,9 @@ function startWhenloaded(){
   //TODO: Insert Click Handlers and editing of the DOM elements 
   let domInformation = {
     initScanButton: $("#camera-button"),
+    submitNumberInput: $(".search-bar"),
+    displayDataElm: $(".info-container1"),
+    modalButton: $('.modal-button'),
     submitBarcodeNumberButton: $(".submit-input"),
     cancleScanButton: $(".cancel-scan"),
     homeIcon:$(".homeIcon"),
