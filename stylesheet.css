@@ -1,14 +1,12 @@
 /* Table of contents:
                 Products Page               Line 128
                 youTube Page                Line 149
-                Google Maps
-                Reviews Page                Line 232s
-
-
+                Google Maps                 Line 277
+                Reviews Page                Line 232
+                NavButtons                  Line 315
 */
 body{
     background:#fff;
-
 }
 
 .main-container {
@@ -19,13 +17,14 @@ body{
     height:100vh;
     width:90%;
     margin:0 auto;
-    overflow: hidden;
+  
 }
-h1{
-    color:red;
-    font-size:red;
-    text-align:center;
-    position:relative;
+h1 {
+    color: black;
+    font-size: 1.5rem;
+    font-size: red;
+    text-align: center;
+    position: relative;
 }
 .top-container {
     height: 20vh;
@@ -41,7 +40,7 @@ h1{
 #penguin-icon{
     color:white;
 }
-/*main-section*/
+                                /*main-section*/
 .scanner-image{
     height: 100%;
     width: 100%;
@@ -63,7 +62,7 @@ h1{
       text-align:center;
   }
 
-  /*search-bar*/
+                                     /*search-bar*/
   .search-bar-container {
     height: 6vh;
     left: 11%;
@@ -91,8 +90,6 @@ h1{
     display:inline-block;
 }
 
-
-  
 #camera-button {
     height: 85%;
     width: 85%;
@@ -110,7 +107,7 @@ h1{
 .submit-input {
     cursor: pointer;
 }
-/*Buttons*/
+                                      /*Buttons*/
 
 .nav-bar-container{
     height: 10vh;
@@ -120,11 +117,15 @@ h1{
 }
 .row{
     position:fixed;
-    margin-right: -8px;
-    margin-left: -22px;
+    display:flex;
+    flex-wrap:wrap;
+    left:0;
+    height: 15vh;
 }
  
 .row:hover{
+    transform:translateZ(0);
+    color:red;
 
 }
 .icon-container{
@@ -143,7 +144,7 @@ h1{
 .image-align{
     align-items: center;
 }
-/* Products Page*/
+                                    /* Products Page*/
 .product-page {
     width: 100vw;
     height: 100vh;
@@ -172,7 +173,7 @@ h1{
     height: 50%;
 }
 
- /*Youtube Page*/
+                                    /*Youtube Page*/
  @mixin font-base {
 	padding: 0;
 	margin: 0;
@@ -196,10 +197,7 @@ p {
 	margin: 0 auto;
 }
 
-/* header, */
-#youtube-header{
-    position:fixed;
-}
+                                /* header, */
 section {
   
     left: 0;
@@ -211,9 +209,7 @@ section {
 section {
 	top: 50px;
 }
-#youtube-video{
- 
-}
+
 .logo {
     width: 26%;
     position: relative;
@@ -249,6 +245,7 @@ section {
     margin: 8px;
     bottom: 9px;
     position: relative;
+    cursor: pointer;
 }
 .search-image-container{
     height: 1vh;
@@ -269,30 +266,34 @@ article:hover{
 }
 
 .thumb {
-	/* height: 70px; */
-	border-radius: 8px;
-}
+        margin: 0px;
+        padding: 18px 0px;
+        border-radius: 8px;
+    }
 
 .details {
-	padding: 0px 22px;
+   
+    padding: 0px 1px;
 }
 
-/* Google Page */
+                                    /* Google Page */
 
-.google-page-container{
-
-}
 .google-header-container{
 position: fixed;
 background:white;
-}
-.google-logo{
-    height: 100%;
-    width: 15%;
-    object-fit: contain;
+top:0;
 }
 
-#google-search{
+.google-logo {
+        height: 100%;
+        width: 65%;
+        position: relative;
+        object-fit: contain;
+        top: 10px;
+
+}
+
+#google-search {
     background-image: url(./icons/search_bar.PNG);
     background-repeat: no-repeat;
     background-position: 101%;
@@ -300,19 +301,20 @@ background:white;
     font-size: 1.5rem;
     position: relative;
     top: 12px;
-    width: 65%;
+    width: 61%;
+    left: 7%;
 }
 .search-icon{
     width:12%;
     margin-top:12px;
 }
 
-/* Reviews Page */
+                                    /* Reviews Page */
 .reviews-content{
     height: 90vh;
     background-color: chartreuse;
 }
-/*Nav Page */
+                                        /*Nav Buttons*/
 .navBar-Container{
     z-index: 100;
     position: fixed;
