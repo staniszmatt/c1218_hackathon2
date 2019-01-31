@@ -1,8 +1,8 @@
 $(document).ready(loadAndReady)
 
 var key = 'AIzaSyARgDW5vI8D7LugaaKcd21ORq5ILiefBxM';
-var playlistId = 'PL2fnLUTsNyq7A335zB_RpOzu7hEUcSJbB';
-var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
+var searchQuery = 'monopoly game';
+var URL = 'https://www.googleapis.com/youtube/v3/search';
 
 var options = {
     method: 'get',
@@ -12,10 +12,12 @@ var options = {
         part: 'snippet',
         key: key,
         maxResults: 20,
-        playlistId: playlistId
+        q: searchQuery,
+        type: ''
     },
     success: function (data) {
-        var id = data.items[0].snippet.resourceId.videoId; // we need to find our data path on youtube
+        console.log(data);
+        var id = data.items[0].id.videoID // we need to find our data path on youtube
         mainVid(id);
         resultsLoop(data);
     }
