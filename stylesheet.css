@@ -2,6 +2,7 @@
                 Products Page               Line 128
                 youTube Page                Line 149
                 Google Maps                 Line 277
+                Google Maps CSS             Line 350
                 Reviews Page                Line 232
                 NavButtons                  Line 315
 */
@@ -9,6 +10,13 @@ body{
     background:#fff;
 }
 
+#myInput{
+    font-size: 1rem;
+}
+
+#index-button-container{
+    height: 20%;
+}
 .main-container {
     height: 80vh;
     width: 100vw; 
@@ -164,7 +172,7 @@ a:hover{
 }
 .navBar-container {
     text-align: center;
-    bottom: 10px;
+    /* bottom: 10px; */
 }
 .image-container{
     height: 50%;
@@ -289,9 +297,13 @@ article:hover{
                                     /* Google Page */
 
 .google-header-container{
-position: fixed;
+/* position: fixed; */
+display: 
+block;
 background:white;
 top:0;
+width: 100%;
+height: 10%;
 }
 
 .google-logo {
@@ -299,8 +311,7 @@ top:0;
         width: 65%;
         position: relative;
         object-fit: contain;
-        top: 10px;
-
+        /* top: 10px; */
 }
 
 #google-search {
@@ -343,6 +354,75 @@ top:0;
 .penguin-logo h2{
     text-align:center;
 }
+
+
+
+/* Google Maps CSS */
+#map {
+    height: 79%;
+    border: 2px black solid;
+    
+  }
+  /* Optional: Makes the sample page fill the window. */
+  #right-panel {
+    font-family: 'Roboto','sans-serif';
+    line-height: 20px;
+    padding-left: 10px;
+  }
+
+  #right-panel select, #right-panel input {
+    font-size: 15px;
+  }
+
+  #right-panel select {
+    width: 100%;
+  }
+
+  #right-panel i {
+    font-size: 12px;
+  }
+  #right-panel {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -195px;
+    height: 30%;
+    width: 35%;
+    padding: 5px;
+    z-index: 5;
+    border: 1px solid #999;
+    background: #fff;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 0 0 5px 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+    display: inline-block;
+  }
+  li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 10px;
+  }
+  li:nth-child(odd) {
+    background-color: #fcfcfc;
+  }
+  #more {
+    width: 100%;
+    margin: 0px 0 0 0;
+    background-color: blanchedalmond;
+  }
 
 /* Modal Styling */
 #modal-shadow{
@@ -407,4 +487,4 @@ appending the divs into data container */
     text-align:center;
     padding: 65px;
 
-}
+

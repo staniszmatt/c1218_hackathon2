@@ -51,7 +51,7 @@ var map, infoWindow, service;
             location: location, 
             radius: 14000, 
             type: ['store'], 
-          query: "monopoly game" //The title of the board game
+            query: "monopoly game" //The title of the board game
           },
             function(results, status, pagination) {
               if (status !== 'OK') return;
