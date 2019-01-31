@@ -4,7 +4,9 @@ class UPC_post_request{
     this.upcSerialNumber = null; 
     this.errors = null;
     this.returnedScanData = null; 
-  }
+    this.productData = new Product_page();
+    }
+
   setScanedData(getScanedSerialNumber){
     this.upcSerialNumber = getScanedSerialNumber;
     this.postData();
@@ -14,22 +16,26 @@ class UPC_post_request{
   }
   postData(){
     console.log("Made it to post request")
+    this.handleData(tempData);
 		// console.log("student ID is ", this.getData.id) 
-		var requestScannedInformation = {
-			method: "get",
-			url: "proxy.php?upc=" + this.upcSerialNumber,
-			error: this.errorHandler,
-			success: this.handleData, 
-			dataType: "json"
-		}	
-		$.ajax(requestScannedInformation);	
+		// var requestScannedInformation = { TODO: TEmp comment out for testing
+		// 	method: "get",
+		// 	url: "proxy.php?upc=" + this.upcSerialNumber,
+		// 	error: this.errorHandler,
+		// 	success: this.handleData, 
+		// 	dataType: "json"
+		// }	
+		// $.ajax(requestScannedInformation);	
   }
   /**
   * @param {Object} returnedData - Returned data from UPC lookup 
   */
   handleData(returnedData){
     console.log("Returned Data ", returnedData);
+    
     this.returnedScanData = returnedData;
+    this.productData.displayData(this.returnedScanData); //TODO: change to recived data once testing is finsihed
+    
   }
   /**
   * @param {Object} errorData - if errored, returns error data. 

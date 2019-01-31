@@ -14,10 +14,11 @@
     <script src="dist/quagga.min.js"></script>
     <script src="JS_Files/upc_scanner.js"></script>
     <script src="JS_Files/currentlocation.js"></script>
-    <script src="JS_Files/maplocation.js"></script>
+    <!-- <script src="JS_Files/maplocation.js"></script> -->
     <script src="JS_Files/upc_post_request.js"></script>
     <script src="JS_Files/modal.js"></script>
     <script src="JS_Files/pbgs.js"></script>
+    <script src="JS_Files/about_product_page.js"></script>
     <script src="JS_Files/main.js"></script>
    <script src="./JS_Files/landing_page.js"></script>
     <title>Penguin Board Game Scanner</title>
@@ -25,14 +26,12 @@
   <body>
     <!-- Main Page -->
 <div id="main-container">
-
-
     <div class="top-container">
       <div class="head-container">
       <header>
           <div class="penguin-logo">
                 <img id="penguin-icon"src="./icons/penguin_logo.png" alt="">
-                <h2>Penguin Board Games Scanner</h2>
+                <h2> </h2>
           </div> 
       </header>
       <h1 class="header"></h1>
@@ -43,7 +42,7 @@
         </div>
         <div class="scan-bar-container">
                 <div class="image-first-container">
-                        <img id="camera-button" src="icons/camera.PNG">
+                        <img id="camera-button" src="icons/camera.png">
                        
                       </div>
                 <div class="cancel-container">
@@ -51,7 +50,7 @@
                      </div>
         </div>
           <div class="search-bar-container">
-                <input class="search-bar" id="myInput" type="text" placeholder="Enter Product">
+                <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
                 <div class="search-image-container">
                     <img id="search-bar-button-image" src="icons/search.PNG">
                 </div>
@@ -59,25 +58,53 @@
         </div>
       </main>
     </div>
+
+    
     <div class="row navBar-Container">
         <div class="col-3 iconContainer text-center home-page-button">
             <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
 
         </div>
         <div class="col-3 iconContainer text-center reviews-page-button">
-            <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
+            <a id="product-page-link" href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
 
         </div>
         <div class="col-3 iconContainer text-center map-page-button">
-            <a href="googleMapPage.html"><img src="icons/google_map.png" class="mapIcon"></a>
+            <a href="google_map_page.html"><img src="icons/GoogleMapsLogo.png" class="mapIcon"></a>
 
         </div>
         <div class="col-3 iconContainer text-center youtube-page-button">
-            <a href="youtubeProductPage.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
-
+            <a href="youtube_product_page.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
         </div>
     </div>
 
+
+    <div class="product-page">
+        <div class="product-container">
+          <div class="col-12 image-container text-center">
+            <img id="product-image-placeholder" src="icons/placeHolderImage.png" class="homeIcon">
+          </div>
+          <div class="col-12 info-container1"></div>
+        </div>
+        <div class="row navBar-Container">
+            <div class="col-3 iconContainer text-center home-page-button">
+                <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
+    
+            </div>
+            <div class="col-3 iconContainer text-center reviews-page-button">
+                <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
+    
+            </div>
+            <div class="col-3 iconContainer text-center map-page-button">
+                <a href="google_map_page.html"><img src="icons/GoogleMapsLogo.png" class="mapIcon"></a>
+    
+            </div>
+            <div class="col-3 iconContainer text-center youtube-page-button">
+                <a href="youtube_product_page.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
+    
+            </div>
+        </div>
+      </div>
 
 </div>
   </div>

@@ -7,7 +7,7 @@ class PBGS_init{
     this.upcScanner = new UPC_Scanner();
     this.barcodeInputValue = null;
     this.modalErrors = new Modal_error_message;
-    this.modalErrors.hideModal();	
+    // this.modalErrors.hideModal();	
     // this.modalErrors.show('barcode could not be read');
     
     //bindings
@@ -26,14 +26,12 @@ class PBGS_init{
     this.domInformation.cancelScanButton.click(this.cancelScan);
     this.domInformation.modalButton.click(this.modalErrors.clickHandle);
   }
-  initScanner(){ //calls when scan is submitted
+  initScanner(){
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
   }
-  submitBarcode(){ //calls with submitted by hand. 
-    console.log("Clicked Submitt");//TODO: Go back to home screen if errors
-    $("#main-container").hide();
-    $(".product-page").show();
+  submitBarcode(){
+    console.log("Clicked Submitt");
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     //if the value of the barcode cannot be read, call modal
     // this.modalErrors.show('barcode could not be read');
