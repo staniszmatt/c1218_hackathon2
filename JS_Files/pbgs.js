@@ -6,8 +6,8 @@ class PBGS_init{
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
     this.barcodeInputValue = null;
-    this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
-    this.modalErrors.hideModal();	
+    // this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
+    // this.modalErrors.hideModal();	
     // this.modalErrors.show('barcode could not be read');
     
     //bindings
@@ -16,7 +16,7 @@ class PBGS_init{
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancelScan = this.cancelScan.bind(this);
     // this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
-    this.whenIndexClicked= this.whenIndexClicked.bind(this);
+    // this.whenIndexClicked= this.whenIndexClicked.bind(this);
     // this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
     // this.whenyouTubeClicked=this.whenyouTubeClicked.bind(this);
 
@@ -24,8 +24,8 @@ class PBGS_init{
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
-    this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
-    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
+    // this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
+    // this.domInformation.modalButton.click(this.modalErrors.clickHandle);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     // this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
     this.domInformation.homeIcon.click(this.whenIndexClicked);
@@ -56,14 +56,14 @@ class PBGS_init{
   // })
   // }
 
-   whenIndexClicked(){
-    $('.index-page').click(function(){
-        $("#main-container")
-        $('.youtube-page').hide();
-        $('.product-page').hide();
-        $('.google-page').hide();
-    })
-  }
+  //  whenIndexClicked(){
+  //   $('.index-page').click(function(){
+  //       $("#main-container")
+  //       $('.youtube-page').hide();
+  //       $('.product-page').hide();
+  //       $('.google-page').hide();
+  //   })
+  // }
 
   //  whenyouTubeClicked(){
   //   $('.youtube-page').click(function(){
