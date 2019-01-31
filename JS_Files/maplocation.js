@@ -34,9 +34,26 @@
 //             });
 //       }
 
-//       function createMarkers(places) {
-//         var bounds = new google.maps.LatLngBounds();
-//         var placesList = document.getElementById('places');
+        // Create the places service.
+        // var service = new google.maps.places.PlacesService(map);
+        // var getNextPage = null;
+        // var moreButton = document.getElementById('more');
+        // moreButton.onclick = function() {
+        //   moreButton.disabled = true;
+        //   if (getNextPage) getNextPage();
+         
+        // };
+        
+        // Perform a nearby search.
+        // service.textSearch(
+        //   {
+        //     location: location, 
+        //     radius: 14000, 
+        //     type: ['store'], 
+        //     query: "monopoly game" //The title of the board game
+        //   },
+        //     function(results, status, pagination) {
+        //       if (status !== 'OK') return;
 
 //         for (var i = 0, place; place = places[i]; i++) {
 //           var image = {
