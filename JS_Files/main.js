@@ -6,9 +6,9 @@ function startWhenloaded(){
     initScanButton: $("#camera-button"),
     submitNumberInput: $(".search-bar"),
     displayDataElm: $(".info-container1"),
-    modalButton: $('.modal-button'),
+    modalButton: $('#modal-button'),
     submitBarcodeNumberButton: $(".submit-input"),
-    cancleScanButton: $(".cancel-scan"),
+    cancelScanButton: $(".cancel-scan"),
     homeIcon:$(".homeIcon"),
     reviewIcon:$(".reviewIcon"),
     mapIcon:$(".mapIcon"),
@@ -18,11 +18,14 @@ function startWhenloaded(){
   initialization.clickHandler();
   $("#main-container").show();
   $(".product-page").hide();
-  testAjax();
-  returnData(response);
-  whenCameraIsClick();
-  whenIndexClicked();
-  whenyouTubeClicked();
-  whenGoogleClicked();
+  $(".youtube-page").hide();
+  $(".google-page").hide();
+
+  // testAjax();
+  // returnData(response);
+  // whenCameraIsClick();
+  // whenIndexClicked();
+  // whenyouTubeClicked();
+  // whenGoogleClicked();
 }
 
