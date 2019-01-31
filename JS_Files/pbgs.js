@@ -24,13 +24,13 @@ class PBGS_init{
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
-    // this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
+    this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     // this.domInformation.modalButton.click(this.modalErrors.clickHandle);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     // this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
-    this.domInformation.homeIcon.click(this.whenIndexClicked);
+    // this.domInformation.homeIcon.click(this.whenIndexClicked);
     // this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
-    this.domInformation.mapIcon.click(this.whenGoogleClicked);
+    // this.domInformation.mapIcon.click(this.whenGoogleClicked);
 
   }
   initScanner(){ //calls when scan is submitted
