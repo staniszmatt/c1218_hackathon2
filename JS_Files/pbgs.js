@@ -6,38 +6,38 @@ class PBGS_init{
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
     this.barcodeInputValue = null;
-    this.modalErrors = new Modal_error_message;
-    this.modalErrors.hideModal();	
+    // this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
+    // this.modalErrors.hideModal();	
     // this.modalErrors.show('barcode could not be read');
     
     //bindings
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
-    this.cancleScan = this.cancleScan.bind(this);
-    this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
-    this.whenIndexClicked= this.whenIndexClicked.bind(this);
-    this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
-    this.whenyouTubeClicked=this.whenyouTubeClicked.bind(this);
+    this.cancelScan = this.cancelScan.bind(this);
+    // this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
+    // this.whenIndexClicked= this.whenIndexClicked.bind(this);
+    // this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
+    // this.whenyouTubeClicked=this.whenyouTubeClicked.bind(this);
 
   }
 
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
-    this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
-    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
-    this.domInformation.cancleScanButton.click(this.cancleScan);
-    this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
+    // this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
+    // this.domInformation.modalButton.click(this.modalErrors.clickHandle);
+    this.domInformation.cancelScanButton.click(this.cancelScan);
+    // this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
     this.domInformation.homeIcon.click(this.whenIndexClicked);
-    this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
+    // this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
     this.domInformation.mapIcon.click(this.whenGoogleClicked);
 
   }
   initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
-    $(".penguin-logo").hide();
-    $("#penguin-logo").hide();
+    $(".penguin-logo").slideUp(); //TODO: Add to the DOM OBject
+
   }
   submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");//TODO: Go back to home screen if errors
@@ -49,32 +49,35 @@ class PBGS_init{
   cancelScan(){
     this.upcScanner.stopScanning();
   }
-  whenCameraIsClick(){
-    $("#camera-button").click(function(){
-  })
-  }
+  // whenCameraIsClick(){
+  //   $("#camera-button").click(function(){
+  //     console.log("penguin")
+  //     $(".penguin-logo").slideUp();
+  // })
+  // }
 
-   whenIndexClicked(){
-    $('.index-page').click(function(){
-        $('.youtube-page').hide();
-        $('.product-page').hide();
-        $('.google-page').hide();
-    })
-  }
+  //  whenIndexClicked(){
+  //   $('.index-page').click(function(){
+  //       $("#main-container")
+  //       $('.youtube-page').hide();
+  //       $('.product-page').hide();
+  //       $('.google-page').hide();
+  //   })
+  // }
 
-   whenyouTubeClicked(){
-    $('.youtube-page').click(function(){
-        $('.index-page').hide();
-        $('.google-page').hide();
-        $('.product-page').hide();
-    })
-  }
+  //  whenyouTubeClicked(){
+  //   $('.youtube-page').click(function(){
+  //       $('.index-page').hide();
+  //       $('.google-page').hide();
+  //       $('.product-page').hide();
+  //   })
+  // }
   
-  whenGoogleClicked(){
-    $('.google-page').click(function(){
-      $('.index-page').hide();
-      $('.youtube-page').hide();
-      $('.product-page').hide();
-    })
-  }
+  // whenGoogleClicked(){
+  //   $('.google-page').click(function(){
+  //     $('.index-page').hide();
+  //     $('.youtube-page').hide();
+  //     $('.product-page').hide();
+  //   })
+  // }
 }
