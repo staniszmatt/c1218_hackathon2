@@ -116,9 +116,9 @@ h1 {
 
 .nav-bar-container{
     height: 10vh;
-    margin: 0px auto;
+    /* margin: 0px auto;
     padding: 2px;
-    position:fixed;
+    position:fixed; */
 }
 .row{
     position:fixed;
@@ -356,6 +356,7 @@ height: 10%;
 }
 
 
+
 /* Google Maps CSS */
 #map {
     height: 79%;
@@ -422,3 +423,68 @@ height: 10%;
     margin: 0px 0 0 0;
     background-color: blanchedalmond;
   }
+
+/* Modal Styling */
+#modal-shadow{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+    opacity: .4;
+}
+#modal-body{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	min-height: 10vmin;
+	min-width: 70vmin;
+	transform: translate(-50%, -50%);
+	background-color: white;
+    display: flex;
+    border: 1px solid black;
+    justify-content: flex-end;
+}
+#modal-message{
+    font-size: 2rem;
+    margin: auto;
+}
+
+#modal-button {
+    background-color: #cc0300;
+    font-size: 2rem;
+    width: 25%;
+    border: 1px solid black;
+}
+#modal-button:hover {
+    background-color: red;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 25%;
+    border: 1px solid black;
+}
+
+#modal-button:active {
+    background-color: rgb(126, 0, 0);
+    cursor: pointer;
+    font-size: 2rem;
+    width: 25%;
+    border: 1px solid black;
+}
+
+.modal-message {
+    padding: 1%;
+    align-self: center;
+    font-size: 21px;
+    color: red;
+    font-weight: 500;
+}
+
+/* 
+appending the divs into data container */
+.display-p-container{
+    text-align:center;
+    padding: 65px;
+
+

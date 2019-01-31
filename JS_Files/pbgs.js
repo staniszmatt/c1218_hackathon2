@@ -6,6 +6,10 @@ class PBGS_init{
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
     this.barcodeInputValue = null;
+    this.modalErrors = new Modal_error_message;
+    this.modalErrors.hideModal();	
+    // this.modalErrors.show('barcode could not be read');
+    
     //bindings
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
@@ -21,6 +25,7 @@ class PBGS_init{
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
+    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
     this.domInformation.cancleScanButton.click(this.cancleScan);
     this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
     this.domInformation.homeIcon.click(this.whenIndexClicked);
@@ -37,9 +42,11 @@ class PBGS_init{
   submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");//TODO: Go back to home screen if errors
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
+    //if the value of the barcode cannot be read, call modal
+    // this.modalErrors.show('barcode could not be read');
     this.upcScanner.processedCallBack(this.barcodeInputValue);
   }
-  cancleScan(){
+  cancelScan(){
     this.upcScanner.stopScanning();
   }
   whenCameraIsClick(){
