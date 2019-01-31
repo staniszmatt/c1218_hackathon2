@@ -1,0 +1,345 @@
+/* Table of contents:
+                Products Page               Line 128
+                youTube Page                Line 149
+                Google Maps                 Line 277
+                Reviews Page                Line 232
+                NavButtons                  Line 315
+*/
+body{
+    background:#fff;
+}
+
+.main-container {
+    height: 80vh;
+    width: 100vw; 
+}
+#main-container{
+    height:100vh;
+    width:90%;
+    margin:0 auto;
+  
+}
+h1 {
+    color: black;
+    font-size: 1.5rem;
+    font-size: red;
+    text-align: center;
+    position: relative;
+}
+.top-container {
+    height: 20vh;
+}
+
+.bg-dark {
+    position: relative;
+    bottom: 47px;
+    background-color: #1c2024;
+    position: fixed;
+    width: 100%;
+}
+#penguin-icon{
+    color:white;
+}
+
+                                /*main-section*/
+.scanner-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  video{
+      width:100%;
+  }
+
+  canvas{
+      display:none;
+  }
+  .scan-bar-container{
+      text-align:center;
+  }
+
+                                     /*search-bar*/
+  .search-bar-container {
+    height: 6vh;
+    left: 11%;
+    position: relative;
+    border: 1px solid black;
+    display: inline-flex;
+}
+
+.search-bar {
+    background-repeat: no-repeat;
+    background-position: 84%;
+    background-size: contain;
+    font-size: 1.5rem;
+    width: 59vw;
+}
+
+.cancel-container{
+    height: 10vh;
+    width: 10vh;
+    display:inline-block;
+}
+.image-first-container {
+    height: 10vh;
+    width: 10vh;
+    display:inline-block;
+}
+
+#camera-button {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.cancel-scan {
+    height: 86%;
+    width: 71%;
+    object-fit: contain;
+    cursor: pointer;
+    display: inline-block;
+}
+.submit-input {
+    cursor: pointer;
+}
+                                      /*Buttons*/
+
+.nav-bar-container{
+    height: 10vh;
+    margin: 0px auto;
+    padding: 2px;
+    position:fixed;
+}
+.row{
+    position:fixed;
+    display:flex;
+    flex-wrap:wrap;
+    left:0;
+    height: 15vh;
+}
+ 
+.row:hover{
+    transform:translateZ(0);
+    color:red;
+
+}
+
+a:hover{
+    background-color:red;
+    border-bottom: 5px solid;
+
+}
+.a{
+    position:fixed;
+    display:flex;
+    flex-wrap:wrap;
+    left:0;
+    height: 15vh;
+}
+.icon-container{
+    height: 100%;
+}
+.square{
+    height: 100%;
+    background-color: blue; 
+}
+
+.home-icon, .reviews-icon, .map-icon, .youtube-icon{
+    height:94%;
+    width:94%;
+}
+
+.image-align{
+    align-items: center;
+}
+                                    /* Products Page*/
+.product-page {
+    width: 100vw;
+    height: 100vh;
+}
+.product-container{
+    height: 85%;
+}
+.navBar-container {
+    text-align: center;
+    bottom: 10px;
+}
+.image-container{
+    height: 50%;
+}
+.product-icon {
+    height: 80%;
+    width: 80%;
+}
+#product-image-placeholder {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.info-container1{
+    height: 50%;
+}
+
+                                    /*Youtube Page*/
+ @mixin font-base {
+	padding: 0;
+	margin: 0;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+h4 {
+	@include font-base;
+}
+
+p {
+	@include font-base;
+	color: grey;
+	font-size: 0.7rem;
+}
+
+.container {
+	width: 560px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+                                /* header, */
+section {
+  
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+section {
+	top: 50px;
+}
+
+.logo {
+    width: 26%;
+    position: relative;
+    right: 5%;
+    padding: 12px;
+    margin: 16px;
+}
+
+#video {
+    padding-top:20px;
+}
+.youtube-container{
+    overflow:scroll;
+    margin-top: 327px;
+}
+.youtube-header-container{
+    width:86%;
+}
+.youtube-search-bar {
+    background-image: url(./icons/search_bar.PNG);
+    background-repeat: no-repeat;
+    background-position: 101%;
+    background-size: contain;
+    font-size: 1.5rem;
+    position: relative;
+    left: 24%;
+    bottom: 58px;
+}
+#search-bar-button-image {
+    width: 12vw;
+    height: 6vh;
+    right: 134%;
+    margin: 8px;
+    bottom: 9px;
+    position: relative;
+    cursor: pointer;
+}
+.search-image-container{
+    height: 1vh;
+    width: 4vw;
+}
+
+article {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 8px;
+	margin: 0 auto;
+	
+}
+
+article:hover{
+    border:2px solid #ff9999;
+}
+
+.thumb {
+        margin: 0px;
+        padding: 18px 0px;
+        border-radius: 8px;
+    }
+
+.details {
+   
+    padding: 0px 1px;
+}
+
+                                    /* Google Page */
+
+.google-header-container{
+position: fixed;
+background:white;
+top:0;
+}
+
+.google-logo {
+        height: 100%;
+        width: 65%;
+        position: relative;
+        object-fit: contain;
+        top: 10px;
+
+}
+
+#google-search {
+    background-image: url(./icons/search_bar.PNG);
+    background-repeat: no-repeat;
+    background-position: 101%;
+    background-size: contain;
+    font-size: 1.5rem;
+    position: relative;
+    top: 12px;
+    width: 61%;
+    left: 7%;
+}
+.search-icon{
+    width:12%;
+    margin-top:12px;
+}
+
+                                    /* Reviews Page */
+.reviews-content{
+    height: 90vh;
+    background-color: chartreuse;
+}
+                                        /*Nav Buttons*/
+.navBar-Container{
+    z-index: 100;
+    position: fixed;
+    padding: 2rem 0.5rem;
+    text-align: center;
+    background:white;
+    bottom:0;
+    box-shadow: 3px 3px 10px black;
+}
+.iconContainer img{
+    width:80%;
+}
+.penguin-logo #penguin-icon{
+    padding: 10px 0px 0px;
+}
+.penguin-logo h2{
+    text-align:center;
+}
