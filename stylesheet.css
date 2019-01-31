@@ -17,6 +17,9 @@ body{
 #index-button-container{
     height: 20%;
 }
+.scanning-main {
+    display: flex;
+}
 .main-container {
     height: 80vh;
     width: 100vw; 
@@ -36,6 +39,19 @@ h1 {
 }
 .top-container {
     height: 20vh;
+}
+
+.cancel-container{
+    height: 10vh;
+    width: 10vh;
+    display:inline-block;
+}
+.cancel-scan {
+    height: 86%;
+    width: 71%;
+    object-fit: contain;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .bg-dark {
