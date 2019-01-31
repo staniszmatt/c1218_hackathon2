@@ -1,9 +1,9 @@
-$(document).ready(initializeApp)
+// $(document).ready(initializeApp)
 
-function initializeApp(){
+// function initializeApp(){
 
-}
+// }
 
-function hoverWhenButtonsAreClicked(){
-    $('.homeIcon').
-}
+// function hoverWhenButtonsAreClicked(){
+//     $('.homeIcon').
+// }
