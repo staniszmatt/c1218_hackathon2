@@ -1,26 +1,25 @@
 // var map, infoWindow;
 // var location;
 
-// function returnData(response){
-//     location = response.location;
-//     lat = response.location.lat;
-//     lng = response.location.lng;
-//     console.log(lat);
-//     console.log(lng);
-//     createMarkers(places);
-// }
 
 
-// function testAjax(){
-//   var ajaxCallOptions = {
-//       url: "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY",
-//       method: 'post',
-//       dataType: 'json',
-//       success: returnData,
-//       key: 'AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY'
-//       }
-//       $.ajax(ajaxCallOptions);
-//   }
+function testAjax(){
+  var ajaxCallOptions = {
+      url: "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY",
+      method: 'post',
+      dataType: 'json',
+      success: returnData,
+      key: 'AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY'
+      }
+      $.ajax(ajaxCallOptions);
+  }
+  function returnData(response){
+    location = response.location;
+    lat = response.location.lat;
+    lng = response.location.lng;
+    console.log(lat);
+    console.log(lng);
+}
 
 //   function returnData(response){
 //     location = response.location;
