@@ -28,12 +28,14 @@ class PBGS_init{
     this.domInformation.mapIcon.click(this.whenGoogleClicked);
 
   }
-  initScanner(){
+  initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
   }
-  submitBarcode(){
-    console.log("Clicked Submitt");
+  submitBarcode(){ //calls with submitted by hand. 
+    console.log("Clicked Submitt");//TODO: Go back to home screen if errors
+    $("#main-container").hide();
+    $(".product-page").show();
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     this.upcScanner.processedCallBack(this.barcodeInputValue);
   }

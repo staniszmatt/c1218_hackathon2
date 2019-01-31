@@ -1,106 +1,221 @@
 <!DOCTYPE html>
 <html>
   <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!--External Links-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="stylesheet.css">
-        
-        <!--JS Files-->
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-        <script src="dist/quagga.js"></script>
-        <script src="dist/quagga.min.js"></script>
-        <script src="JS_Files/upc_scanner.js"></script>
-        <script src="JS_Files/upc_post_request.js"></script>
-        <script src="JS_Files/main.js"></script>
-       <script src="./JS_Files/landing_page.js"></script>
-       <script src="JS_Files/currentlocation.js"></script>
-       <script src="JS_Files/maplocation.js"></script>
-       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script>
+    <title>Place Searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #right-panel {
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+  #mapNavButtonsContainer{
+    margin-top:5%;
+    height: 20%;
+    background: black;
+  }
+  
+        #map {
+          height: 79%;
+          border: 2px black solid;
+          
+          
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        #right-panel {
+          font-family: 'Roboto','sans-serif';
+          line-height: 30px;
+          padding-left: 10px;
+        }
+  
+        #right-panel select, #right-panel input {
+          font-size: 15px;
+        }
+  
+        #right-panel select {
+          width: 100%;
+        }
+  
+        #right-panel i {
+          font-size: 12px;
+        }
+        #right-panel {
+          font-family: Arial, Helvetica, sans-serif;
+          position: absolute;
+          right: 5px;
+          top: 40%;
+          margin-top: -195px;
+          height: 30%;
+          width: 35%;
+          padding: 5px;
+          z-index: 5;
+          border: 1px solid #999;
+          background: #fff;
+        }
+        h2 {
+          font-size: 22px;
+          margin: 0 0 5px 0;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          height: 80%;
+          width: 100%;
+          overflow-y: scroll;
+          display: inline-block;
+        }
+        li {
+          background-color: #f1f1f1;
+          padding: 10px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 10px;
+        }
+        li:nth-child(odd) {
+          background-color: #fcfcfc;
+        }
+        #more {
+          width: 100%;
+          margin: 0px 0 0 0;
+          background-color: blanchedalmond;
+        }
+      </style>
+  
+    <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-      #right-panel select, #right-panel input {
-        font-size: 15px;
-      }
+        var map, infoWindow, service;
 
-      #right-panel select {
-        width: 100%;
-      }
+function initMap(pos) {
+  // Create the map.
+  var location = pos || {lat: 33.699, lng: -117.829};
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: location,
+    zoom: 10
+  });
 
-      #right-panel i {
-        font-size: 12px;
-      }
-      #right-panel {
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        right: 5px;
-        top: 60%;
-        margin-top: -195px;
-        height: 330px;
-        width: 200px;
-        padding: 5px;
-        z-index: 5;
-        border: 1px solid #999;
-        background: #fff;
-      }
-      h2 {
-        font-size: 22px;
-        margin: 0 0 5px 0;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        height: 271px;
-        width: 200px;
-        overflow-y: scroll;
-      }
-      li {
-        background-color: #f1f1f1;
-        padding: 10px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-      li:nth-child(odd) {
-        background-color: #fcfcfc;
-      }
-      #more {
-        width: 100%;
-        margin: 5px 0 0 0;
-      }
-    </style>
+  infoWindow = new google.maps.InfoWindow();
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      initMap(pos);
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      infoWindow.open(map);
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+
+  // Create the places service.
+  var service = new google.maps.places.PlacesService(map);
+  var getNextPage = null;
+  var moreButton = document.getElementById('more');
+  moreButton.onclick = function() {
+    moreButton.disabled = true;
+    if (getNextPage) getNextPage();
+   
+  };
+  
+  // Perform a nearby search.
+  service.textSearch(
+      {location: location, radius: 14000, type: ['store'], query: "monopoly game"},
+      function(results, status, pagination) {
+        if (status !== 'OK') return;
+
+        createMarkers(results);
+        moreButton.disabled = !pagination.hasNextPage;
+        getNextPage = pagination.hasNextPage && function() {
+          pagination.nextPage();
+        };
+      });
+      service.findPlaceFromQuery(request, function(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+
+          map.setCenter(results[0].geometry.location);
+        }
+      });
+}
+//create markets on map
+function createMarkers(places) {
+  var bounds = new google.maps.LatLngBounds();
+  var placesList = document.getElementById('places');
+
+  for (var i = 0, place; place = places[i]; i++) {
+    var image = {
+      url: place.icon,
+      size: new google.maps.Size(71, 71),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(17, 34),
+      scaledSize: new google.maps.Size(25, 25)
+    };
+
+    var marker = new google.maps.Marker({
+      map: map,
+      icon: image,
+      title: place.name,
+      position: place.geometry.location
+    });
+
+    var li = document.createElement('li');
+    li.textContent = place.name;
+    placesList.appendChild(li);
+
+    bounds.extend(place.geometry.location);
+  }
+  map.fitBounds(bounds);
+}
+
+    </script>
   </head>
   <body>
-        <div id="map"></div>
-        <div id="right-panel">
-          <h2>Results</h2>
-          <ul id="places"></ul>
-          <button id="more">More results</button>
-        </div>
+      <div id="mapConatiner"></div>
+      <div id="map"></div>
+  <div id="right-panel">
+    <h2>Results</h2>
+    <ul id="places"></ul>
+    <button id="more">More results</button>
+  </div>
+      <div class="row navBar-Container">
+          <div class="col-3 iconContainer text-center home-page-button">
+              <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
+  
+          </div>
+          <div class="col-3 iconContainer text-center reviews-page-button">
+              <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
+  
+          </div>
+          <div class="col-3 iconContainer text-center map-page-button">
+              <a href="googleMapPage.html"><img src="icons/google_map.png" class="mapIcon"></a>
+  
+          </div>
+          <div class="col-3 iconContainer text-center youtube-page-button">
+              <a href="youtubeProductPage.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
+  
+          </div>
+      </div>
+  </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script>
   </body>
 </html>
-  
