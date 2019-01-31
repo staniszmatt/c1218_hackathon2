@@ -14,7 +14,7 @@ class PBGS_init{
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
-    this.cancleScan = this.cancleScan.bind(this);
+    this.cancelScan = this.cancelScan.bind(this);
     this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
     this.whenIndexClicked= this.whenIndexClicked.bind(this);
     this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
@@ -26,7 +26,7 @@ class PBGS_init{
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.modalButton.click(this.modalErrors.clickHandle);
-    this.domInformation.cancleScanButton.click(this.cancleScan);
+    this.domInformation.cancelScanButton.click(this.cancelScan);
     this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
     this.domInformation.homeIcon.click(this.whenIndexClicked);
     this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
