@@ -35,6 +35,8 @@ class UPC_post_request{
     
     this.returnedScanData = returnedData;
     this.productData.displayData(returnedData); 
+    $("#main-container").hide();
+    $(".product-page").show();
     
   }
   /**
