@@ -11,6 +11,10 @@ class PBGS_init{
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancleScan = this.cancleScan.bind(this);
+    this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
+    this.whenIndexClicked= this.whenIndexClicked.bind(this);
+    this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
+    this.whenyouTubeClicked=this.whenyouTubeClicked.bind(this);
 
   }
 
@@ -18,11 +22,10 @@ class PBGS_init{
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.cancleScanButton.click(this.cancleScan);
-    this.domInformation.camera-button.click(this.whenCameraIsClick);
-    this.domInformation.homeIcon.click(this. whenIndexClicked);
+    this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
+    this.domInformation.homeIcon.click(this.whenIndexClicked);
     this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
-    this.domInformation.mapIcon.click(this. whenGoogleClicked);
-
+    this.domInformation.mapIcon.click(this.whenGoogleClicked);
 
   }
   initScanner(){
@@ -37,16 +40,14 @@ class PBGS_init{
   cancleScan(){
     this.upcScanner.stopScanning();
   }
-
-
- whenCameraIsClick(){
-    $("#camera-button").on("click", ()=>{
+  whenCameraIsClick(){
+    $("#camera-button").click(function(){
       console.log("penguin")
       $(".penguin-logo").slideUp();
   })
   }
 
- whenIndexClicked(){
+   whenIndexClicked(){
     $('.index-page').click(function(){
         $('.youtube-page').hide();
         $('.product-page').hide();
@@ -54,7 +55,7 @@ class PBGS_init{
     })
   }
 
-  whenyouTubeClicked(){
+   whenyouTubeClicked(){
     $('.youtube-page').click(function(){
         $('.index-page').hide();
         $('.google-page').hide();
@@ -67,7 +68,6 @@ class PBGS_init{
       $('.index-page').hide();
       $('.youtube-page').hide();
       $('.product-page').hide();
-    }
+    })
   }
-
 }
