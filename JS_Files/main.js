@@ -166,9 +166,9 @@ function startWhenloaded(){
   // testAjax();
   // returnData(response);
 }
-$("#main-container").show();
-$(".product-page").hide();
-$("#camera-button").on("click", ()=>{
-  console.log("penguin")
-  $(".penguin-logo").slideUp();
-});
+// $("#main-container").show();
+// $(".product-page").hide();
+// $("#camera-button").on("click", ()=>{
+//   console.log("penguin")
+//   $(".penguin-logo").slideUp();
+// });
