@@ -4,6 +4,7 @@ function startWhenloaded(){
   //TODO: Insert Click Handlers and editing of the DOM elements 
   let domInformation = {
     initScanButton: $("#camera-button"),
+    displayDataElm: $(".info-container1"),
     submitBarcodeNumberButton: $(".submit-input"),
     cancleScanButton: $(".cancel-scan"),
     homeIcon:$(".homeIcon"),
@@ -15,11 +16,11 @@ function startWhenloaded(){
   initialization.clickHandler();
   $("#main-container").show();
   $(".product-page").hide();
-  testAjax();
-  returnData(response);
-  whenCameraIsClick();
-  whenIndexClicked();
-  whenyouTubeClicked();
-  whenGoogleClicked();
+  // testAjax();
+  // returnData(response);
+  // whenCameraIsClick();
+  // whenIndexClicked();
+  // whenyouTubeClicked();
+  // whenGoogleClicked();
 }
 
