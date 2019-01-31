@@ -28,16 +28,10 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-#mapNavButtonsContainer{
-  margin-top:5%;
-  height: 20%;
-  background: black;
-}
 
       #map {
         height: 79%;
         border: 2px black solid;
-        
         
       }
       /* Optional: Makes the sample page fill the window. */
@@ -48,7 +42,7 @@
       }
       #right-panel {
         font-family: 'Roboto','sans-serif';
-        line-height: 30px;
+        line-height: 20px;
         padding-left: 10px;
       }
 
@@ -67,7 +61,7 @@
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         right: 5px;
-        top: 40%;
+        top: 50%;
         margin-top: -195px;
         height: 30%;
         width: 35%;
@@ -111,82 +105,29 @@
 <body>
 
 <!--YouTube Header-->
-<div id="main-container" class="google-page">
-
-    <div id="mapConatiner"></div>
-    <div id="map"></div>
-<div id="right-panel">
-  <h2>Results</h2>
-  <ul id="places"></ul>
-  <button id="more">More results</button>
-</div>
-<div id="mapNavButtonsContainer">
-  
-</div>
-</div>
-<div class="google-page-container">
-
-        <header>
-            <div class="row">
-
-            </div>
-            <div class="google-header-container">
-                <img src="icons/googlemap.png" alt="" class="google-logo">
-            </div>
-
-        </header>
-
-        <section id="video"></section>
-        <main>
-
-        </main>
-        <div class="row navBar-Container">
-                <div class="col-3 iconContainer text-center home-page-button">
-                    <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
-    
-                </div>
-                <div class="col-3 iconContainer text-center reviews-page-button">
-                    <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="reviewIcon"></a>
-    
-                </div>
-                <div class="col-3 iconContainer text-center map-page-button">
-                        <a href="google_map_page.html"><img src="icons/GoogleMapsLogo.png" class="mapIcon"></a>
-    
-                </div>
-                <div class="col-3 iconContainer text-center youtube-page-button">
-                    <a href="youtube_product_page.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
-    
-                </div>
-            </div>
-    </div> 
-    
-
-  <div id="mapConatiner"></div>
-        <div id="map"></div>
-    <div id="right-panel">
-      <h2>Results</h2>
-      <ul id="places"></ul>
-      <button id="more">More results</button>
+  <div class="google-header-container">
+    <img src="icons/googlemap.png" alt="" class="google-logo">
+  </div>
+  <div id="map"></div>
+  <div id="right-panel">
+    <h2>Results</h2>
+    <ul id="places"></ul>
+    <button id="more">More results</button>
+  </div>
+  <div class="row navBar-Container">
+    <div class="col-3 iconContainer text-center home-page-button">
+      <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
     </div>
-        <div class="row navBar-Container">
-            <div class="col-3 iconContainer text-center home-page-button">
-                <a href="index.html"><img src="icons/home.png" class="homeIcon"></a>
-    
-            </div>
-            <div class="col-3 iconContainer text-center reviews-page-button">
-                <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="homeIcon"></a>
-    
-            </div>
-            <div class="col-3 iconContainer text-center map-page-button">
-                <a href="googleMapPage.html"><img src="icons/google_map.png" class="mapIcon"></a>
-    
-            </div>
-            <div class="col-3 iconContainer text-center youtube-page-button">
-                <a href="youtubeProductPage.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
-    
-            </div>
-        </div>
+    <div class="col-3 iconContainer text-center reviews-page-button">
+      <a href="reviews_about_product_page.html"><img src="icons/reviews.png" class="reviewIcon"></a>
     </div>
+    <div class="col-3 iconContainer text-center map-page-button">
+      <a href="google_map_page.html"><img src="icons/GoogleMapsLogo.png" class="mapIcon"></a>
+    </div>
+    <div class="col-3 iconContainer text-center youtube-page-button">
+      <a href="youtube_product_page.html"> <img src="icons/youtube.png" class="youtubeIcon"></a>
+    </div>
+  </div>
 
 </body>
 </html>

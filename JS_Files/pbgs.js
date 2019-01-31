@@ -31,6 +31,8 @@ class PBGS_init{
   initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
+    $(".penguin-logo").hide();
+    $("#penguin-logo").hide();
   }
   submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");//TODO: Go back to home screen if errors
@@ -42,8 +44,6 @@ class PBGS_init{
   }
   whenCameraIsClick(){
     $("#camera-button").click(function(){
-      console.log("penguin")
-      $(".penguin-logo").slideUp();
   })
   }
 
