@@ -40,6 +40,7 @@ h1 {
 #penguin-icon{
     color:white;
 }
+
                                 /*main-section*/
 .scanner-image{
     height: 100%;
@@ -54,10 +55,6 @@ h1 {
   canvas{
       display:none;
   }
-  .image-scanner-container{
-      
-  }
-
   .scan-bar-container{
       text-align:center;
   }
@@ -127,6 +124,19 @@ h1 {
     transform:translateZ(0);
     color:red;
 
+}
+
+a:hover{
+    background-color:red;
+    border-bottom: 5px solid;
+
+}
+.a{
+    position:fixed;
+    display:flex;
+    flex-wrap:wrap;
+    left:0;
+    height: 15vh;
 }
 .icon-container{
     height: 100%;

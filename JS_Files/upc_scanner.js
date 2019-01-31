@@ -27,8 +27,7 @@ class UPC_Scanner{
         }
         console.log("Initialization finished. Ready to start");
         Quagga.start();
-
-        // Quagga.onProcessed(processedCallBack)
+        // Quagga.onProcessed(this.processedCallBack)
         Quagga.onDetected(this.processedCallBack);
     });
   }
@@ -46,6 +45,7 @@ class UPC_Scanner{
       }
     } else {
     this.barcodeNumber = returnData.codeResult.code;//"610370565025"
+    this.upc_post_request.setScanedData(this.barcodeNumber)
     }  
     this.stopScanning();
   }

@@ -7,15 +7,16 @@ class Product_page {
       lowestPrice: "",
       images: []
     };
-    this.displayTitleArray = ["Title: ", "UPC: ", "Highest Sold Price: ", "Lowest Sold Price: "]
+    this.displayTitleArray = ["Title: ", "UPC: ", "Highest Sold Price: ", "Lowest Sold Price: "];
     this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
+    this.displayData = this.displayData.bind(this);
   }
   /**
    * 
    * @param {object} dataToDisplay - passing in the data recived from post request for inormaton 
    */
   displayData(dataToDisplay){
-    
+    this.dataToDisplay = dataToDisplay;
     console.log("Data for displaying", this.dataToDisplay);
     this.dataToDisplay.title = dataToDisplay.items[0].title;
     this.dataToDisplay.upc = dataToDisplay.items[0].upc;
@@ -24,7 +25,7 @@ class Product_page {
     this.dataToDisplay.images = dataToDisplay.items[0].images;
     this.domSetupForDisplay();
   }
-
+  
   domSetupForDisplay(){
     const displayData = Object.values(this.dataToDisplay);
 
