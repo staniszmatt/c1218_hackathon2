@@ -41,7 +41,7 @@ class Product_page {
         this.displayElmToAppend.append(tempPelm);
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
-    initialization.domInformation.displayDataImgElm.attr("src", this.images[0])
+    initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
   }
   getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

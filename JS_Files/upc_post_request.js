@@ -44,5 +44,6 @@ class UPC_post_request{
   */
   errorHandler(errorData){  //TODO: setup with error handling modal
     console.log("error Data ", errorData)
+    initialization.modalErrorMessage(errorData);
   }
 }

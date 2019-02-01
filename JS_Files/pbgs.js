@@ -6,8 +6,8 @@ class PBGS_init{
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
     this.barcodeInputValue = null;
-    // this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
-    // this.modalErrors.hideModal();	
+    this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
+    this.modalErrors.hideModal();	
     // this.modalErrors.show('barcode could not be read');
     
     //bindings
@@ -15,6 +15,7 @@ class PBGS_init{
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancelScan = this.cancelScan.bind(this);
+    this.modalErrorMessage = this.modalErrorMessage.bind(this);
     // this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
     // this.whenIndexClicked= this.whenIndexClicked.bind(this);
     // this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
@@ -25,7 +26,7 @@ class PBGS_init{
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
-    // this.domInformation.modalButton.click(this.modalErrors.clickHandle);
+    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     // this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
     // this.domInformation.homeIcon.click(this.whenIndexClicked);
@@ -36,7 +37,7 @@ class PBGS_init{
   initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
-    $(".penguin-logo").slideUp(); //TODO: Add to the DOM OBject
+    // $(".penguin-logo").slideUp(); //TODO: Add to the DOM OBject
 
   }
   submitBarcode(){ //calls with submitted by hand. 
@@ -48,6 +49,10 @@ class PBGS_init{
   }
   cancelScan(){
     this.upcScanner.stopScanning();
+  }
+
+  modalErrorMessage(errorMessage){
+    this.modalErrors.show(errorMessage)
   }
   // whenCameraIsClick(){
   //   $("#camera-button").click(function(){
