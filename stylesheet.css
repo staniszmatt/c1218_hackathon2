@@ -144,17 +144,8 @@ h1 {
     height: 15vh;
 }
  
-.row:hover{
-    transform:translateZ(0);
-    color:red;
 
-}
 
-a:hover{
-    background-color:red;
-    border-bottom: 5px solid;
-
-}
 .a{
     position:fixed;
     display:flex;
@@ -174,6 +165,7 @@ a:hover{
     height:94%;
     width:94%;
 }
+
 
 .image-align{
     align-items: center;
@@ -226,11 +218,11 @@ p {
 }
 
 .container {
-	width: 560px;
-	background-color: #fff;
-	margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
 }
-
                                 /* header, */
 section {
   
@@ -257,7 +249,7 @@ section {
 }
 .youtube-container{
     overflow:scroll;
-    margin-top: 327px;
+    
 }
 .youtube-header-container{
     width:86%;
@@ -287,12 +279,11 @@ section {
 }
 
 article {
-	display: flex;
-	align-items: center;
-	padding: 8px 12px;
-	border-radius: 8px;
-	margin: 0 auto;
-	
+    display: block;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 article:hover{
@@ -323,11 +314,12 @@ height: 10%;
 }
 
 .google-logo {
-        height: 100%;
-        width: 65%;
-        position: relative;
-        object-fit: contain;
-        /* top: 10px; */
+    height: 96%;
+    width: 50%;
+    top: 9px;
+    margin: 5px 14px;
+    position: relative;
+    object-fit: contain;  
 }
 
 #google-search {
@@ -360,6 +352,7 @@ height: 10%;
     background:white;
     bottom:0;
     box-shadow: 3px 3px 10px black;
+    cursor:pointer;
 }
 .iconContainer img{
     width:80%;
@@ -371,7 +364,17 @@ height: 10%;
     text-align:center;
 }
 
+.home-Icon, .reviews-Icon, .map-Icon, .youtube-Icon{
+    transition:all 0.5s;
+    
 
+}
+.home-Icon:hover, .reviews-Icon:hover, .map-Icon:hover, .youtube-Icon:hover{
+    transition:all 0.5s;
+    transform:translateY(10px);
+    opacity: 0.7;
+
+}
 
 /* Google Maps CSS */
 #map {
@@ -503,4 +506,4 @@ appending the divs into data container */
     text-align:center;
     padding: 65px;
 
-
+}
