@@ -53,6 +53,7 @@ class PBGS_init{
   }
 
   modalErrorMessage(errorMessage){
+    //testing modal erorring
     this.modalErrors.show(errorMessage)
   }
   // whenCameraIsClick(){
