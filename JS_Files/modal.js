@@ -1,13 +1,13 @@
-// class Modal_error_message {
+class Modal_error_message {
 
-// 	constructor(){
-//     this.modalButton = $("#modal-button");
-//     this.modalShadow = $("#modal-shadow");
-//     this.modalBody= $("#modal-body");
-//     this.modalDisplay = $(".modal-message");
-// // Binding
-//     this.clickHandle = this.clickHandle.bind(this);
-//   }
+	constructor(){
+    this.modalButton = $("#modal-button");
+    this.modalShadow = $("#modal-shadow");
+    this.modalBody= $("#modal-body");
+    this.modalDisplay = $(".modal-message");
+// Binding
+    this.clickHandle = this.clickHandle.bind(this);
+  }
 
 
 show(errorMessage){
@@ -16,17 +16,17 @@ show(errorMessage){
     this.modalDisplay.text(errorMessage);
 
     
-//   }
-// hideModal(){
-//     console.log("Hide Modal");
-//     this.modalShadow.hide();
-//     this.modalBody.hide();
-//     this.errorMessage = null;
+  }
+hideModal(){
+    console.log("Hide Modal");
+    this.modalShadow.hide();
+    this.modalBody.hide();
+    this.errorMessage = null;
 
-// }
+}
 
-// clickHandle() {  
-//     console.log("modal event ", event);
-//     this.hideModal();
-//   }
-// }
+clickHandle() {  
+    console.log("modal event ", event);
+    this.hideModal();
+  }
+}
