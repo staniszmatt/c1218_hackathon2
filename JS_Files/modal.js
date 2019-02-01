@@ -12,7 +12,7 @@ class Modal_error_message {
 show(errorMessage){
     this.modalShadow.show();
     this.modalBody.show(); 
-    this.modalDisplay.text("WARNING! " + errorMessage);
+    this.modalDisplay.text(errorMessage);
     
   }
 hideModal(){
