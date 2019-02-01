@@ -36,6 +36,7 @@ class UPC_Scanner{
    * @param {Object} returnData - the scanned barcode data 
    */
   processedCallBack(returnData){
+    console.log("Test Init",initialization);
     console.log("Process Data ", returnData);
     if(!isNaN(returnData)){
       if(returnData === ""){
@@ -60,8 +61,6 @@ class UPC_Scanner{
    */
   handleError(err){
     console.log(err); //TODO: setup with errorModal
-    
-    
   }
   getBarcodeNumber(){
     return this.barcodeNumber; 

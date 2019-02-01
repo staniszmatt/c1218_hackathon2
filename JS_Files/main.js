@@ -1,5 +1,6 @@
 $(document).ready(startWhenloaded)
 let initialization = null;
+
 function startWhenloaded(){
   //TODO: Insert Click Handlers and editing of the DOM elements 
   let domInformation = {
