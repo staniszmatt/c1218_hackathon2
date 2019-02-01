@@ -7,7 +7,7 @@ class YouTube_page {
             data: {
                 part: 'snippet',
                 key: 'AIzaSyARgDW5vI8D7LugaaKcd21ORq5ILiefBxM',
-                maxResults: 20,
+                maxResults: 5,
                 q: ""
             },
             success: (data) => {
@@ -34,8 +34,6 @@ class YouTube_page {
         this.mainVid(data.items[0].id.videoId);
         $.each(data.items, function (i, item) {
             if (i != 0) {
-
-
                 console.log("our data from the parameter", data);
                 let thumb = item.snippet.thumbnails.medium.url;
                 let title = item.snippet.title;
