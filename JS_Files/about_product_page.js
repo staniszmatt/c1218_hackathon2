@@ -13,6 +13,7 @@ class Product_page {
     //bindings
     this.displayData = this.displayData.bind(this);
     this.domSetupForDisplay = this.domSetupForDisplay.bind(this);
+   
   }
   /**
    * 
@@ -42,6 +43,8 @@ class Product_page {
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
     initialization.domInformation.displayDataImgElm.attr("src", this.images[0])
+    initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
+    //TODO: add youtube funciton call funciton(gametitle)//instatntiate youtube page 
   }
   getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

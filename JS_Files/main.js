@@ -19,6 +19,7 @@ function startWhenloaded(){
   initialization.clickHandler();
   $("#main-container").show();
   $(".product-page").hide();
+  $(".youtube-page").hide();
   // testAjax();
   // returnData(response);
   // whenCameraIsClick();
