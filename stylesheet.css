@@ -55,7 +55,7 @@ h1 {
   height: 20vh;
 }
 .scan-bar-container {
-  displ
+  /* TODO: Come back to fix this */
 }
 .button-container {
   height: 10vh;
@@ -162,7 +162,6 @@ canvas {
 a:hover {
   background-color: red;
   border-bottom: 5px solid;
-
 }
 
 .a {
@@ -229,12 +228,12 @@ p {
 }
 
 .container {
-  width: 560px;
-  background-color: #fff;
-  margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
 }
-
-/* header, */
+                                /* header, */
 section {
 
   left: 0;
@@ -258,10 +257,9 @@ section {
 #video {
   padding-top: 20px;
 }
-
-.youtube-container {
-  overflow: scroll;
-  margin-top: 327px;
+.youtube-container{
+    overflow:scroll;
+    
 }
 
 .youtube-header-container {
@@ -295,12 +293,11 @@ section {
 }
 
 article {
-  display: flex;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 8px;
-  margin: 0 auto;
-
+    display: block;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 article:hover {
@@ -331,11 +328,12 @@ article:hover {
 }
 
 .google-logo {
-  height: 100%;
-  width: 65%;
-  position: relative;
-  object-fit: contain;
-  /* top: 10px; */
+    height: 96%;
+    width: 50%;
+    top: 9px;
+    margin: 5px 14px;
+    position: relative;
+    object-fit: contain;  
 }
 
 #google-search {
@@ -360,16 +358,16 @@ article:hover {
   height: 90vh;
   background-color: chartreuse;
 }
-
-/*Nav Buttons*/
-.navBar-Container {
-  z-index: 100;
-  position: fixed;
-  padding: 2rem 0.5rem;
-  text-align: center;
-  background: white;
-  bottom: 0;
-  box-shadow: 3px 3px 10px black;
+                                        /*Nav Buttons*/
+.navBar-Container{
+    z-index: 100;
+    position: fixed;
+    padding: 2rem 0.5rem;
+    text-align: center;
+    background:white;
+    bottom:0;
+    box-shadow: 3px 3px 10px black;
+    cursor:pointer;
 }
 
 .iconContainer img {
@@ -387,6 +385,18 @@ article:hover {
   width: 100vw;
   height: 42vh;
   background-color: black;
+}
+
+.home-Icon, .reviews-Icon, .map-Icon, .youtube-Icon{
+    transition:all 0.5s;
+    
+
+}
+.home-Icon:hover, .reviews-Icon:hover, .map-Icon:hover, .youtube-Icon:hover{
+    transition:all 0.5s;
+    transform:translateY(10px);
+    opacity: 0.7;
+
 }
 
 /* Google Maps CSS */

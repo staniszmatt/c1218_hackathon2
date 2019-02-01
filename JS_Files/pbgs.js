@@ -5,6 +5,7 @@ class PBGS_init{
   constructor(domInformation){
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
+    this.youTubeSetup = new YouTube_page();
     this.barcodeInputValue = null;
     this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
     this.modalErrors.hideModal();	
@@ -37,7 +38,7 @@ class PBGS_init{
   initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
-    // $(".penguin-logo").slideUp(); //TODO: Add to the DOM OBject
+    //$(".penguin-logo").slideUp(); //TODO: Add to the DOM OBject
 
   }
   submitBarcode(){ //calls with submitted by hand. 
