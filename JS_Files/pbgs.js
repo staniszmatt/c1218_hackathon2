@@ -8,7 +8,7 @@ class PBGS_init{
     this.youTubeSetup = new YouTube_page();
     this.barcodeInputValue = null;
     this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
-    // this.modalErrors.hideModal();	
+    this.modalErrors.hideModal();	
     // this.modalErrors.show('barcode could not be read');
     
     //bindings
@@ -16,6 +16,7 @@ class PBGS_init{
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancelScan = this.cancelScan.bind(this);
+    this.modalErrorMessage = this.modalErrorMessage.bind(this);
     // this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
     // this.whenIndexClicked= this.whenIndexClicked.bind(this);
     // this.whenGoogleClicked=this.whenGoogleClicked.bind(this);
@@ -49,6 +50,10 @@ class PBGS_init{
   }
   cancelScan(){
     this.upcScanner.stopScanning();
+  }
+
+  modalErrorMessage(errorMessage){
+    this.modalErrors.show(errorMessage)
   }
   // whenCameraIsClick(){
   //   $("#camera-button").click(function(){
