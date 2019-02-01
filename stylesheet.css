@@ -144,17 +144,8 @@ h1 {
     height: 15vh;
 }
  
-.row:hover{
-    transform:translateZ(0);
-    color:red;
 
-}
 
-a:hover{
-    background-color:red;
-    border-bottom: 5px solid;
-
-}
 .a{
     position:fixed;
     display:flex;
@@ -373,7 +364,17 @@ height: 10%;
     text-align:center;
 }
 
+.home-Icon, .reviews-Icon, .map-Icon, .youtube-Icon{
+    transition:all 0.5s;
+    
 
+}
+.home-Icon:hover, .reviews-Icon:hover, .map-Icon:hover, .youtube-Icon:hover{
+    transition:all 0.5s;
+    transform:translateY(10px);
+    opacity: 0.7;
+
+}
 
 /* Google Maps CSS */
 #map {
