@@ -19,6 +19,7 @@
    <!-- <script src="JS_Files/currentlocation.js"></script> -->
    <!-- <script src="JS_Files/maplocation.js"></script> -->
    <script src="JS_Files/upc_post_request.js"></script>
+   <script src="JS_Files/modal.js"></script>
    <script src="JS_Files/pbgs.js"></script>
    <script src="JS_Files/about_product_page.js"></script>
    <script src="JS_Files/main.js"></script>
@@ -45,7 +46,7 @@
          </div>
          <div class="scanner-buttons">
             <div class="cancel-container">
-               <img class="cancel-scan" src="icons/cancel.png" >
+               <img class="cancel-scan" src="icons/cancel.png">
             </div>
             <div class="scan-bar-container">
                <div class="image-first-container">
@@ -66,7 +67,7 @@
       <div class="product-container">
          <div class="col-12 image-container text-center">
 
-               <!-- <a id="product-image-placeholder" href="" download> -->
+            <!-- <a id="product-image-placeholder" href="" download> -->
             <img id="product-image-placeholder" src="" class="homeIcon">
          </div>
          <div class="col-12 info-container1"></div>
@@ -87,9 +88,11 @@
                <div class="youtube-log">
                   <header id="youtube-header">
                      <div class="review-page"></div>
+
                      <main> 
-                        <!--Data will be appended here from API DATA-->
+   <!--Data will be appended here from API DATA-->
                      </main>
+
                </div>
             </div>
          </div>
@@ -124,5 +127,12 @@
          </div>
       </div>
       <div class="review-page"></div>
-
+<!--Modal Error Page-->
+   <div id="modal-shadow"></div>
+   <div id="modal-body">
+      <output class="modal-message"></output>
+      <button type="button" class="btn-modal" id="modal-button">OK</button>
+   </div>
+</body>
 </html>
+

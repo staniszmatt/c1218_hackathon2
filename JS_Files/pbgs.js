@@ -7,7 +7,7 @@ class PBGS_init{
     this.upcScanner = new UPC_Scanner();
     this.youTubeSetup = new YouTube_page();
     this.barcodeInputValue = null;
-    // this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
+    this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
     // this.modalErrors.hideModal();	
     // this.modalErrors.show('barcode could not be read');
     
@@ -26,7 +26,7 @@ class PBGS_init{
   clickHandler(){
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
-    // this.domInformation.modalButton.click(this.modalErrors.clickHandle);
+    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     // this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
     // this.domInformation.homeIcon.click(this.whenIndexClicked);

@@ -7,6 +7,7 @@ class UPC_Scanner{
     //Binding Section
     this.processedCallBack = this.processedCallBack.bind(this);
     this.initScanner = this.initScanner.bind(this);
+    this.handleError = this.handleError.bind(this);
   }
 
   initScanner(){  //Initialize Quagga scanner and request access to camera
@@ -38,6 +39,7 @@ class UPC_Scanner{
     console.log("Process Data ", returnData);
     if(!isNaN(returnData)){
       if(returnData === ""){
+      
         console.log("Input a number!") //TODO: Add to error modal
       }else {
       this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!
@@ -57,7 +59,9 @@ class UPC_Scanner{
    * @param {Object} err - If scanner errors, will return error object information 
    */
   handleError(err){
-    console.log(err); //TODO: setup with errorModal 
+    console.log(err); //TODO: setup with errorModal
+    
+    
   }
   getBarcodeNumber(){
     return this.barcodeNumber; 

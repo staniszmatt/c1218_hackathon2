@@ -9,10 +9,12 @@
 //     this.clickHandle = this.clickHandle.bind(this);
 //   }
 
-// show(errorMessage){
-//     this.modalShadow.show();
-//     this.modalBody.show(); 
-//     this.modalDisplay.text("WARNING! " + errorMessage);
+
+show(errorMessage){
+    this.modalShadow.show();
+    this.modalBody.show(); 
+    this.modalDisplay.text(errorMessage);
+
     
 //   }
 // hideModal(){
