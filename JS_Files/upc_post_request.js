@@ -20,7 +20,7 @@ class UPC_post_request{
 		console.log("Post Serial number", this.upcSerialNumber) 
 		var requestScannedInformation = { 
 			method: "get",
-			url: "proxy.php?upc=" + this.upcSerialNumber,
+			url: "proxy.php?upc=" + this.upcSerialNumber, //Call out proxy.php to access API
 			error: this.errorHandler,
 			success: this.handleData, 
 			dataType: "json"

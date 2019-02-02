@@ -3,11 +3,13 @@ class UPC_Scanner{
   constructor(){ 
     this.barcodeNumber = null;
     this.barCodeInput = null; 
+    this.cameraActivated = false;  //Determins if camera has been activated, if not, no need to shut off. 
     this.upc_post_request = new UPC_post_request();
     //Binding Section
     this.processedCallBack = this.processedCallBack.bind(this);
     this.initScanner = this.initScanner.bind(this);
     this.handleError = this.handleError.bind(this);
+    this.stopScanning = this.stopScanning.bind(this);
   }
 
   initScanner(){  //Initialize Quagga scanner and request access to camera
@@ -28,7 +30,6 @@ class UPC_Scanner{
         }
         console.log("Initialization finished. Ready to start");
         Quagga.start();
-        // Quagga.onProcessed(this.processedCallBack)
         Quagga.onDetected(this.processedCallBack);
     });
   }
@@ -53,8 +54,13 @@ class UPC_Scanner{
     this.stopScanning();
   }
   stopScanning(){
+    console.log("camera truthy ", this.cameraActivated);
+    if (!this.cameraActivated){
+      return;
+    } else {
     Quagga.offDetected();
     Quagga.stop();
+    }
   }
   /** 
    * @param {Object} err - If scanner errors, will return error object information 
