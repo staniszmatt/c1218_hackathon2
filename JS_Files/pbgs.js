@@ -30,7 +30,7 @@ class PBGS_init{
     this.domInformation.modalButton.click(this.modalErrors.clickHandle);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     // this.domInformation.whenCameraIsClick.click(this.whenCameraIsClick);
-    // this.domInformation.homeIcon.click(this.whenIndexClicked);
+    // this.domInformation.homeIcon.click(this.whenHomeButtonClicked);
     // this.domInformation.youtubeIcon.click(this.whenyouTubeClicked);
     // this.domInformation.mapIcon.click(this.whenGoogleClicked);
 
@@ -62,15 +62,29 @@ class PBGS_init{
   // })
   // }
 
-  //  whenIndexClicked(){
-  //   $('.index-page').click(function(){
-  //       $("#main-container")
-  //       $('.youtube-page').hide();
-  //       $('.product-page').hide();
-  //       $('.google-page').hide();
-  //   })
-  // }
+    // whenHomeButtonClicked = () =>{
+    //   $('.home-page-button').click(function(){
+    //     window.location.href='.index-page'
+    //   })
+    // }
 
+    // whenYouTubeButtonClicked = () => {
+    //   $('.youtube-page-button').click(function(){
+    //     window.location.href='.youtube-page'
+    //   })
+    // }
+
+    // whenReviewsButtonClicked = () => {
+    //   $('.reviews-page-button').click(function(){
+    //     window.location.href='.product-page'
+    //   })
+    // }
+
+    // whenGoogleButtonClicked =() =>{
+    //   $('.map-page-button').click(function(){
+    //     window.location.href='.google-page'
+    //   })
+    // }
   //  whenyouTubeClicked(){
   //   $('.youtube-page').click(function(){
   //       $('.index-page').hide();
