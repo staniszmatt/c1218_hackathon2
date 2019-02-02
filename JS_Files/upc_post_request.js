@@ -43,6 +43,13 @@ class UPC_post_request{
   * @param {Object} errorData - if errored, returns error data. 
   */
   errorHandler(errorData){  //TODO: setup with error handling modal
+    //if error data is a string, then
+    // if error data is a 
+
+    // (if errorData['total'] === 0 ){
+    //  initialization.modal.show('Scan did not go through') 
+    
+    // }
     console.log("error Data ", errorData)
     initialization.modalErrorMessage(errorData);
   }
