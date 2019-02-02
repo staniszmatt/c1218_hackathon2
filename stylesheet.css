@@ -560,7 +560,7 @@ appending the divs into data container */
 }
 
 .info-container1 {
-  height: 60vh;
+  height: 50vh;
   display: flex;
   align-items: center;
 }
