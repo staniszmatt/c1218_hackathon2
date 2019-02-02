@@ -140,9 +140,9 @@ canvas {
 
 .nav-bar-container {
   height: 10vh;
-  /* margin: 0px auto;
+  margin: 0px auto;
     padding: 2px;
-    position:fixed; */
+    position:fixed;
 }
 
 .row {
@@ -153,16 +153,6 @@ canvas {
   height: 15vh;
 }
 
-.row:hover {
-  transform: translateZ(0);
-  color: red;
-
-}
-
-a:hover {
-  background-color: red;
-  border-bottom: 5px solid;
-}
 
 .a {
   position: fixed;
@@ -552,9 +542,27 @@ appending the divs into data container */
 .product-display {
   font-size: 1em;
   color: black;
-  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family:'Overlock', cursive;
+}
+.card {
+  width: 74vw;
+  position: relative;
+  margin: 90px auto;
+  border: 2px solid black;
+  height: 50vh;
 }
 
+.card-title{
+  text-align:center;
+  font-family:'Overlock', cursive;
+  font-weight:bold;
+}
+span:hover{
+  background:yellow;
+}
 .image-container {
   height: 40vh;
 }
