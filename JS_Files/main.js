@@ -32,6 +32,7 @@ function startWhenloaded(){
 }
 
 //TODO: REMOVE Temp Pass data after testing
+let testBadScan = {"code":"OK","total":0,"offset":0,"items":[]}
 let testData = {
   "code": "OK",
   "total": 1,

@@ -43,7 +43,7 @@ class UPC_Scanner{
       if(returnData === ""){
       
         console.log("Input a number!") //TODO: Add to error modal
-      }else {
+      }  {
       this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!
       this.upc_post_request.setScanedData(this.barcodeNumber);
       }
