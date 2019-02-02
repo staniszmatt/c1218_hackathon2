@@ -8,8 +8,8 @@ function startWhenloaded(){
     submitNumberInput: $(".search-bar"),
     displayDataElm: $(".info-container1"),
     displayDataImgElm: $("#product-image-placeholder"),
-    modalButton: $('#modal-button'),
-    submitBarcodeNumberButton: $(".submit-input"),
+    modalButton: $('.btn-modal'),
+    submitBarcodeNumberButton: $("#search-bar-button-image"),
     cancelScanButton: $(".cancel-scan"),
     homeIcon:$(".homeIcon"),
     reviewIcon:$(".reviewIcon"),
@@ -18,9 +18,10 @@ function startWhenloaded(){
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
-  $("#main-container").show();
+  $(".index-page").show();
   $(".product-page").hide();
   $(".youtube-page").hide();
+  $(".google-page").hide();
   // testAjax();
   // returnData(response);
   // whenCameraIsClick();

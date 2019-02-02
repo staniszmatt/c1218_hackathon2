@@ -38,11 +38,11 @@ class PBGS_init{
   initScanner(){ //calls when scan is submitted
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
-    //$(".penguin-logo").slideUp(); //TODO: Add to the DOM OBject
-
+    this.upcScanner.cameraActivated = true;
   }
   submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");//TODO: Go back to home screen if errors
+    this.upcScanner.stopScanning();
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     //if the value of the barcode cannot be read, call modal
     // this.modalErrors.show('barcode could not be read');
