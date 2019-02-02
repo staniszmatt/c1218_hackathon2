@@ -17,7 +17,9 @@ class YouTube_page {
         this.loadAndReady = this.loadAndReady.bind(this);
         this.resultsLoop = this.resultsLoop.bind(this);
     };
-
+ /**
+   * @param {string} query-search parameters for ajax calls 
+   */
     loadAndReady(query) {
         this.options.data.q = query;
         this.loadVids();
@@ -26,10 +28,16 @@ class YouTube_page {
     loadVids() {
         $.ajax(this.options);
     }
+     /**
+   * @param {string} id-data passed in from object to retrieve the current video
+   */
     mainVid(id) {
         $('#video').html(
             `<iframe width="350" height="250" id="youtube-video" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
     }
+      /**
+   * @param {string} id-data passed in from object to retrieve the current video
+   */
     resultsLoop(data) {
         this.mainVid(data.items[0].id.videoId);
         $.each(data.items, function (i, item) {

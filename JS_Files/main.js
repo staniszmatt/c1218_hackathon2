@@ -11,10 +11,11 @@ function startWhenloaded(){
     modalButton: $('#modal-button'),
     submitBarcodeNumberButton: $(".submit-input"),
     cancelScanButton: $(".cancel-scan"),
-    homeIcon:$(".homeIcon"),
-    reviewIcon:$(".reviewIcon"),
-    mapIcon:$(".mapIcon"),
-    youtubeIcon:$(".youtubeIcon")
+    homeIcon:$(".home-page-button"),
+    reviewIcon:$(".reviews-page-button"),
+    mapIcon:$(".map-page-button"),
+    youtubeIcon:$(".youtube-page-button"),
+
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
