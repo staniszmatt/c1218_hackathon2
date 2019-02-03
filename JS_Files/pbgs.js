@@ -31,7 +31,6 @@ class PBGS_init {
     this.domInformation.reviewIcon.click(this.reviewsButtonClicked);
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
-
   }
   initScanner() { //calls when scan request button is pressed
     console.log("Clicked InitScanner");

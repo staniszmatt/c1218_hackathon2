@@ -64,6 +64,7 @@ class YouTube_page {
          this.mainVid(id);
       });
       // Hiding display after information is loaded. 
+      initialization.onNavClick();
       initialization.domInformation.youtubeDisplayPage.hide();
    }
 }
