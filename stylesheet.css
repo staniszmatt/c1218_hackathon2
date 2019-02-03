@@ -191,7 +191,7 @@ canvas {
 }
 
 #product-image-placeholder {
-  height: 100%;
+  height: 90%;
   width: 100%;
   object-fit: contain;
 }
@@ -212,6 +212,9 @@ p {
   @include font-base;
   color: grey;
   font-size: 0.7rem;
+}
+.display-p-container p:first-child{
+  color: red;
 }
 
 .container {
@@ -525,7 +528,7 @@ appending the divs into data container */
 /* Products Page*/
 .product-page {
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
 }
 
 
@@ -560,6 +563,8 @@ span:hover{
 }
 .image-container {
   height: 40vh;
+  display: flex;
+  align-items: center;
 }
 
 .info-container1 {
