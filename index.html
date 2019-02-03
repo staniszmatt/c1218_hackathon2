@@ -4,6 +4,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="stylesheet.css">
    <!--JS Files-->
@@ -26,9 +27,14 @@
    <title>Penguin Board Game Scanner</title>
 </head>
 <body>
-   <div class="alert alert-primary header-style" role="alert">
-         <img id="penguin-icon" src="./icons/penguin_logo.png" alt="">
+   <div class="search" role="alert">
+      <h5 class="app-title">Penguin Board Game Scanner</h5>
+      <div class="banner-logo-container">
+         <img id="penguin-icon" src="./icons/penguin.png" alt="">
+         <!-- <img id="penguin-icon" src="./icons/you_are_here.png" > -->
    </div>
+</div>  
+</div>
    <!-- Main Page -->
    <div class="index-page">
       <div class="head-container">
@@ -45,17 +51,10 @@
                   <div class="button-container">
                      <img class="cancel-scan" src="icons/cancel.png" >
                   </div>
-                  <div class="image-first-container">
-                     <img id="camera-button" src="icons/camera.png">
-                  </div>
+                
                </div>
             </div>
-         <div class="search-bar-container">
-            <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
-            <div class="search-image-container">
-               <img id="search-bar-button-image" src="icons/search.PNG">
-            </div>
-         </div>
+       
          </main>
    </div>
    <!--Product Page-->
@@ -65,25 +64,15 @@
        </div>
       <div class="col-12 info-container1"></div>
    </div>  -->
-
-
-
    <div class="card product-page" style="width: 18rem;">
       <img id="product-image-placeholder" src="" class="homeIcon card-img-top"> 
       <div class="card-body">
         <!-- <h5 class="card-title"></h5> -->
         <div class="col-12 info-container1">
-        <button class="display-page-button">Informaiton</button>
+        <button class="display-page-button">Information</button>
       </div>
       </div>
     </div>
-
-
-
-
-
-
-
    <!-- <div class="card product-page">
       <img id="card-img-top product-image-placeholder" src="" class="homeIcon">
       <div class="card-body">
@@ -98,7 +87,7 @@
    <!-- Youtube Page-->
     <div class="youtube-page">
       <div class="youtube-header-container">
-         <img src="icons/youtube-logo.png" alt="" class="google-logo">
+         <img src="icons/youtube-logo.png" alt="" class="youtube-logo">
          <section id="video"></section>
       </div>
       <div class="container youtube-container">
@@ -131,20 +120,17 @@
          </div>
       </div>
    <!-- Button Container -->
-   <!-- <div class="row navBar-Container">
-         <div class="col-3 iconContainer text-center home-page-button">
-            <img src="icons/home.png" class="home-Icon">
+   <div id="activate-search-bar-container" class="navBar-Container">
+         <div class="search-bar-container">
+            <div class="image-first-container">
+               <img id="camera-button" src="icons/camera.png">
+            </div>
+            <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
+            <div class="search-image-container">
+               <img id="search-bar-button-image" src="icons/magnifying-glass.png">
+            </div>
          </div>
-         <div class="col-3 iconContainer text-center reviews-page-button">
-            <img src="icons/reviews.png" class="reviews-Icon">
-         </div>
-         <div class="col-3 iconContainer text-center map-page-button">
-            <img src="icons/GoogleMapsLogo.png" class="map-Icon">
-         </div>
-         <div class="col-3 iconContainer text-center youtube-page-button">
-            <img src="icons/youtube.png" class="youtube-Icon">
-         </div>
-      </div> -->
+   <div class="row">
       <div class="review-page"></div>
       <div class="row navBar-Container">
          <div class="col-3 iconContainer text-center home-page-button line">
@@ -161,27 +147,20 @@
          </div>
       </div>
       <div class="review-page"></div>
+   </div>
 <!--Modal Error Page-->
-   <!-- <div id="modal-shadow"></div>
-   <div id="modal-body">
-      <output class="modal-message"></output>
-      <button type="button" class="btn-modal" id="modal-button">OK</button>
-   </div> -->
    <div id="modal-shadow"></div>
    <div class="modal">
       <div class="modal-dialog modal-dialog-centered">
          <div class="modal-content">
             <div class="modal-header">
                   <h5 class="modal-title">ERROR MESSAGE</h5>
-                 
             </div>
             <div class="modal-body"></div>
             <div class="modal-footer">
                   <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal">Close</button>
-           
          </div>
       </div>
-
    </div>
    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -204,4 +183,3 @@
     </div> -->
 </body>
 </html>
-
