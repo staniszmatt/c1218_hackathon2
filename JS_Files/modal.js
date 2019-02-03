@@ -7,7 +7,7 @@ class Modal_error_message {
 
     this.modalButton = $("#modal-button");
     this.modalShadow = $("#modal-shadow");
-    this.modalBody = $('.modal')
+    this.modalBody = $("#modal-body")
     this.modalDisplay = $(".modal-body");
 // Binding
     this.clickHandle = this.clickHandle.bind(this);
@@ -19,8 +19,6 @@ show(errorMessage){
     this.modalBody.show(); 
     this.modalDisplay.text(errorMessage);
     console.log('went through');
-   
-
   }
 hideModal(){
     console.log("Hide Modal");
