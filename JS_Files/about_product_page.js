@@ -32,8 +32,10 @@ class Product_page {
   }
   
   domSetupForDisplay(){
+    this.displayElmToAppend.remove(); //clear previous elm data 
+    this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
     const displayData = Object.values(this.dataToDisplay);
-
+    
     for (let dataIndex = 0; dataIndex < displayData.length; dataIndex++){
       let tempKeyName = this.getKeyByValue(this.dataToDisplay, displayData[dataIndex]).toUpperCase();
       let tempPelm = $("<p>")
