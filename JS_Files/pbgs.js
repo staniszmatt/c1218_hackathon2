@@ -9,7 +9,7 @@ class PBGS_init{
     this.barcodeInputValue = null;
     this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
     this.modalErrors.hideModal();	
-    
+    // this.modalErrors.show('this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!');
     //bindings
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);

@@ -470,7 +470,11 @@ li:nth-child(odd) {
   opacity: .4;
 }
 
-#modal-body {
+.modal-title{
+  color:red;
+
+}
+/* #modal-body {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -516,7 +520,7 @@ li:nth-child(odd) {
   align-self: center;
   font-size: 21px;
   color: red;
-  font-weight: 500;
+  font-weight: 500; */
 }
 
 /* 
