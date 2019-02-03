@@ -30,9 +30,7 @@ class UPC_post_request{
   /**
   * @param {Object} returnedData - Returned data from UPC lookup 
   */
-  handleData(returnedData){
-    console.log("This is Returned Data ", returnedData);
-    //if the returned data contains total= 0, then run the error saying "upc was not read correctly. try again"
+  handleData(returnedData){   
     this.returnedScanData = returnedData;
     if (returnedData['total'] === 0){
       this.errorHandler();
@@ -45,7 +43,6 @@ class UPC_post_request{
    
     $(".index-page").hide();
     $(".product-page").show();
-    
   }
   /**
   * @param {Object} errorData - if errored, returns error data. 

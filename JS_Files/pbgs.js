@@ -1,31 +1,28 @@
-class PBGS_init{
+class PBGS_init {
   /**
    * @param {Object} domInformation - DOM information of buttons and access to elements needed. 
    */
-  constructor(domInformation){
+  constructor(domInformation) {
     this.domInformation = domInformation;
     this.upcScanner = new UPC_Scanner();
     this.youTubeSetup = new YouTube_page();
     this.barcodeInputValue = null;
-    this.modalErrors = new Modal_error_message(); //TODO: Fix undefined
-    this.modalErrors.hideModal();	
-    
+    this.modalErrors = new Modal_error_message();
+    this.modalErrors.hideModal();
     //bindings
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
     this.submitBarcode = this.submitBarcode.bind(this);
     this.cancelScan = this.cancelScan.bind(this);
-    // this.whenCameraIsClick =this.whenCameraIsClick.bind(this);
-    this.indexButtonClicked= this.indexButtonClicked.bind(this);
-    this.youTubeButtonClicked=this.youTubeButtonClicked.bind(this);
-    this.reviewsButtonClicked=this.reviewsButtonClicked.bind(this);
-    this.mapButtonClicked=this.mapButtonClicked.bind(this);
-    this.hideAllPages=this.hideAllPages.bind(this);
-    this.displayPage=this.displayPage.bind(this);
-
+    this.modalErrorMessage = this.modalErrorMessage.bind(this);
+    this.indexButtonClicked = this.indexButtonClicked.bind(this);
+    this.youTubeButtonClicked = this.youTubeButtonClicked.bind(this);
+    this.reviewsButtonClicked = this.reviewsButtonClicked.bind(this);
+    this.mapButtonClicked = this.mapButtonClicked.bind(this);
+    this.hideAllPages = this.hideAllPages.bind(this);
+    this.displayPage = this.displayPage.bind(this);
   }
-
-  clickHandler(){
+  clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.modalButton.click(this.modalErrors.clickHandle);
@@ -34,9 +31,9 @@ class PBGS_init{
     this.domInformation.reviewIcon.click(this.reviewsButtonClicked);
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
- 
+
   }
-  initScanner(){ //calls when scan is submitted
+  initScanner() { //calls when scan request button is pressed
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
     this.upcScanner.cameraActivated = true;
@@ -51,45 +48,34 @@ class PBGS_init{
       this.upcScanner.processedCallBack(this.barcodeInputValue);
     }
     this.upcScanner.stopScanning();
-  
   }
-  cancelScan(){
+  cancelScan() {
     this.upcScanner.stopScanning();
   }
-
-
-  // whenCameraIsClick(){
-  //   $("#camera-button").click(function(){
-  //     console.log("penguin")
-  //     $(".penguin-logo").slideUp();
-  // })
-  
-   hideAllPages(){
-     $('.index-page').hide();
-     $('.google-page').hide();
-     $('.youtube-page').hide();
-     $('.product-page').hide();
-   }
-
-    displayPage(pageToShow){
-      this.hideAllPages();
-      $(pageToShow).show();
-    }
-
-  indexButtonClicked(){
-      this.displayPage('.index-page');
+  modalErrorMessage(errorMessage) {
+    this.modalErrors.show(errorMessage)
   }
- 
-  youTubeButtonClicked(){
-      this.displayPage('.youtube-page');
+  hideAllPages() {
+    this.domInformation.indexDisplayPage.hide();
+    this.domInformation.productDisplayPage.hide();
+    this.domInformation.youtubeDisplayPage.hide();
+    this.domInformation.googleDisplayPage.hide();
   }
-  reviewsButtonClicked(){
-      this.displayPage('.product-page');
+  displayPage(pageToShow) {
+    this.hideAllPages();
+    pageToShow.show();
   }
-  mapButtonClicked(){
-      this.displayPage('.google-page');
+  indexButtonClicked() {
+    this.displayPage(this.domInformation.indexDisplayPage);
   }
-
+  youTubeButtonClicked() {
+    this.displayPage(this.domInformation.youtubeDisplayPage);
+    //function to call youtube load page. 
+  }
+  reviewsButtonClicked() {
+    this.displayPage(this.domInformation.productDisplayPage);
+  }
+  mapButtonClicked() {
+    this.displayPage(this.domInformation.googleDisplayPage);
+  }
 }
-
-
