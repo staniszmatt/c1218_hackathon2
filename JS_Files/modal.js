@@ -17,7 +17,7 @@ show(errorMessage){
     
     this.modalShadow.show();
     this.modalBody.show(); 
-    this.modalDisplay.text('this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!');
+    this.modalDisplay.text(errorMessage);
     console.log('went through');
    
 
