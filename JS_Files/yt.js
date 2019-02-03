@@ -64,8 +64,6 @@ class YouTube_page {
             this.mainVid(id);
         });
     }
-}
-   }
    loadVids() {
       $.ajax(this.options);
    }
