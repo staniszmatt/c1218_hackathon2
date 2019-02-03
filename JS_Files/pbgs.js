@@ -38,16 +38,20 @@ class PBGS_init {
     this.upcScanner.initScanner();
     this.upcScanner.cameraActivated = true;
   }
-  submitBarcode() { //calls with click to submit a number typed in input box. 
-    console.log("Clicked Submitt"); //TODO: Go back to home screen if errors
-    this.upcScanner.stopScanning();
+  submitBarcode(){ //calls with submitted by hand. 
+    console.log("Clicked Submitt");//TODO: Go back to home screen if errors
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
-    this.upcScanner.processedCallBack(this.barcodeInputValue);
+    if(this.barcodeInputValue === ""){
+      this.modalErrors.show("Input a number!");
+    }
+    else{
+      this.upcScanner.processedCallBack(this.barcodeInputValue);
+    }
+    this.upcScanner.stopScanning();
   }
   cancelScan() {
     this.upcScanner.stopScanning();
   }
-
   modalErrorMessage(errorMessage) {
     this.modalErrors.show(errorMessage)
   }
