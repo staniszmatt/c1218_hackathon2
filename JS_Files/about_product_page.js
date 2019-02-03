@@ -43,7 +43,7 @@ class Product_page {
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
     initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
-    //TODO: add youtube funciton call funciton(gametitle)//instatntiate youtube page 
+    initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title); 
   }
   getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);

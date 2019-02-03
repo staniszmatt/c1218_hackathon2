@@ -147,8 +147,8 @@ canvas {
 .nav-bar-container {
   height: 10vh;
   margin: 0px auto;
-    padding: 2px;
-    /* position:fixed; */
+  padding: 2px;
+  /* position:fixed; */
 }
 
 .row {
@@ -191,7 +191,7 @@ canvas {
 }
 
 #product-image-placeholder {
-  height: 100%;
+  height: 90%;
   width: 100%;
   object-fit: contain;
 }
@@ -212,6 +212,9 @@ p {
   @include font-base;
   color: grey;
   font-size: 0.7rem;
+}
+.display-p-container p:first-child{
+  color: red;
 }
 
 .container {
@@ -300,7 +303,7 @@ article:hover {
 
 /* Google Page */
 
-.google-header-container {
+.youtube-header-container {
   /* position: fixed; */
   display:
     block;
@@ -341,10 +344,11 @@ article:hover {
   height: 90vh;
   background-color: chartreuse;
 }
-                                        /*Nav Buttons*/
+
+/*Nav Buttons*/
 .navBar-Container{
     z-index: 100;
-    /* position: fixed; */
+    position: fixed;
     padding: 2rem 0.5rem;
     text-align: center;
     background:white;
@@ -355,6 +359,23 @@ article:hover {
     margin: unset;
 }
 
+.display-page-button {
+  border-top: 1.5px solid #e88e2e;
+  background: -webkit-linear-gradient(top, yellow, green);
+  border-radius: 5px;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: #2417e6;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  outline: none;
+  width: 70vw;
+  font-weight: unset;
+}
 .iconContainer img {
   width: 80%;
 }
@@ -376,6 +397,14 @@ article:hover {
     transition:all 0.5s;
     
 
+}
+.youtube-page {
+  width: 100vw;
+  /* height: 100vh; */
+}
+.youtube-main {
+  overflow: scroll;
+  margin-bottom: 15vh;
 }
 .home-Icon:hover, .reviews-Icon:hover, .map-Icon:hover, .youtube-Icon:hover{
     transition:all 0.5s;
@@ -527,33 +556,34 @@ li:nth-child(odd) {
 appending the divs into data container */
 
 /* Products Page*/
-.product-page {
-  width: 100vw;
-  height: 100vh;
+div .product-page {
+  width: 0;
+  height: 85vh;
 }
 
 
 .display-p-container {
-  text-align: center;
-  width: 100%;
+  margin: 9px;
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .product-display {
-  font-size: 1em;
+  font-size: 11px;
   color: black;
   letter-spacing: 1px;
   line-height: 1.5;
-  font-weight: 600;
-  font-family:'Overlock', cursive;
 }
-.card {
-  width: 74vw;
+div .card {
+  width: 90vw;
   position: relative;
-  margin: 90px auto;
+  margin: 15px auto;
   border: 2px solid black;
-  height: 50vh;
+  height: 80vh;
 }
-
+div .card-body {
+  height: 40vh;
+}
 .card-title{
   text-align:center;
   font-family:'Overlock', cursive;
@@ -564,10 +594,12 @@ span:hover{
 }
 .image-container {
   height: 40vh;
+  display: flex;
+  align-items: center;
 }
 
 .info-container1 {
   height: 50vh;
-  display: flex;
+  display: block;
   align-items: center;
 }

@@ -2,11 +2,13 @@ $(document).ready(startWhenloaded)
 let initialization = null;
 
 function startWhenloaded(){
-  //TODO: Insert Click Handlers and editing of the DOM elements 
-  let domInformation = {
+
+  let domInformation = { //Passes all elments for click handling and editing that is needed. 
     initScanButton: $("#camera-button"),
     submitNumberInput: $(".search-bar"),
     displayDataElm: $(".info-container1"),
+    displayYoutubeElm: $(".youtube-main"),
+    youtubeArticleElm: $(".youtube-main .article.item"),
     displayDataImgElm: $("#product-image-placeholder"),
     modalButton: $('.btn-modal'),
     submitBarcodeNumberButton: $("#search-bar-button-image"),
@@ -15,23 +17,20 @@ function startWhenloaded(){
     reviewIcon:$(".reviews-page-button"),
     mapIcon:$(".map-page-button"),
     youtubeIcon:$(".youtube-page-button"),
-
+    indexDisplayPage: $(".index-page"),
+    productDisplayPage: $(".product-page"),
+    youtubeDisplayPage: $(".youtube-page"),
+    googleDisplayPage: $(".google-page")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
-  $(".index-page").show();
-  $(".product-page").hide();
-  $(".youtube-page").hide();
-  $(".google-page").hide();
-  // testAjax();
-  // returnData(response);
-  // whenCameraIsClick();
-  // whenIndexClicked();
-  // whenyouTubeClicked();
-  // whenGoogleClicked();
+  domInformation.indexDisplayPage.show();
+  domInformation.productDisplayPage.hide();
+  domInformation.youtubeDisplayPage.hide();
+  domInformation.googleDisplayPage.hide();
 }
-
 //TODO: REMOVE Temp Pass data after testing
+let testBadScan = {"code":"OK","total":0,"offset":0,"items":[]}
 let testData = {
   "code": "OK",
   "total": 1,

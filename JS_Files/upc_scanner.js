@@ -13,7 +13,6 @@ class UPC_Scanner{
   }
 
   initScanner(){  //Initialize Quagga scanner and request access to camera
-    console.log("Init Scanner");
     Quagga.init({
       inputStream : {
         name : "Live",
@@ -34,12 +33,12 @@ class UPC_Scanner{
     });
   }
   /**
-   * @param {Object} returnData - the scanned barcode data 
+   * @param {Object} returnData - the scanned barcode data returned from scanner
    */
   processedCallBack(returnData){
     console.log("Test Init",initialization);
     console.log("Process Data ", returnData);
-    if(!isNaN(returnData)){
+    if(!isNaN(returnData))
       this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!
       this.upc_post_request.setScanedData(this.barcodeNumber);
     } else {
