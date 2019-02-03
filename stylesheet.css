@@ -9,6 +9,11 @@
 body {
   background: #fff;
 }
+.header-style {
+  height: 10vh;
+  padding: unset;
+  margin: 2px;
+}
 .index-page {
   height: 85vh;
   width: 100vw;
@@ -382,8 +387,9 @@ article:hover {
 .head-container {
   display: flex;
 }
-#penguin-icon  {
-  height: 20vw;
+#penguin-icon  {  
+  right: 1px;
+  height: 17vw;
   width: 100vw;
   object-fit: contain;
 }
