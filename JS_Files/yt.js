@@ -39,6 +39,7 @@ class YouTube_page {
     * @param {string} id-data passed in from object to retrieve the current video
     */
    resultsLoop(data) {
+      initialization.domInformation.displayYoutubeElm.empty();
       this.mainVid(data.items[0].id.videoId);
       $.each(data.items, function (i, item) {
          if (i != 0) {
@@ -62,7 +63,8 @@ class YouTube_page {
          let id = $(event.currentTarget).attr('data-key');
          this.mainVid(id);
       });
-      // this.domInformation.youtubeDisplayPage.hide()
+      // Hiding display after information is loaded. 
+      initialization.onNavClick();
       initialization.domInformation.youtubeDisplayPage.hide();
    }
 }
