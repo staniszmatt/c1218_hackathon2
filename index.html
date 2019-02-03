@@ -10,6 +10,7 @@
    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
    <script src="dist/quagga.js"></script>
    <script src="dist/quagga.min.js"></script>
    <script src="JS_Files/upc_scanner.js"></script>
@@ -130,7 +131,7 @@
          </div>
       </div>
    <!-- Button Container -->
-   <div class="row navBar-Container">
+   <!-- <div class="row navBar-Container">
          <div class="col-3 iconContainer text-center home-page-button">
             <img src="icons/home.png" class="home-Icon">
          </div>
@@ -143,14 +144,64 @@
          <div class="col-3 iconContainer text-center youtube-page-button">
             <img src="icons/youtube.png" class="youtube-Icon">
          </div>
+      </div> -->
+      <div class="review-page"></div>
+      <div class="row navBar-Container">
+         <div class="col-3 iconContainer text-center home-page-button line">
+            <a href="index.html"><img src="icons/home.png" class="home-Icon"></a>
+         </div>
+         <div class="col-3 iconContainer text-center reviews-page-button">
+            <img src="icons/reviews.png" class="reviews-Icon"></a>
+         </div>
+         <div class="col-3 iconContainer text-center map-page-button">
+            <img src="icons/GoogleMapsLogo.png" class="map-Icon"></a>
+         </div>
+         <div class="col-3 iconContainer text-center youtube-page-button">
+            <img src="icons/youtube.png" class="youtube-Icon"></a>
+         </div>
       </div>
       <div class="review-page"></div>
 <!--Modal Error Page-->
-   <div id="modal-shadow"></div>
+   <!-- <div id="modal-shadow"></div>
    <div id="modal-body">
       <output class="modal-message"></output>
       <button type="button" class="btn-modal" id="modal-button">OK</button>
+   </div> -->
+   <div id="modal-shadow"></div>
+   <div class="modal">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+                  <h5 class="modal-title">ERROR MESSAGE</h5>
+                 
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal">Close</button>
+           
+         </div>
+      </div>
+
    </div>
+   <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
 </body>
 </html>
 
