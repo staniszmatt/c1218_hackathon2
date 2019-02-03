@@ -30,14 +30,11 @@ class UPC_post_request{
   /**
   * @param {Object} returnedData - Returned data from UPC lookup 
   */
-  handleData(returnedData){
-    console.log("Returned Data ", returnedData);
-    
+  handleData(returnedData){   
     this.returnedScanData = returnedData;
     this.productData.displayData(returnedData); 
     $(".index-page").hide();
     $(".product-page").show();
-    
   }
   /**
   * @param {Object} errorData - if errored, returns error data. 
