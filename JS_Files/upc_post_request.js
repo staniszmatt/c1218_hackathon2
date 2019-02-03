@@ -20,7 +20,7 @@ class UPC_post_request{
 		console.log("Post Serial number", this.upcSerialNumber) 
 		var requestScannedInformation = { 
 			method: "get",
-			url: "proxy.php?upc=" + this.upcSerialNumber,
+			url: "proxy.php?upc=" + this.upcSerialNumber, //Call out proxy.php to access API
 			error: this.errorHandler,
 			success: this.handleData, 
 			dataType: "json"
@@ -31,10 +31,18 @@ class UPC_post_request{
   * @param {Object} returnedData - Returned data from UPC lookup 
   */
   handleData(returnedData){
-    console.log("Returned Data ", returnedData);
-    
+    console.log("This is Returned Data ", returnedData);
+    //if the returned data contains total= 0, then run the error saying "upc was not read correctly. try again"
     this.returnedScanData = returnedData;
-    this.productData.displayData(returnedData); 
+    if (returnedData['total'] === 0){
+      this.errorHandler();
+      // this.productData.displayData(returnedData); 
+      //initialize camera
+    }
+    else{
+      this.productData.displayData(returnedData); 
+    }
+   
     $(".index-page").hide();
     $(".product-page").show();
     
@@ -42,15 +50,10 @@ class UPC_post_request{
   /**
   * @param {Object} errorData - if errored, returns error data. 
   */
-  errorHandler(errorData){  //TODO: setup with error handling modal
-    //if error data is a string, then
-    // if error data is a 
-
-    // (if errorData['total'] === 0 ){
-    //  initialization.modal.show('Scan did not go through') 
-    
-    // }
-    console.log("error Data ", errorData)
-    initialization.modalErrorMessage(errorData);
+  errorHandler(){  //TODO: setup with error handling modal, error when typing in the wrong numbers in the searchbar
+    //NOTE: deosnt seem to be called by postData()
+ 
+    console.log("error data, there is error in your data");
+    initialization.modalErrors.show("INVALID UPC");
   }
 }

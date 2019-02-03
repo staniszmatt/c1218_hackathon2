@@ -10,8 +10,8 @@ body {
   background: #fff;
 }
 .index-page {
-  height: 100vh;
-  width: 100vh;
+  height: 85vh;
+  width: 100vw;
 }
 #myInput {
   font-size: 1rem;
@@ -23,13 +23,14 @@ body {
 
 .scanning-main {
   display: block;
+  width: 100vw;
 }
-.scanner-buttons {
+.scanning-main {
   display: block;
 }
 .scanner-buttons-container {
-  background-color: red;
   display: flex;
+  justify-content: center;
 }
 .main-container {
   height: 80vh;
@@ -55,26 +56,29 @@ h1 {
   height: 20vh;
 }
 .scan-bar-container {
-  /* TODO: Come back to fix this */
+  display: flex;
+  width: 50vw;
 }
 .button-container {
   height: 10vh;
   width: 10vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
 
 .cancel-scan {
-  height: 86%;
-  width: 71%;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   cursor: pointer;
-  display: inline-block;
 }
 
 .bg-dark {
   position: relative;
   bottom: 47px;
   background-color: #1c2024;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
 }
 
@@ -101,8 +105,9 @@ canvas {
 /*search-bar*/
 .search-bar-container {
   height: 6vh;
-  border: 1px solid black;
   display: inline-flex;
+  width: 100vw;
+  justify-content: center;
 }
 
 .search-bar {
@@ -123,11 +128,12 @@ canvas {
   height: 10vh;
   width: 10vh;
   display: inline-block;
+  margin: auto;
 }
 
 #camera-button {
-  height: 85%;
-  width: 85%;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   cursor: pointer;
 }
@@ -140,32 +146,13 @@ canvas {
 
 .nav-bar-container {
   height: 10vh;
-  /* margin: 0px auto;
+  margin: 0px auto;
     padding: 2px;
-    position:fixed; */
+    /* position:fixed; */
 }
 
 .row {
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  left: 0;
-  height: 15vh;
-}
-
-.row:hover {
-  transform: translateZ(0);
-  color: red;
-
-}
-
-a:hover {
-  background-color: red;
-  border-bottom: 5px solid;
-}
-
-.a {
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   flex-wrap: wrap;
   left: 0;
@@ -278,18 +265,14 @@ section {
 }
 
 #search-bar-button-image {
-  width: 12vw;
-  height: 6vh;
-  right: 134%;
-  margin: 8px;
-  bottom: 9px;
-  position: relative;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
 .search-image-container {
-  height: 1vh;
-  width: 4vw;
+  height: 100%;
+  width: 10vw;  
 }
 
 article {
@@ -361,13 +344,15 @@ article:hover {
                                         /*Nav Buttons*/
 .navBar-Container{
     z-index: 100;
-    position: fixed;
+    /* position: fixed; */
     padding: 2rem 0.5rem;
     text-align: center;
     background:white;
     bottom:0;
     box-shadow: 3px 3px 10px black;
     cursor:pointer;
+    width: 100vw;
+    margin: unset;
 }
 
 .iconContainer img {
@@ -428,7 +413,7 @@ article:hover {
 
 #right-panel {
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
+  /* position: absolute; */
   right: 5px;
   top: 50%;
   margin-top: -195px;
@@ -476,7 +461,7 @@ li:nth-child(odd) {
 
 /* Modal Styling */
 #modal-shadow {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   height: 100vh;
@@ -552,9 +537,27 @@ appending the divs into data container */
 .product-display {
   font-size: 1em;
   color: black;
-  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family:'Overlock', cursive;
+}
+.card {
+  width: 74vw;
+  position: relative;
+  margin: 90px auto;
+  border: 2px solid black;
+  height: 50vh;
 }
 
+.card-title{
+  text-align:center;
+  font-family:'Overlock', cursive;
+  font-weight:bold;
+}
+span:hover{
+  background:yellow;
+}
 .image-container {
   height: 40vh;
 }
