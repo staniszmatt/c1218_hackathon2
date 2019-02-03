@@ -13,7 +13,6 @@ class UPC_Scanner{
   }
 
   initScanner(){  //Initialize Quagga scanner and request access to camera
-    console.log("Init Scanner");
     Quagga.init({
       inputStream : {
         name : "Live",
@@ -34,7 +33,7 @@ class UPC_Scanner{
     });
   }
   /**
-   * @param {Object} returnData - the scanned barcode data 
+   * @param {Object} returnData - the scanned barcode data returned from scanner
    */
   processedCallBack(returnData){
     console.log("Test Init",initialization);
