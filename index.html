@@ -5,13 +5,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="stylesheet.css">
    <!--JS Files-->
    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=initMap" async defer></script> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
    <script src="dist/quagga.js"></script>
    <script src="dist/quagga.min.js"></script>
    <script src="JS_Files/upc_scanner.js"></script>
@@ -31,12 +31,20 @@
       <h5 class="app-title">Penguin Board Game Scanner</h5>
       <div class="banner-logo-container">
          <img id="penguin-icon" src="./icons/penguin.png" alt="">
+         <!-- <img id="penguin-icon" src="./icons/you_are_here.png" > -->
    </div>
-</div>  
+</div>
+
+
+
+
+  
 </div>
    <!-- Main Page -->
    <div class="index-page">
       <div class="head-container">
+         <!-- <div class="penguin-logo">
+            <img id="penguin-icon" src="./icons/penguin_logo.png" alt=""> -->
             <div class="image-scanner-container">
                <div class='scanner-image'></div>
             </div>
@@ -55,6 +63,15 @@
          </main>
    </div>
    <!--Product Page-->
+   <!-- <div class="product-page">
+      <div class="col-12 image-container text-center">
+         <img id="product-image-placeholder" src="" class="homeIcon"> 
+       </div>
+      <div class="col-12 info-container1"></div>
+   </div>  -->
+
+
+
    <div class="card product-page" style="width: 18rem;">
       <img id="product-image-placeholder" src="" class="homeIcon card-img-top"> 
       <div class="card-body">
@@ -64,6 +81,24 @@
       </div>
       </div>
     </div>
+
+
+
+
+
+
+
+   <!-- <div class="card product-page">
+      <img id="card-img-top product-image-placeholder" src="" class="homeIcon">
+      <div class="card-body">
+            <div class="card-title shadow p-3 mb-5 bg-white rounded">Place Title Here </div>
+        <h5 class="card-title">The Title of the Product goes here</h5> -->
+        <!-- <p class="card-text">This is where all the information of the product goes into</p>
+        <div class="rating">
+         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+         </div>
+      </div>
+    </div>  -->
    <!-- Youtube Page-->
     <div class="youtube-page">
       <div class="youtube-header-container">
@@ -111,36 +146,26 @@
             </div>
          </div>
    <div class="row">
-      <div class="review-page"></div>
-      <div class="row navBar-Container">
-         <div class="col-3 iconContainer text-center home-page-button line">
-            <a href="index.html"><img src="icons/home.png" class="home-Icon"></a>
+         <div class="col-3 iconContainer text-center home-page-button">
+            <img src="icons/home.png" class="home-Icon">
          </div>
          <div class="col-3 iconContainer text-center reviews-page-button">
-            <img src="icons/reviews.png" class="reviews-Icon"></a>
+            <img src="icons/product.png" class="reviews-Icon">
          </div>
          <div class="col-3 iconContainer text-center map-page-button">
-            <img src="icons/GoogleMapsLogo.png" class="map-Icon"></a>
+            <img src="icons/map.png" class="map-Icon">
          </div>
          <div class="col-3 iconContainer text-center youtube-page-button">
-            <img src="icons/youtube.png" class="youtube-Icon"></a>
+            <img src="icons/youtube-icon.png" class="youtube-Icon">
          </div>
       </div>
       <div class="review-page"></div>
    </div>
 <!--Modal Error Page-->
    <div id="modal-shadow"></div>
-   <div class="modal">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-            <div class="modal-header">
-                  <h5 class="modal-title">ERROR MESSAGE</h5>
-            </div>
-            <div class="modal-body"></div>
-            <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal">Close</button>
-         </div>
-      </div>
+   <div id="modal-body">
+      <output class="modal-message"></output>
+      <button type="button" class="btn-modal" id="modal-button">OK</button>
    </div>
 </body>
 </html>
