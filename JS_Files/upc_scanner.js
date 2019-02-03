@@ -54,6 +54,7 @@ class UPC_Scanner{
     } else {
     Quagga.offDetected();
     Quagga.stop();
+    initialization.domInformation.cancelScanButton.hide();
     }
   }
   /** 
