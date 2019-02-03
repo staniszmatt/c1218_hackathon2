@@ -21,6 +21,8 @@ class PBGS_init {
     this.mapButtonClicked = this.mapButtonClicked.bind(this);
     this.hideAllPages = this.hideAllPages.bind(this);
     this.displayPage = this.displayPage.bind(this);
+    this.showSearchBar = this.showSearchBar.bind(this);
+    this.hideSearchBar = this.hideSearchBar.bind(this);
   }
   clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
@@ -67,15 +69,24 @@ class PBGS_init {
   }
   indexButtonClicked() {
     this.displayPage(this.domInformation.indexDisplayPage);
+    this.showSearchBar(this.domInformation.searchBarContainer);
   }
   youTubeButtonClicked() {
     this.displayPage(this.domInformation.youtubeDisplayPage);
-    //function to call youtube load page. 
+    this.hideSearchBar(this.domInformation.searchBarContainer);
   }
   reviewsButtonClicked() {
     this.displayPage(this.domInformation.productDisplayPage);
+    this.hideSearchBar(this.domInformation.searchBarContainer);
   }
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
+    this.hideSearchBar(this.domInformation.searchBarContainer);
+  }
+  showSearchBar(){
+    this.domInformation.searchBarContainer.show();
+  }
+  hideSearchBar(){
+    this.domInformation.searchBarContainer.hide();
   }
 }

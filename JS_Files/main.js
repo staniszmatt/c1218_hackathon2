@@ -20,7 +20,8 @@ function startWhenloaded(){
     indexDisplayPage: $(".index-page"),
     productDisplayPage: $(".product-page"),
     youtubeDisplayPage: $(".youtube-page"),
-    googleDisplayPage: $(".google-page")
+    googleDisplayPage: $(".google-page"),
+    searchBarContainer:$(".search-bar-container")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();

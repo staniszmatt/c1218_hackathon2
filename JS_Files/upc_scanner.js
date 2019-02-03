@@ -38,10 +38,10 @@ class UPC_Scanner{
   processedCallBack(returnData){
     console.log("Test Init",initialization);
     console.log("Process Data ", returnData);
-    if(!isNaN(returnData))
+    if(!isNaN(returnData)){
       this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!
       this.upc_post_request.setScanedData(this.barcodeNumber);
-    } else {
+    } else  {
     this.barcodeNumber = returnData.codeResult.code;//"610370565025"
     this.upc_post_request.setScanedData(this.barcodeNumber)
     }  
@@ -61,7 +61,6 @@ class UPC_Scanner{
    */
   handleError(err){
     initialization.modalErrors.show("CAMERA COULD NOT LOAD. TRY AGAIN");
-    console.log("this is the errordata" + err); //TODO: setup with errorModal
 
   }
   getBarcodeNumber(){
