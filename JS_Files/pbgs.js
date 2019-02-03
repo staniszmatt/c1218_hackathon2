@@ -33,11 +33,13 @@ class PBGS_init {
     this.domInformation.reviewIcon.click(this.reviewsButtonClicked);
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
+    this.domInformation.cancelScanButton.hide();
   }
   initScanner() { //calls when scan request button is pressed
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
     this.upcScanner.cameraActivated = true;
+    this.domInformation.cancelScanButton.show();
   }
   submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");//TODO: Go back to home screen if errors
@@ -52,6 +54,7 @@ class PBGS_init {
   }
   cancelScan() {
     this.upcScanner.stopScanning();
+    this.domInformation.cancelScanButton.hide();
   }
   modalErrorMessage(errorMessage) {
     this.modalErrors.show(errorMessage)
