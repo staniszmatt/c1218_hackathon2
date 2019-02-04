@@ -421,9 +421,9 @@ article:hover {
 
 /* Google Maps CSS */
 #map {
-  height: 79%;
+  height: 75%;
   border: 2px black solid;
-
+  position: static;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -508,6 +508,12 @@ li:nth-child(odd) {
 .modal-title{
   color:red;
 
+}
+
+.google-page {
+  height: 80%;
+  background-color: chartreuse;
+  display: block;
 }
 /* #modal-body {
   position: fixed;

@@ -76,5 +76,6 @@ class PBGS_init {
   }
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
+    
   }
 }
