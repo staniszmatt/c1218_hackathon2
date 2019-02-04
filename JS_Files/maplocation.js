@@ -1,7 +1,7 @@
 var map, infoWindow, service;
 var theTitle = "Monopoly"
 var coords = {lat: 33.699, lng: -117.829}
-
+var googlePosition = pos;
 function googleMapGameName(gameName){
   return theTitle = gameName
 }
@@ -33,6 +33,7 @@ function createMap(){
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            googlePosition = pos;
 
             startMap(pos, theTitle);
             // placesList();
@@ -128,4 +129,5 @@ function createMap(){
         }
         map.fitBounds(bounds);
         map.setZoom(10);
+        map.getCenter(googlePosition);
       }
