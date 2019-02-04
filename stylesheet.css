@@ -484,9 +484,9 @@ img .youtube-Icon{
 
 /* Google Maps CSS */
 #map {
-  height: 79%;
+  height: 75%;
   border: 2px black solid;
-
+  position: static;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -582,16 +582,17 @@ li:nth-child(odd) {
 .modal-title{
   color:red;
 }
-/* 
-appending the divs into data container */
+.google-page {
+  height: 80%;
+  background-color: chartreuse;
+  display: block;
+}
 
 /* Products Page*/
 div .product-page {
   width: 0;
   height: 85vh;
 }
-
-
 .display-p-container {
   margin: 9px;
   font-size: 15px;
