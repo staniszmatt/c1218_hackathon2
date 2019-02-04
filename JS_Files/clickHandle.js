@@ -88,6 +88,7 @@ class PBGS_init {
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
+    startMap();
   }
   showSearchBar(){
     this.domInformation.searchBarContainer.show();
