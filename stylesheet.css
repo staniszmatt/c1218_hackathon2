@@ -420,6 +420,13 @@ article:hover {
 }
 
 /* Google Maps CSS */
+
+.google-page {
+  height: 80%;
+  background-color: chartreuse;
+  display: block; 
+}
+
 #map {
   position: absolute !important; 
   z-index: 3;
@@ -525,12 +532,6 @@ li:nth-child(odd) {
 .modal-title{
   color:red;
 
-}
-
-.google-page {
-  height: 80%;
-  background-color: chartreuse;
-  display: block; 
 }
 
 /* #modal-body {
