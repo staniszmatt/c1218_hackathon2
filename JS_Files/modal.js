@@ -1,11 +1,6 @@
 class Modal_error_message {
 	constructor(domInformation){
-    // this.modalButton = $("#modal-button");
-    // this.modalShadow = $("#modal-shadow");
-    // this.modalBody= $("#modal-body");
-    // this.modalDisplay = $(".modal-message");
 
-    // this.modalButton = initialization.domInformation.
     this.domInformation = domInformation;
     this.modalShadow = this.domInformation.modalShadow;
     this.modalBody = this.domInformation.modalBody;
@@ -14,7 +9,6 @@ class Modal_error_message {
     this.show = this.show.bind(this);
     this.hideModal = this.hideModal.bind(this);
   }
-
     show(errorMessage){
         
         this.modalShadow.show();
