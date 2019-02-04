@@ -420,6 +420,7 @@ article:hover {
 }
 
 .display-page-button { 
+  opacity: 0; /* Remove when button is ready to use*/
   border-radius: 1px;
   background: #c1494e;
   box-shadow: rgba(0,0,0,1) 0 1px 0;

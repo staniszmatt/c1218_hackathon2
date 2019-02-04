@@ -53,8 +53,11 @@ class UPC_post_request{
       this.productData.displayData(returnedData); 
     }
    
-    $(".index-page").hide();
+    $(".index-page").hide(); //TODO: setup as domElement pulls from clickhandleer
+    $(".search-bar-container").hide();
     $(".product-page").show();
+    
+
   }
   /**
   * @param {Object} errorData - if errored, returns error data.
