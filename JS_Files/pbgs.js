@@ -38,10 +38,9 @@ class PBGS_init {
     this.upcScanner.cameraActivated = true;
   }
   submitBarcode(){ //calls with submitted by hand. 
-    console.log("Clicked Submitt");//TODO: Go back to home screen if errors
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     if(this.barcodeInputValue === ""){
-      this.modalErrors.show("Input a number!");
+      this.modalErrors.show("INPUT A NUMBER!");
     }
     else{
       this.upcScanner.processedCallBack(this.barcodeInputValue);

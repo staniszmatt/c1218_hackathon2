@@ -1,10 +1,5 @@
 class Modal_error_message {
 	constructor(){
-    // this.modalButton = $("#modal-button");
-    // this.modalShadow = $("#modal-shadow");
-    // this.modalBody= $("#modal-body");
-    // this.modalDisplay = $(".modal-message");
-
     this.modalButton = $("#modal-button");
     this.modalShadow = $("#modal-shadow");
     this.modalBody = $('.modal')
@@ -13,14 +8,11 @@ class Modal_error_message {
     this.clickHandle = this.clickHandle.bind(this);
   }
 
+//   @param {string} errorMessage - Returned message error in modal 
 show(errorMessage){
-    
     this.modalShadow.show();
     this.modalBody.show(); 
-    this.modalDisplay.text('this.barcodeNumber = returnData; //TODO: Add error check enousre data is there!');
-    console.log('went through');
-   
-
+    this.modalDisplay.text(errorMessage);
   }
 hideModal(){
     console.log("Hide Modal");

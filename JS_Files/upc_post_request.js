@@ -48,9 +48,6 @@ class UPC_post_request{
   * @param {Object} errorData - if errored, returns error data. 
   */
   errorHandler(){  //TODO: setup with error handling modal, error when typing in the wrong numbers in the searchbar
-    //NOTE: deosnt seem to be called by postData()
- 
-    console.log("error data, there is error in your data");
     initialization.modalErrors.show("INVALID UPC");
   }
 }

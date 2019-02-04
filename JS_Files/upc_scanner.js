@@ -60,8 +60,7 @@ class UPC_Scanner{
    * @param {Object} err - If scanner errors, will return error object information 
    */
   handleError(err){
-    initialization.modalErrors.show("CAMERA COULD NOT LOAD. TRY AGAIN");
-    console.log("this is the errordata" + err); //TODO: setup with errorModal
+    initialization.modalErrors.show("CAMERA COULD NOT LOAD. TRY AGAIN"); 
 
   }
   getBarcodeNumber(){
