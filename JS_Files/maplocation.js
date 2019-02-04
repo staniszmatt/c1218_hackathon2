@@ -1,16 +1,30 @@
 var map, infoWindow, service;
-var theTitle = "cards against humanity"
+var theTitle = "Monopoly"
+var coords = {lat: 33.699, lng: -117.829}
+
+function googleMapGameName(gameName){
+  return theTitle = gameName
+}
+
+
+function createMap(){
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: coords,
+        zoom: 10
+      });
+}
 
       function startMap(pos, gameName) {
         // Create the map.
-        var currentLocation = pos;
-        var location = pos || {lat: 33.699, lng: -120.829};
+        var placesList = document.getElementById('places');
+        var location = pos || {lat: 33.699, lng: -117.829};
         map = new google.maps.Map(document.getElementById('map'), {
           center: location,
           zoom: 10
         });
 
         infoWindow = new google.maps.InfoWindow();
+   
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -21,12 +35,13 @@ var theTitle = "cards against humanity"
             };
 
             startMap(pos, theTitle);
-            placesList();
-            createMarkers(places);
+            // placesList();
+            // createMarkers(results);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
             map.setCenter(pos);
+            map.setZoom(10);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -36,7 +51,7 @@ var theTitle = "cards against humanity"
         }
 
         // Create the places service.
-        var service = new google.maps.places.PlacesService(map);
+        service = new google.maps.places.PlacesService(map);
         var getNextPage = null;
         var moreButton = document.getElementById('more');
         moreButton.onclick = function() {
@@ -44,11 +59,16 @@ var theTitle = "cards against humanity"
           if (getNextPage) getNextPage();
          
         };
-        
+        var request = {
+          query: 'Monopoly',
+          fields: ['name', 'geometry'],
+        };
+      
         // Perform a nearby search.
+        map.setZoom(10);
         service.textSearch(
           {
-            location: location, 
+            location: pos, 
             radius: 14000, 
             type: ['store'], 
             query: gameName +" game" //The title of the board game
@@ -107,4 +127,5 @@ var theTitle = "cards against humanity"
           bounds.extend(place.geometry.location);
         }
         map.fitBounds(bounds);
+        map.setZoom(10);
       }
