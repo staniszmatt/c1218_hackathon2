@@ -4,33 +4,39 @@ class Product_page {
       title: "",
       upc: "",
       highestPrice: "",
-      lowestPrice: ""
-      //images: []
+      lowestPrice: "",
+      brand: ""
     };
+    this.images = [];
     this.displayTitleArray = ["Title: ", "UPC: ", "Highest Sold Price: ", "Lowest Sold Price: "];
     this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
+    //bindings
     this.displayData = this.displayData.bind(this);
     this.domSetupForDisplay = this.domSetupForDisplay.bind(this);
+   
   }
   /**
    * 
    * @param {object} dataToDisplay - passing in the data recived from post request for inormaton 
    */
-  displayData(dataToDisplay){
+  displayData(dataToDisplay){ //Pull data from object into array
     
     console.log("Data for displaying", this.dataToDisplay);
     this.dataToDisplay.title = dataToDisplay.items[0].title;
     this.dataToDisplay.upc = dataToDisplay.items[0].upc;
     this.dataToDisplay.highestPrice = dataToDisplay.items[0].highest_recorded_price;
     this.dataToDisplay.lowestPrice = dataToDisplay.items[0].lowest_recorded_price;
-    //this.dataToDisplay.images = dataToDisplay.items[0].images;
+    this.dataToDisplay.brand = dataToDisplay.items[0].brand;
+    this.images = dataToDisplay.items[0].images;
     this.domSetupForDisplay();
   }
   
   domSetupForDisplay(){
+    this.displayElmToAppend.remove(); //clear previous elm data 
+    this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
     const displayData = Object.values(this.dataToDisplay);
-
-    for (let dataIndex = 0; dataIndex < displayData.length-1; dataIndex++){
+    
+    for (let dataIndex = 0; dataIndex < displayData.length; dataIndex++){
       let tempKeyName = this.getKeyByValue(this.dataToDisplay, displayData[dataIndex]).toUpperCase();
       let tempPelm = $("<p>")
         .addClass("product-display")
@@ -38,6 +44,9 @@ class Product_page {
         this.displayElmToAppend.append(tempPelm);
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
+    initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
+    initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
+
   }
   getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
