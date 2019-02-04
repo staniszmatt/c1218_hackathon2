@@ -29,7 +29,7 @@ function startMap(pos, gameName) {
     center: location,
     zoom: 10
   });
-
+  map.setCenter(pos);
   infoWindow = new google.maps.InfoWindow();
 
 
