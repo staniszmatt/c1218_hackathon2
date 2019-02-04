@@ -76,7 +76,7 @@ function startMap(pos, gameName) {
   map.setZoom(10);
   service.textSearch({
       location: pos,
-      radius: 14000,
+      radius: 10000,
       type: ['store'],
       query: gameName + " game" //The title of the board game
     },
@@ -134,6 +134,6 @@ function createMarkers(places) {
     bounds.extend(place.geometry.location);
   }
   map.fitBounds(bounds);
-  map.setZoom(10);
+  map.setZoom(11);
   map.getCenter(googlePosition);
 }

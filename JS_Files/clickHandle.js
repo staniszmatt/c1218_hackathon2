@@ -21,6 +21,8 @@ class PBGS_init {
     this.mapButtonClicked = this.mapButtonClicked.bind(this);
     this.hideAllPages = this.hideAllPages.bind(this);
     this.displayPage = this.displayPage.bind(this);
+    this.showSearchBar = this.showSearchBar.bind(this);
+    this.hideSearchBar = this.hideSearchBar.bind(this);
   }
   clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
@@ -31,11 +33,13 @@ class PBGS_init {
     this.domInformation.reviewIcon.click(this.reviewsButtonClicked);
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
+    this.domInformation.cancelScanButton.hide();
   }
   initScanner() { //calls when scan request button is pressed
     console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
     this.upcScanner.cameraActivated = true;
+    this.domInformation.cancelScanButton.show();
   }
   submitBarcode(){ //calls with submitted by hand. 
     console.log("Clicked Submitt");//TODO: Go back to home screen if errors
@@ -50,6 +54,7 @@ class PBGS_init {
   }
   cancelScan() {
     this.upcScanner.stopScanning();
+    this.domInformation.cancelScanButton.hide();
   }
   modalErrorMessage(errorMessage) {
     this.modalErrors.show(errorMessage)
@@ -66,16 +71,25 @@ class PBGS_init {
   }
   indexButtonClicked() {
     this.displayPage(this.domInformation.indexDisplayPage);
+    this.showSearchBar(this.domInformation.searchBarContainer);
   }
   youTubeButtonClicked() {
     this.displayPage(this.domInformation.youtubeDisplayPage);
-    //function to call youtube load page. 
+    this.hideSearchBar(this.domInformation.searchBarContainer);
   }
   reviewsButtonClicked() {
     this.displayPage(this.domInformation.productDisplayPage);
+    this.hideSearchBar(this.domInformation.searchBarContainer);
   }
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
-    
+    this.hideSearchBar(this.domInformation.searchBarContainer);
+    startMap();
+  }
+  showSearchBar(){
+    this.domInformation.searchBarContainer.show();
+  }
+  hideSearchBar(){
+    this.domInformation.searchBarContainer.hide();
   }
 }
