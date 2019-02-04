@@ -7,8 +7,7 @@ class PBGS_init {
     this.upcScanner = new UPC_Scanner();
     this.youTubeSetup = new YouTube_page();
     this.barcodeInputValue = null;
-    this.modalErrors = new Modal_error_message();
-    this.modalErrors.hideModal();
+    this.modalErrors = new Modal_error_message(this.domInformation);
     //bindings
     this.clickHandler = this.clickHandler.bind(this);
     this.initScanner = this.initScanner.bind(this);
@@ -23,17 +22,19 @@ class PBGS_init {
     this.displayPage = this.displayPage.bind(this);
     this.showSearchBar = this.showSearchBar.bind(this);
     this.hideSearchBar = this.hideSearchBar.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
   clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
-    this.domInformation.modalButton.click(this.modalErrors.clickHandle);
+    this.domInformation.modalButton.click(this.hideModal);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     this.domInformation.homeIcon.click(this.indexButtonClicked);
     this.domInformation.reviewIcon.click(this.reviewsButtonClicked);
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
     this.domInformation.cancelScanButton.hide();
+    this.hideModal();
   }
   initScanner() { //calls when scan request button is pressed
     console.log("Clicked InitScanner");
@@ -58,6 +59,9 @@ class PBGS_init {
   }
   modalErrorMessage(errorMessage) {
     this.modalErrors.show(errorMessage)
+  }
+  hideModal() {  //TODO: 
+    this.modalErrors.hideModal();
   }
   hideAllPages() {
     this.domInformation.indexDisplayPage.hide();
@@ -84,6 +88,7 @@ class PBGS_init {
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
+    
   }
   showSearchBar(){
     this.domInformation.searchBarContainer.show();
