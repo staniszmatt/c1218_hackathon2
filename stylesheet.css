@@ -419,7 +419,7 @@ article:hover {
   margin: unset;
 }
 
-.display-page-button {
+.display-page-button { 
   border-radius: 1px;
   background: #c1494e;
   box-shadow: rgba(0,0,0,1) 0 1px 0;
@@ -434,7 +434,7 @@ article:hover {
   width: 60vw;
   font-weight: unset;
   position: relative;
-  top: 28px;
+  top: 7vh;
 }
 .iconContainer img {
   width: 60%;
@@ -483,10 +483,35 @@ img .youtube-Icon{
 }
 
 /* Google Maps CSS */
-#map {
-  height: 79%;
-  border: 2px black solid;
 
+.google-page {
+  height: 80%;
+  background-color: chartreuse;
+  display: block; 
+}
+
+#map {
+  position: absolute !important; 
+  z-index: 3;
+  height: 80%;
+  border: 2px black solid;
+  width: 100%;
+  top: 10%;
+  /* position: static; */
+}
+
+#map > div {
+  height: 75%;
+  border: 2px black solid;
+  width: 100%;
+  /* position: static; */
+}
+
+#map > div > div {
+  height: 75%;
+  border: 2px black solid;
+  width: 100%;
+  /* position: static; */
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -511,13 +536,13 @@ img .youtube-Icon{
 
 #right-panel {
   font-family: Arial, Helvetica, sans-serif;
-  /* position: absolute; */
-  right: 5px;
-  top: 50%;
-  margin-top: -195px;
+  position: absolute;
+  left: 5px;
+  bottom: 20%;
+  /* margin-top: -195px; */
   height: 30%;
   width: 35%;
-  padding: 5px;
+  /* padding: 5px; */
   z-index: 5;
   border: 1px solid #999;
   background: #fff;
@@ -540,11 +565,11 @@ ul {
 
 li {
   background-color: #f1f1f1;
-  padding: 10px;
+  /* padding: 10px; */
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
-  font-size: 10px;
+  font-size: 8px;
 }
 
 li:nth-child(odd) {
@@ -582,16 +607,72 @@ li:nth-child(odd) {
 .modal-title{
   color:red;
 }
+<<<<<<< HEAD
+
+/* #modal-body {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  min-height: 10vmin;
+  min-width: 70vmin;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: flex;
+  border: 1px solid black;
+  justify-content: flex-end;
+}
+
+#modal-message {
+  font-size: 2rem;
+  margin: auto;
+}
+
+#modal-button {
+  background-color: #cc0300;
+  font-size: 2rem;
+  width: 25%;
+  border: 1px solid black;
+}
+
+#modal-button:hover {
+  background-color: red;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 25%;
+  border: 1px solid black;
+}
+
+#modal-button:active {
+  background-color: rgb(126, 0, 0);
+  cursor: pointer;
+  font-size: 2rem;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.modal-message {
+  padding: 1%;
+  align-self: center;
+  font-size: 21px;
+  color: red;
+  font-weight: 500; */
+}
+
 /* 
 appending the divs into data container */
+=======
+.google-page {
+  height: 80%;
+  background-color: chartreuse;
+  display: block;
+}
+>>>>>>> 7fb72e1c24c6dedc20bbf4c74308e41b7c4753d7
 
 /* Products Page*/
 div .product-page {
   width: 0;
   height: 85vh;
 }
-
-
 .display-p-container {
   margin: 9px;
   font-size: 15px;
