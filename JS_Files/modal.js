@@ -5,7 +5,8 @@ class Modal_error_message {
     this.modalBody = $('.modal')
     this.modalDisplay = $(".modal-body");
 // Binding
-    this.clickHandle = this.clickHandle.bind(this);
+    this.show = this.show.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
 //   @param {string} errorMessage - Returned message error in modal 

@@ -11,6 +11,9 @@ function startWhenloaded(){
     youtubeArticleElm: $(".youtube-main .article.item"),
     displayDataImgElm: $("#product-image-placeholder"),
     modalButton: $('.btn-modal'),
+    modalShadow: $("#modal-shadow"),
+    modalBody: $(".modal"),
+    modalDisplayText: $(".modal-body"),
     submitBarcodeNumberButton: $("#search-bar-button-image"),
     cancelScanButton: $(".cancel-scan"),
     homeIcon:$(".home-page-button"),
@@ -20,7 +23,8 @@ function startWhenloaded(){
     indexDisplayPage: $(".index-page"),
     productDisplayPage: $(".product-page"),
     youtubeDisplayPage: $(".youtube-page"),
-    googleDisplayPage: $(".google-page")
+    googleDisplayPage: $(".google-page"),
+    searchBarContainer:$(".search-bar-container")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
@@ -28,6 +32,8 @@ function startWhenloaded(){
   domInformation.productDisplayPage.hide();
   domInformation.youtubeDisplayPage.hide();
   domInformation.googleDisplayPage.hide();
+  domInformation.modalBody.hide();
+  domInformation.modalShadow.hide();
 }
 //TODO: REMOVE Temp Pass data after testing
 let testBadScan = {"code":"OK","total":0,"offset":0,"items":[]}
