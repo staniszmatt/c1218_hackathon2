@@ -1,5 +1,5 @@
 var map, infoWindow, service;
-var theTitle = "Monopoly"
+var theTitle = "Monopoly" //TODO: This needs to be made dynamic based off the title of the game that is retrieved
 var coords = {
   lat: 33.699,
   lng: -117.829
