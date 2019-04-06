@@ -608,66 +608,11 @@ li:nth-child(odd) {
 .modal-title{
   color:red;
 }
-<<<<<<< HEAD
-
-/* #modal-body {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  min-height: 10vmin;
-  min-width: 70vmin;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  display: flex;
-  border: 1px solid black;
-  justify-content: flex-end;
-}
-
-#modal-message {
-  font-size: 2rem;
-  margin: auto;
-}
-
-#modal-button {
-  background-color: #cc0300;
-  font-size: 2rem;
-  width: 25%;
-  border: 1px solid black;
-}
-
-#modal-button:hover {
-  background-color: red;
-  cursor: pointer;
-  font-size: 2rem;
-  width: 25%;
-  border: 1px solid black;
-}
-
-#modal-button:active {
-  background-color: rgb(126, 0, 0);
-  cursor: pointer;
-  font-size: 2rem;
-  width: 25%;
-  border: 1px solid black;
-}
-
-.modal-message {
-  padding: 1%;
-  align-self: center;
-  font-size: 21px;
-  color: red;
-  font-weight: 500; */
-}
-
-/* 
-appending the divs into data container */
-=======
 .google-page {
   height: 80%;
   background-color: chartreuse;
   display: block;
 }
->>>>>>> 7fb72e1c24c6dedc20bbf4c74308e41b7c4753d7
 
 /* Products Page*/
 div .product-page {
