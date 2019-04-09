@@ -1,10 +1,8 @@
 # Board Game Bar Code Scanner
 
 Welcome to our Hack-A-Thon project. 
-
 We have created a web application that allows you to scan a standard bar code using your phone or device with a camera. 
 The application was designed with games in mind so you will see some basic game information, locations of where you can buy the games in your current location and you tube videos for game play and reviews. 
-
 
 ### API's used: 
 - QuaggaJS - https://serratus.github.io/quaggaJS/

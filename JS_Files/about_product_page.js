@@ -1,5 +1,6 @@
 class Product_page {
   constructor() {
+    this.startMap = new StartMap();
     this.dataToDisplay = {
       title: "",
       upc: "",
@@ -9,19 +10,15 @@ class Product_page {
     };
     this.images = [];
     this.displayTitleArray = ["Title: ", "UPC: ", "Highest Sold Price: ", "Lowest Sold Price: "];
-    this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
+    this.displayElmToAppend = $("<div>").addClass("display-p-container");
     //bindings
     this.displayData = this.displayData.bind(this);
     this.domSetupForDisplay = this.domSetupForDisplay.bind(this);
-   
   }
   /**
-   * 
    * @param {object} dataToDisplay - passing in the data recived from post request for inormaton 
    */
-  displayData(dataToDisplay){ //Pull data from object into array
-    
-    console.log("Data for displaying", this.dataToDisplay);
+  displayData(dataToDisplay) { //Pull data from object into array
     this.dataToDisplay.title = dataToDisplay.items[0].title;
     this.dataToDisplay.upc = dataToDisplay.items[0].upc;
     this.dataToDisplay.highestPrice = dataToDisplay.items[0].highest_recorded_price;
@@ -30,25 +27,26 @@ class Product_page {
     this.images = dataToDisplay.items[0].images;
     this.domSetupForDisplay();
   }
-  
-  domSetupForDisplay(){
+
+  domSetupForDisplay() {
     this.displayElmToAppend.remove(); //clear previous elm data 
-    this.displayElmToAppend = $("<div>").addClass("display-p-container"); 
+    this.displayElmToAppend = $("<div>").addClass("display-p-container");
     const displayData = Object.values(this.dataToDisplay);
-    
-    for (let dataIndex = 0; dataIndex < displayData.length; dataIndex++){
+    for (let dataIndex = 0; dataIndex < displayData.length; dataIndex++) {
       let tempKeyName = this.getKeyByValue(this.dataToDisplay, displayData[dataIndex]).toUpperCase();
       let tempPelm = $("<p>")
         .addClass("product-display")
         .text(`${tempKeyName}: ${displayData[dataIndex]}`)
-        this.displayElmToAppend.append(tempPelm);
+      this.displayElmToAppend.append(tempPelm);
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
     initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
     initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
-    googleMapGameName(this.dataToDisplay.title);
-    startMap();
+    this.startMap.getCurrentLocation();//Maps to get current Location
+    this.startMap.googleMapGameName(this.dataToDisplay.title); //Passing game title over to maps to search for store locations
+    this.startMap.startMap(); //Initializes maps 
   }
+  
   getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
   }
