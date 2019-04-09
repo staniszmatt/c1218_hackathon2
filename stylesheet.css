@@ -1,10 +1,10 @@
 /* Table of contents:
-                Products Page               Line 128
-                youTube Page                Line 149
-                Google Maps                 Line 277
-                Google Maps CSS             Line 350
-                Reviews Page                Line 232
-                NavButtons                  Line 315
+  Products Page
+  youTube Page
+  Google Maps
+  Google Maps CSS
+  Reviews Page
+  NavButtons
 */
 body {
   background: #f2ecec;
@@ -101,7 +101,6 @@ h1 {
   position: relative;
   bottom: 47px;
   background-color: #1c2024;
-  /* position: fixed; */
   width: 100%;
 }
 
@@ -185,15 +184,12 @@ canvas {
   height: 10vh;
   margin: 0px auto;
   padding: 2px;
-  /* position:fixed; */
 }
 
 .row {
-  /* position: fixed; */
   display: flex;
   flex-wrap: wrap;
   left: 0;
-  /* height: 15vh; */
 }
 
 .icon-container {
@@ -221,7 +217,6 @@ canvas {
 
 .navBar-container {
   text-align: center;
-  /* bottom: 10px; */
 }
 
 .product-icon {
@@ -281,7 +276,7 @@ p {
     margin: 0 auto;
     text-align: center;
 }
-                                /* header, */
+/* header, */
 section {
 
   left: 0;
@@ -364,9 +359,7 @@ article:hover {
 /* Google Page */
 
 .youtube-header-container {
-  /* position: fixed; */
-  display:
-    block;
+  display: block;
   background: white;
   top: 0;
   width: 100%;
@@ -460,7 +453,7 @@ article:hover {
 }
 
 .home-Icon, .reviews-Icon, .map-Icon, .youtube-Icon{
-    transition:all 0.5s;
+  transition:all 0.5s;
     
 }
 img .youtube-Icon{
@@ -475,16 +468,11 @@ img .youtube-Icon{
   margin-bottom: 15vh;
 }
 .home-Icon:hover, .reviews-Icon:hover, .map-Icon:hover, .youtube-Icon:hover{
-    transition:all 0.5s;
-    filter: drop-shadow(1px 1px 1px black);
-    transform:scale(1.1);
-
-
-
+  transition:all 0.5s;
+  filter: drop-shadow(1px 1px 1px black);
+  transform:scale(1.1);
 }
-
 /* Google Maps CSS */
-
 .google-page {
   height: 80%;
   background-color: chartreuse;
@@ -498,23 +486,19 @@ img .youtube-Icon{
   border: 2px black solid;
   width: 100%;
   top: 10%;
-  /* position: static; */
 }
 
 #map > div {
   height: 75%;
   border: 2px black solid;
   width: 100%;
-  /* position: static; */
 }
 
 #map > div > div {
   height: 75%;
   border: 2px black solid;
   width: 100%;
-  /* position: static; */
 }
-
 /* Optional: Makes the sample page fill the window. */
 #right-panel {
   font-family: 'Roboto', 'sans-serif';
@@ -540,10 +524,8 @@ img .youtube-Icon{
   position: absolute;
   left: 5px;
   bottom: 20%;
-  /* margin-top: -195px; */
   height: 30%;
   width: 35%;
-  /* padding: 5px; */
   z-index: 5;
   border: 1px solid #999;
   background: #fff;
@@ -566,9 +548,7 @@ ul {
 
 li {
   background-color: #f1f1f1;
-  /* padding: 10px; */
   text-overflow: ellipsis;
-  /* white-space: nowrap; */
   overflow: hidden;
   font-size: 8px;
 }
@@ -582,7 +562,6 @@ li:nth-child(odd) {
   margin: 0px 0 0 0;
   background-color: blanchedalmond;
 }
-
 /* Modal Styling */
 #modal-shadow {
   position: absolute;

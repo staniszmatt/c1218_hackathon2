@@ -1,144 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-         crossorigin="anonymous">
-      <link rel="stylesheet" href="stylesheet.css">
-      <!--JS Files-->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=createMap" async defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-         crossorigin="anonymous"></script>
-      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-      <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
-      <script src="dist/quagga.js"></script>
-      <script src="dist/quagga.min.js"></script>
-      <script src="JS_Files/upc_scanner.js"></script>
-      <script src="JS_Files/currentlocation.js"></script>
-      <script src="JS_Files/maplocation.js"></script> 
-      <script src="JS_Files/upc_post_request.js"></script>
-      <script src="JS_Files/modal.js"></script>
-      <script src="JS_Files/clickHandle.js"></script>
-      <script src="JS_Files/about_product_page.js"></script>
-      <script src="JS_Files/main.js"></script>
-      <script src="./JS_Files/landing_page.js"></script>
-      <script src="JS_Files/yt.js"></script>
-      <title>Penguin Board Game Scanner</title>
-   </head>
-   <body>
-      <div class="search" role="alert">
-         <h5 class="app-title">Penguin Board Game Scanner</h5>
-         <div class="banner-logo-container">
-            <img id="penguin-icon" src="./icons/penguin.png" alt="">
-         </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS5OO9L2mJhS-RqA8lhnqz1VXGG8hHdKY&libraries=places&callback=createMap"
+      async defer>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="dist/quagga.js"></script>
+    <script src="dist/quagga.min.js"></script>
+    <script src="JS_Files/upc_scanner.js"></script>
+    <script src="JS_Files/maplocation.js"></script>
+    <script src="JS_Files/upc_post_request.js"></script>
+    <script src="JS_Files/modal.js"></script>
+    <script src="JS_Files/clickHandle.js"></script>
+    <script src="JS_Files/about_product_page.js"></script>
+    <script src="JS_Files/yt.js"></script>
+    <script src="JS_Files/main.js"></script>
+    <title>Penguin Board Game Scanner</title>
+  </head>
+  <body>
+    <div class="search" role="alert">
+      <h5 class="app-title">Penguin Board Game Scanner</h5>
+      <div class="banner-logo-container">
+        <img id="penguin-icon" src="./icons/penguin.png" alt="">
       </div>
+    </div>
+    <!-- Main Page -->
+    <div class="index-page">
+      <div class="head-container">
+        <div class="image-scanner-container">
+          <div class='scanner-image'></div>
+        </div>
       </div>
-      <!-- Main Page -->
-      <div class="index-page">
-         <div class="head-container">
-            <div class="image-scanner-container">
-               <div class='scanner-image'></div>
+      <main class="scanning-main">
+        <div class="scanner-buttons-container">
+          <div class="scan-bar-container">
+            <div class="button-container">
+              <img class="cancel-scan" src="icons/cancel.png">
             </div>
-         </div>
-         <main class="scanning-main">
-            <div class="scanner-buttons-container">
-               <div class="scan-bar-container">
-                  <div class="button-container">
-                     <img class="cancel-scan" src="icons/cancel.png">
-                  </div>
-
-               </div>
-            </div>
-
-         </main>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="card product-page" style="width: 18rem;">
+      <img id="product-image-placeholder" src="" class="homeIcon card-img-top">
+      <div class="card-body">
+        <!-- <h5 class="card-title"></h5> -->
+        <div class="col-12 info-container1">
+          <button class="display-page-button">
+            Information
+          </button>
+        </div>
       </div>
-      <div class="card product-page" style="width: 18rem;">
-         <img id="product-image-placeholder" src="" class="homeIcon card-img-top">
-         <div class="card-body">
-            <!-- <h5 class="card-title"></h5> -->
-            <div class="col-12 info-container1">
-               <button class="display-page-button">Information</button> 
-            </div>
-         </div>
+    </div>
+    <!-- Youtube Page-->
+    <div class="youtube-page">
+      <div class="youtube-header-container">
+        <img src="icons/youtube-logo.png" alt="" class="youtube-logo">
+        <section id="video"></section>
       </div>
-      <!-- Youtube Page-->
-      <div class="youtube-page">
-         <div class="youtube-header-container">
-            <img src="icons/youtube-logo.png" alt="" class="youtube-logo">
-            <section id="video"></section>
-         </div>
-         <div class="container youtube-container">
+      <div class="container youtube-container">
+        <div class="youtube-log"></div>
+        <div class="home-page">
+          <div class="container">
             <div class="youtube-log">
+              <header id="youtube-header">
+                <div class="review-page"></div>
+                <main class="youtube-main">
+                  <!--Data will be appended here from API DATA-->
+                </main>
+              </header>
             </div>
-            <div class="home-page">
-               <div class="container">
-                  <div class="youtube-log">
-                     <header id="youtube-header">
-                        <div class="review-page"></div>
-
-                        <main class="youtube-main">
-                           <!--Data will be appended here from API DATA-->
-                        </main>
-
-                  </div>
-               </div>
-            </div>
-            </header>
-         </div>
+          </div>
+        </div>
       </div>
-      <!-- Google Page-->
-      <div class="google-page">
-         <div id="mapConatiner"></div>
-         <div id="map"></div>
-         <div id="right-panel">
-            <h2>Results</h2>
-            <ul id="places"></ul>
-            <button id="more">More results</button>
-         </div>
+    </div>
+    <!-- Google Page-->
+    <div class="google-page">
+      <div id="mapConatiner"></div>
+      <div id="map"></div>
+      <div id="right-panel">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button id="more">
+          More results
+        </button>
       </div>
-      <!-- Button Container -->
-      <div id="activate-search-bar-container" class="navBar-Container">
-         <div class="search-bar-container">
-            <div class="image-first-container">
-               <img id="camera-button" src="icons/camera.png">
-            </div>
-            <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
-            <div class="search-image-container">
-               <img id="search-bar-button-image" src="icons/magnifying-glass.png">
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-3 iconContainer text-center home-page-button">
-               <img src="icons/home.png" class="home-Icon">
-            </div>
-            <div class="col-3 iconContainer text-center reviews-page-button">
-               <img src="icons/product.png" class="reviews-Icon">
-            </div>
-            <div class="col-3 iconContainer text-center map-page-button">
-               <img src="icons/map.png" class="map-Icon">
-            </div>
-            <div class="col-3 iconContainer text-center youtube-page-button">
-               <img src="icons/youtube-icon.png" class="youtube-Icon">
-            </div>
-         </div>
-         <div class="review-page"></div>
+    </div>
+    <!-- Button Container -->
+    <div id="activate-search-bar-container" class="navBar-Container">
+      <div class="search-bar-container">
+        <div class="image-first-container">
+          <img id="camera-button" src="icons/camera.png">
+        </div>
+        <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
+        <div class="search-image-container">
+          <img id="search-bar-button-image" src="icons/magnifying-glass.png">
+        </div>
       </div>
-      <!--Modal Error Page-->
-      <div id="modal-shadow"></div>
-      <div class="modal">
-         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title">ERROR MESSAGE</h5>
-               </div>
-               <div class="modal-body"></div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-   </body>
+      <div class="row">
+        <div class="col-3 iconContainer text-center home-page-button">
+          <img src="icons/home.png" class="home-Icon">
+        </div>
+        <div class="col-3 iconContainer text-center reviews-page-button">
+          <img src="icons/product.png" class="reviews-Icon">
+        </div>
+        <div class="col-3 iconContainer text-center map-page-button">
+          <img src="icons/map.png" class="map-Icon">
+        </div>
+        <div class="col-3 iconContainer text-center youtube-page-button">
+          <img src="icons/youtube-icon.png" class="youtube-Icon">
+        </div>
+      </div>
+      <div class="review-page"></div>
+    </div>
+    <!--Modal Error Page-->
+    <div id="modal-shadow"></div>
+    <div class="modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">ERROR MESSAGE</h5>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-modal" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
