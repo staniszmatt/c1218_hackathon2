@@ -10,15 +10,22 @@ body {
   background: #f2ecec;
 }
 
+.center-desktop-version{
+background-color:blue;
+}
 
+.board-gamee-title{
+  text-align:center;
+  font-size:2rem;
 
+}
 @media only screen and (min-width:500px){
   .navbar{
     display:flex;
     text-align:right;
     justify-content: space-around;
     background-color:#ddddd9;
-    /* padding: 15px 0px 16px 89px; */
+    
   }
   .nav-item{
     color:#c1494e;
@@ -42,6 +49,12 @@ body {
   .nav-button{
     display:none;
   }
+  .image-scanner-container {
+    width: 70vw;
+    margin: 68px auto;
+    height: 47vh;
+    background-color: black;
+ }
 }
 
 
@@ -52,6 +65,11 @@ body {
  }
  .app-title-container{
   display:inline-block;
+}
+.image-scanner-container {
+  width: 100vw;
+  height: 42vh;
+  background-color: black;
 }
 } 
 
@@ -78,8 +96,8 @@ body {
   width: 100vw;
 }
 #myInput {
-  font-size: 0.75rem;
-  padding: 4px;
+  font-size: 0.9rem;
+  padding: 10px;
   border: none;
 }
 
@@ -176,7 +194,7 @@ canvas {
   width: 100vw;
   position: relative;
   justify-content: center;
-  bottom: 7px;
+  bottom: 19px;
   right: 7px;
   margin: 0px;
   filter: drop-shadow(2px 2px 2px black);
@@ -368,11 +386,16 @@ section {
 
 #search-bar-button-image {
   width: 53%;
-  height: 56%;
-  top: 22px;
+  height: 49%;
+  top: 29px;
   cursor: pointer;
   position: relative;
-  right: 32px;
+  right: 45px;
+}
+@media only screen and (min-width:589){
+  #search-bar-button-image{
+    right:67px;
+  }
 }
 .search-image-container {
   height: 100%;
@@ -492,11 +515,11 @@ article:hover {
   right: 159px;
   bottom: 55px;
 }
-.image-scanner-container {
+/* .image-scanner-container {
   width: 100vw;
   height: 42vh;
   background-color: black;
-}
+} */
 
 .home-Icon, .reviews-Icon, .map-Icon, .youtube-Icon{
   transition:all 0.5s;
