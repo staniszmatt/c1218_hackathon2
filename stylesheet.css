@@ -10,12 +10,7 @@ body {
   background: #f2ecec;
 }
 
-/* .navbar{
- display:none;
-}
-.nav-item{
-  display: none;
- } */
+
 
 @media only screen and (min-width:500px){
   .navbar{
@@ -23,7 +18,7 @@ body {
     text-align:right;
     justify-content: space-around;
     background-color:#ddddd9;
-    padding: 15px 0px 16px 89px;
+    /* padding: 15px 0px 16px 89px; */
   }
   .nav-item{
     color:#c1494e;
@@ -44,15 +39,21 @@ body {
   .app-title-container{
     display:none;
   }
+  .nav-button{
+    display:none;
+  }
 }
 
 
 
-/* @media only screen and (max-width:500px){
-  .app-title-container{
-    display:none;
-  }
-} */
+ @media only screen and (max-width:499px){
+ .navbar{
+  display:none
+ }
+ .app-title-container{
+  display:inline-block;
+}
+} 
 
 .header-style {
   height: 11vh;
