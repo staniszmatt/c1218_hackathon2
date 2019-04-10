@@ -8,7 +8,6 @@ class UPC_post_request{
     //binding
     this.handleData = this.handleData.bind(this);
     }
-
   /**
    * This function takes in the serial number and saves it
    * Then the we call the next function to request the information from the API
@@ -20,12 +19,11 @@ class UPC_post_request{
     this.postData();
   }
   /**
-   * This will grabe the serial number and submit it for info to the API
+   * This will grab the serial number and submit it for info to the API
    * For more information on this follow the link.
    * @see {@link https://www.upcitemdb.com/api/explorer#!/lookup/get_trial_lookup}
    */
   postData(){
-		console.log("Post Serial number", this.upcSerialNumber) 
 		var requestScannedInformation = { 
 			method: "get",
 			url: "proxy.php?upc=" + this.upcSerialNumber, //Call out proxy.php to access API
@@ -35,35 +33,29 @@ class UPC_post_request{
 		}	
 		$.ajax(requestScannedInformation);	
   }
-  
   /**
-   * 
    * @param  {object} returnedData Call back function with the server data
-   * We check for errors if it was scannable but has no data
+   * We check for errors if it was scanned but has no data
    * @see {@link postData()}
    */
   handleData(returnedData){   
     this.returnedScanData = returnedData;
     if (returnedData['total'] === 0){
       this.errorHandler();
-      // this.productData.displayData(returnedData); 
       //initialize camera
     }
     else{
       this.productData.displayData(returnedData); 
     }
-   
-    $(".index-page").hide(); //TODO: setup as domElement pulls from clickhandleer
+    $(".index-page").hide(); 
     $(".search-bar-container").hide();
     $(".product-page").show();
-    
-
   }
   /**
-  * @param {Object} errorData - if errored, returns error data.
+  * @param {Object} errorData - if error, returns error data.
   * @see {@link postData()} 
   */
-  errorHandler(){  //TODO: setup with error handling modal, error when typing in the wrong numbers in the searchbar
+  errorHandler(){  
     initialization.modalErrors.show("INVALID UPC");
   }
 }
