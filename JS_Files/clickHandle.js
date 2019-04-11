@@ -23,10 +23,14 @@ class PBGS_init {
     this.showSearchBar = this.showSearchBar.bind(this);
     this.hideSearchBar = this.hideSearchBar.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    //
+    this.hideDesktopDisplay = this.hideDesktopDisplay.bind(this);
   }
 
   clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
+    //landing page that is hidden once camera is clicked
+    this.domInformation.initScanButton.click(this.hideDesktopDisplay);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.modalButton.click(this.hideModal);
     this.domInformation.cancelScanButton.click(this.cancelScan);
@@ -106,5 +110,8 @@ class PBGS_init {
   
   hideSearchBar(){
     this.domInformation.searchBarContainer.hide();
+  }
+  hideDesktopDisplay(){
+    this.domInformation.desktopDisplay.hide();
   }
 }
