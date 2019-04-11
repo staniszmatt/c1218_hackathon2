@@ -312,14 +312,34 @@ canvas {
   width: 80%;
 }
 
-#product-image-placeholder {
-  border: 2px solid #c1494e;
-  filter: drop-shadow(2px 2px 2px black);
-  margin: 0 auto;
-  height: 100%;
-  width: 83%;
-  object-fit: contain;
+@media only screen and (min-width:500px){
+  #product-image-placeholder {
+    border: 2px solid #c1494e;
+    filter: drop-shadow(2px 2px 2px black);
+    margin: 0 auto;
+    width: 20vw;
+    object-fit: contain;
+  }
+  .product-image-width{
+    width: 80%;
+  }
+  
 }
+
+@media only screen and (max-width:499px){
+  #product-image-placeholder {
+    border: 2px solid #c1494e;
+    filter: drop-shadow(2px 2px 2px black);
+    margin: 0 auto;
+    height: 100%;
+    width: 83%;
+    object-fit: contain;
+  }
+  .product-image-width{
+    width: 18rem;
+  }
+}
+
 
 .display-p-container p:first-child {
   color: #c1494e;
@@ -740,6 +760,7 @@ appending the divs into data container */
 }
 
 /* Products Page*/
+
 div .product-page {
   width: 0;
   height: 85vh;
