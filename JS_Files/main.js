@@ -22,7 +22,8 @@ function startWhenLoaded(){
     productDisplayPage: $(".product-page"),
     youtubeDisplayPage: $(".youtube-page"),
     googleDisplayPage: $(".google-page"),
-    searchBarContainer:$(".search-bar-container")
+    searchBarContainer:$(".search-bar-container"),
+    desktopDisplay:$(".desktop-display")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();
@@ -32,4 +33,5 @@ function startWhenLoaded(){
   domInformation.googleDisplayPage.hide();
   domInformation.modalBody.hide();
   domInformation.modalShadow.hide();
+  // domInformation.desktopDisplay.hide();
 }
