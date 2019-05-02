@@ -42,7 +42,7 @@ background-color:blue;
   text-align: center;
 }
 
-@media only screen and (min-width:500px){
+@media only screen and (min-width:576px){
   .navbar{
     display:flex;
     text-align:right;
@@ -83,7 +83,7 @@ background-color:blue;
 
 
 
- @media only screen and (max-width:499px){
+ @media only screen and (max-width:575px){
  .navbar{
   display:none
  }
@@ -116,7 +116,7 @@ background-color:blue;
   background: #ddddd9;
 }
 .index-page {
-  height: 85vh;
+  height: 80vh;
   width: 100vw;
 }
 #myInput {
@@ -313,7 +313,7 @@ canvas {
   width: 80%;
 }
 
-@media only screen and (min-width:500px){
+@media only screen and (min-width:576px){
   #product-image-placeholder {
     border: 2px solid #c1494e;
     filter: drop-shadow(2px 2px 2px black);
@@ -327,7 +327,7 @@ canvas {
   
 }
 
-@media only screen and (max-width:499px){
+@media only screen and (max-width:575px){
   #product-image-placeholder {
     border: 2px solid #c1494e;
     filter: drop-shadow(2px 2px 2px black);
@@ -514,16 +514,16 @@ article:hover {
 
 /*Nav Buttons*/
 .navBar-Container {
-  z-index: 100;
+  /* z-index: 100; */
   position: fixed;
   /* padding: 0.5rem 0.5rem; */
   text-align: center;
   background: #ddddd9;
-  bottom: 0;
-  box-shadow: 3px 3px 10px black;
+  /* bottom: 0; */
+  /* box-shadow: 3px 3px 10px black; */
   cursor: pointer;
   width: 100vw;
-  margin: unset;
+  /* margin: unset; */
 }
 
 .display-page-button { 
