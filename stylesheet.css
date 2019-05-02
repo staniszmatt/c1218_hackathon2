@@ -226,18 +226,17 @@ canvas {
 }
 
 .search-bar {
-  background-repeat: no-repeat;
-  background-position: 84%;
-  background-size: contain;
-  width: 77vw;
-  margin: 0px;
-  height: 85%;
-  left: 8px;
-  top: 24px;
-  position: relative;
+  /* background-repeat: no-repeat; */
+  /* background-position: 84%; */
+  /* background-size: contain; */
+  /* width: 84vw; */
+  /* margin: 0px; */
+  /* height: 85%; */
+  /* left: 8px; */
+  /* top: 24px; */
+  /* position: relative; */
   border-radius: 24px;
   background: #d5d2c0;
-
 }
 
 .cancel-container {
@@ -252,14 +251,16 @@ canvas {
   display: inline-block;
   margin: auto;
 }
+
+
 #camera-button {
-  height: 81%;
-  width: 44%;
-  position: relative;
-  left: 0%;
-  top: 12%;
-  object-fit: contain;
-  cursor: pointer;
+    /* height: 81%; */
+    /* width: 44%; */
+    /* position: relative; */
+    /* left: 0%; */
+    /* top: 12%; */
+    /* object-fit: contain; */
+    cursor: pointer;
 }
 
 .submit-input {
@@ -429,12 +430,12 @@ section {
 }
 
 #search-bar-button-image {
-  width: 53%;
-  height: 49%;
-  top: 29px;
+  /* width: 53%; */
+  /* height: 49%; */
+  /* top: 29px; */
   cursor: pointer;
-  position: relative;
-  right: 45px;
+  /* position: relative; */
+  /* right: 45px; */
 }
 @media only screen and (min-width:589){
   #search-bar-button-image{
