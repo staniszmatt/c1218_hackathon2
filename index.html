@@ -33,7 +33,7 @@
     <!-- Navbar Desktop -->
  
     </div>
-      <nav class="navbar navbar-expand-lg">
+      <!-- <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
             <div class="navbar-brand-icon">
                 <img id="icon" src="./icons/penguin.png" alt="">
@@ -47,15 +47,20 @@
             <a class="nav-item" href="#">Youtube</a> 
           </div>
         </div>
-      </nav>
+      </nav> -->
 <!-- App container mobile  -->
-      <div class="app-title-container">
-    <div class="search" role="alert">
-      <h5 class="app-title">Penguin Board Game Scanner</h5>
-      <div class="banner-logo-container">
-        <img id="penguin-icon" src="./icons/penguin.png" alt="">
+      <div class="row app-title-container">
+      <div class="col-3">
+              <img id="penguin-icon" src="./icons/penguin.png" alt="">
       </div>
-    </div>
+      <div class="col-9">
+          <h5 class="app-title">Penguin Board Game Scanner</h5>
+      </div>
+      
+       <!-- <div class="search" role="alert"> 
+            </div> -->
+          
+      
   </div>
     <!-- Main Page -->
     <div class="index-page">
@@ -67,6 +72,18 @@
             <div class="desktop-display-footer">
                <h5>Click on Camera or Enter Serial Number to Start </h5>
             </div>
+            <!-- Button Container -->
+    <div class="row navBar-Container">
+        <div id="camera-container"class="col-lg-3 col-md-4 col-sm-4 col-4">
+           <img id="camera-button" src="icons/camera.png">
+        </div>
+        <div id="search-container" class="col-lg-6 col-md-4 col-sm-4 col-4">
+          <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
+        </div>
+        <div id="search-icon-container" class="col-lg-3 col-md-4 col-sm-4 col-4">
+          <img id="search-bar-button-image" src="icons/magnifying-glass.png">
+        </div>
+      </div>
          </div>
         <div class="image-scanner-container">
           <div class='scanner-image'></div>
@@ -128,18 +145,7 @@
         </button>
       </div>
     </div>
-    <!-- Button Container -->
-    <div class="row navBar-Container">
-      <div id="camera-container"class="col-lg-3 col-md-4 col-sm-4 col-4">
-         <img id="camera-button" src="icons/camera.png">
-      </div>
-      <div id="search-container" class="col-lg-6 col-md-4 col-sm-4 col-4">
-        <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
-      </div>
-      <div id="search-icon-container" class="col-lg-3 col-md-4 col-sm-4 col-4">
-        <img id="search-bar-button-image" src="icons/magnifying-glass.png">
-      </div>
-    </div>
+    
     <!-- <div id="activate-search-bar-container" class="navBar-Container">
       <div class="search-bar-container">
         <div class="image-first-container">

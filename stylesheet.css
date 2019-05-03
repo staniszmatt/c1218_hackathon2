@@ -87,8 +87,11 @@ background-color:blue;
  .navbar{
   display:none
  }
- .app-title-container{
+ /* .app-title-container{
   display:inline-block;
+} */
+.app-title-container{
+  height:10vh; 
 }
 .image-scanner-container {
   width: 100vw;
@@ -116,7 +119,7 @@ background-color:blue;
   background: #ddddd9;
 }
 .index-page {
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
 }
 #myInput {
@@ -275,11 +278,11 @@ canvas {
   padding: 2px;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-wrap: wrap;
   left: 0;
-}
+} */
 
 .icon-container {
   height: 100%;
@@ -552,13 +555,13 @@ article:hover {
   display: flex;
 }
 #penguin-icon {
-  right: 1px;
+  /* right: 1px;
   height: 10vw;
   width: 100vw;
   position: relative;
   object-fit: contain;
   right: 159px;
-  bottom: 55px;
+  bottom: 55px; */
 }
 /* .image-scanner-container {
   width: 100vw;
