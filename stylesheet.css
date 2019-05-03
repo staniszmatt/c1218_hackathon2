@@ -123,6 +123,7 @@ background-color:blue;
 .index-page {
   height: 70vh;
   width: 100vw;
+  position: relative;
 }
 #myInput {
   font-size: 0.9rem;
@@ -529,6 +530,8 @@ article:hover {
   cursor: pointer;
   width: 100vw;
   /* margin: unset; */
+  position: absolute;
+  bottom: 0;
 }
 
 .display-page-button { 
