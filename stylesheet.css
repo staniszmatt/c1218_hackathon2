@@ -92,6 +92,8 @@ background-color:blue;
 } */
 .app-title-container{
   height:10vh; 
+  background: #ddddd9;
+
 }
 .image-scanner-container {
   width: 100vw;
@@ -116,7 +118,7 @@ background-color:blue;
   position: relative;
   padding: 20px;
   font-size: 1rem;
-  background: #ddddd9;
+  /* background: #ddddd9; */
 }
 .index-page {
   height: 70vh;
@@ -555,6 +557,10 @@ article:hover {
   display: flex;
 }
 #penguin-icon {
+  height:80%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
   /* right: 1px;
   height: 10vw;
   width: 100vw;
