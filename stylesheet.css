@@ -42,6 +42,10 @@ background-color:blue;
   text-align: center;
 }
 
+.image-scanner-container{
+  position:relative;
+}
+
 @media only screen and (min-width:500px){
   .navbar{
     display:flex;
@@ -176,13 +180,10 @@ h1 {
   margin: auto;
 }
 .cancel-scan {
-  height: 100%;
-  width: 31%;
-  position: relative;
-  bottom: 314px;
-  right: 153px;
-  object-fit: contain;
+  width: 20px;
   cursor: pointer;
+  position: absolute;
+  right: 0%;
 }
 
 .bg-dark {
@@ -205,6 +206,7 @@ h1 {
 
 video {
   width: 100%;
+  height: 100%;
 }
 
 canvas {
