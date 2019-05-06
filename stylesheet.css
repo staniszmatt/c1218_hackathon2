@@ -90,6 +90,10 @@ background-color:blue;
  /* .app-title-container{
   display:inline-block;
 } */
+
+.nav-button{
+  height:10vh; 
+}
 .app-title-container{
   height:10vh; 
   background: #ddddd9;
@@ -121,7 +125,7 @@ background-color:blue;
   /* background: #ddddd9; */
 }
 .index-page {
-  height: 70vh;
+  height: 80vh;
   width: 100vw;
   position: relative;
 }
