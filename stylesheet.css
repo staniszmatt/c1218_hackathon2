@@ -6,6 +6,52 @@
   Reviews Page
   NavButtons
 */
+
+/* @media only screen and (min-width: 1200px){
+  .youtube-header-container{
+    max-width: 1140px;
+}
+}
+
+@media only screen and (min-width: 992px){
+  .youtube-header-container {
+    max-width: 960px;
+}
+}
+
+@media only screen and (min-width: 768px){
+  .youtube-header-container {
+    max-width: 720px;
+}
+}
+
+@media only screen and (min-width: 576px){
+  .youtube-header-container{
+    max-width: 540px;
+}
+} */
+
+@media only screen and (min-width: 576px){
+  .youtube-header-container{
+    max-width: 540px;
+}
+} 
+@media only screen and (min-width: 768px){
+  .youtube-header-container {
+    max-width: 720px;
+}
+}
+@media only screen and (min-width: 992px){
+  .youtube-header-container {
+    max-width: 960px;
+}
+}
+@media only screen and (min-width: 1200px){
+  .youtube-header-container{
+    max-width: 1140px;
+}
+}
+
 body {
   background: #f2ecec;
 }
@@ -109,6 +155,22 @@ background-color:blue;
 }
 
 
+/* @media (min-width: 1200px)
+.container {
+    max-width: 1140px;
+}
+@media (min-width: 992px)
+.container {
+    max-width: 960px;
+}
+@media (min-width: 768px)
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+} */
 
 
  @media only screen and (max-width:499px){
@@ -511,9 +573,9 @@ section {
     
 }
 
-.youtube-header-container {
+/* .youtube-header-container {
   width: 86%;
-}
+} */
 
 .youtube-search-bar {
   background-image: url(./icons/search_bar.PNG);
@@ -568,15 +630,31 @@ article:hover {
   top: 0;
   width: 100%;
   height: 10%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.youtube-logo {
-  height: 96%;
-  bottom: 45px;
-  width: 30%;
-  margin: 5px 14px;
-  position: relative;
-  object-fit: contain;
+@media only screen and (min-width:700px){
+  .youtube-logo {
+    height: 96%;
+    /* bottom: 45px; */
+    width: 20%;
+    margin: 5px 14px;
+    position: relative;
+    object-fit: contain;
+  }
+  
+}
+@media only screen and (max-width:699px){
+  .youtube-logo {
+    height: 96%;
+    /* bottom: 45px; */
+    width: 30%;
+    margin: 5px 14px;
+    position: relative;
+    object-fit: contain;
+  }
+  
 }
 
 #google-search {
@@ -899,3 +977,5 @@ span:hover{
   display: block;
   align-items: center;
 }
+
+/*youtube media queries*/
