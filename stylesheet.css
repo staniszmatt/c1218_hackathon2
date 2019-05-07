@@ -44,6 +44,29 @@ background-color:blue;
 }
 
 @media only screen and (min-width:500px){
+  .search-bar-container {
+    display: inline-flex;
+    width: 100vw;
+    position: relative;
+    /* justify-content: center; */
+    /* bottom: 19px; */
+    /* right: 7px; */
+    margin: 0px;
+    filter: drop-shadow(2px 2px 2px black);
+    background: #c1494e;
+}
+  .navBar-Container {
+    z-index: 100;
+    position: fixed;
+    /* padding: 0.5rem 0.5rem; */
+    text-align: center;
+    background: #ddddd9;
+    bottom: 0;
+    box-shadow: 3px 3px 10px black;
+    cursor: pointer;
+    width: 100vw;
+    margin: unset;
+  }
   .desktop-display-header{
     margin-top: 20vh;
     text-align: center;
@@ -89,6 +112,29 @@ background-color:blue;
 
 
  @media only screen and (max-width:499px){
+  .search-bar-container {
+    display: inline-flex;
+    width: 100vw;
+    position: relative;
+    /* justify-content: center; */
+    bottom: 19px;
+    right: 7px;
+    margin: 0px;
+    filter: drop-shadow(2px 2px 2px black);
+    background: #c1494e;
+  }
+  .navBar-Container {
+    z-index: 100;
+    position: fixed;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    background: #ddddd9;
+    bottom: 0;
+    box-shadow: 3px 3px 10px black;
+    cursor: pointer;
+    width: 100vw;
+    margin: unset;
+  }
   .desktop-display-header{
     margin-top: 10vh;
     text-align: center;
@@ -221,17 +267,7 @@ canvas {
 
 
 /*search-bar*/
-.search-bar-container {
-  display: inline-flex;
-  width: 100vw;
-  position: relative;
-  /* justify-content: center; */
-  bottom: 19px;
-  right: 7px;
-  margin: 0px;
-  filter: drop-shadow(2px 2px 2px black);
-  background: #c1494e;
-}
+
 
 @media only screen and (min-width:666px){
   .search-bar{
@@ -549,18 +585,7 @@ article:hover {
 }
 
 /*Nav Buttons*/
-.navBar-Container {
-  z-index: 100;
-  position: fixed;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-  background: #ddddd9;
-  bottom: 0;
-  box-shadow: 3px 3px 10px black;
-  cursor: pointer;
-  width: 100vw;
-  margin: unset;
-}
+
 
 .display-page-button { 
   opacity: 0; /* Remove when button is ready to use*/
