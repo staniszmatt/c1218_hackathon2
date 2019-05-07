@@ -28,10 +28,7 @@ background-color:blue;
   background-color:#f2ecec;
 }
 
-.desktop-display-header{
-  margin-top: 20vh;
-  text-align: center;
-}
+
 
 .desktop-display.active{
     display: none;
@@ -47,6 +44,10 @@ background-color:blue;
 }
 
 @media only screen and (min-width:500px){
+  .desktop-display-header{
+    margin-top: 20vh;
+    text-align: center;
+  }
   .navbar{
     display:flex;
     text-align:right;
@@ -88,6 +89,10 @@ background-color:blue;
 
 
  @media only screen and (max-width:499px){
+  .desktop-display-header{
+    margin-top: 10vh;
+    text-align: center;
+  }
  .navbar{
   display:none
  }
@@ -333,6 +338,9 @@ canvas {
   width: 80%;
 }
 
+h3, h4, h5, h6{
+  color:white;
+}
 @media only screen and (min-width:500px){
   #product-image-placeholder {
     border: 2px solid #c1494e;
@@ -344,7 +352,11 @@ canvas {
   .product-image-width{
     width: 80%;
   }
-  
+
+  h3, h4, h5, h6{
+    color:white;
+  }
+
 }
 
 @media only screen and (max-width:499px){
@@ -574,6 +586,12 @@ article:hover {
 }
 .head-container {
   display: flex;
+}
+
+.boardgame-background{
+  background-image: url("./icons/boardgamestill.jpg");
+  background-size: 100% 100%;
+  opacity: 0.5;
 }
 #penguin-icon {
   right: 1px;
