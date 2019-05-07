@@ -291,15 +291,13 @@ canvas {
   background-repeat: no-repeat;
   background-position: 84%;
   background-size: contain;
-  
   margin: 0px;
-  height: 85%;
-  left: 8px;
-  top: 24px;
-  position: relative;
+  left: 50%;
+  top: 50%;
+  position: absolute;
   border-radius: 24px;
   background: #d5d2c0;
-
+  transform: translate(-50%, -50%);
 }
 
 .cancel-container {
@@ -378,15 +376,31 @@ h3, h4, h5, h6{
   color:white;
 }
 @media only screen and (min-width:500px){
+  #search-bar-button-image {
+    /* width: 53%; */
+    /* height: 49%; */
+    /* top: 29px; */
+    cursor: pointer;
+    position: relative;
+    position: absolute;
+    /* right: 45px; */
+    right: 5%;
+    filter: brightness(0) invert(1);
+    top: 38%;
+    height: 32%;
+    width: 3.5%;
+  }
   #product-image-placeholder {
-    border: 2px solid #c1494e;
+    /* border: 2px solid #c1494e; */
     filter: drop-shadow(2px 2px 2px black);
     margin: 0 auto;
     width: 20vw;
     object-fit: contain;
-  }
+    padding: 10px;
+}
   .product-image-width{
     width: 80%;
+    top: 5vh;
   }
 
   h3, h4, h5, h6{
@@ -396,14 +410,29 @@ h3, h4, h5, h6{
 }
 
 @media only screen and (max-width:499px){
+  #search-bar-button-image {
+    /* width: 53%; */
+    /* height: 49%; */
+    /* top: 29px; */
+    cursor: pointer;
+    position: relative;
+    position: absolute;
+    /* right: 45px; */
+    right: 5%;
+    filter: brightness(0) invert(1);
+    top: 38%;
+    height: 32%;
+    width: 7.3%;
+  }
   #product-image-placeholder {
-    border: 2px solid #c1494e;
+    /* border: 2px solid #c1494e; */
     filter: drop-shadow(2px 2px 2px black);
     margin: 0 auto;
     height: 100%;
     width: 83%;
     object-fit: contain;
-  }
+    padding: 20px;
+}
   .product-image-width{
     width: 18rem;
   }
@@ -497,18 +526,7 @@ section {
   bottom: 58px;
 }
 
-#search-bar-button-image {
-  /* width: 53%; */
-  /* height: 49%; */
-  /* top: 29px; */
-  cursor: pointer;
-  position: relative;
-  position: absolute;
-  /* right: 45px; */
-  right: 5%;
-  filter: brightness(0) invert(1);
-  top:38%;
-}
+
 @media only screen and (min-width:589){
   /* #search-bar-button-image{
     right:67px;
