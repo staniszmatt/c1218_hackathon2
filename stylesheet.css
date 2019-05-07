@@ -180,6 +180,7 @@ h1 {
   margin: auto;
 }
 .cancel-scan {
+  z-index: 1;
   width: 20px;
   cursor: pointer;
   position: absolute;

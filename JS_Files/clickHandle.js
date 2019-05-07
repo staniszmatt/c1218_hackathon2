@@ -62,6 +62,7 @@ class PBGS_init {
   cancelScan() {
     this.upcScanner.stopScanning();
     this.domInformation.cancelScanButton.hide();
+    console.log('iminit')
   }
 
   modalErrorMessage(errorMessage) {
