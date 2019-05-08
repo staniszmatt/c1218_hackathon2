@@ -28,10 +28,7 @@ background-color:blue;
   background-color:#f2ecec;
 }
 
-.desktop-display-header{
-  margin-top: 20vh;
-  text-align: center;
-}
+
 
 .desktop-display.active{
     display: none;
@@ -42,7 +39,15 @@ background-color:blue;
   text-align: center;
 }
 
+.image-scanner-container{
+  position:relative;
+}
+
 @media only screen and (min-width:500px){
+  .desktop-display-header{
+    margin-top: 20vh;
+    text-align: center;
+  }
   .navbar{
     display:flex;
     text-align:right;
@@ -84,6 +89,10 @@ background-color:blue;
 
 
  @media only screen and (max-width:499px){
+  .desktop-display-header{
+    margin-top: 10vh;
+    text-align: center;
+  }
  .navbar{
   display:none
  }
@@ -176,13 +185,11 @@ h1 {
   margin: auto;
 }
 .cancel-scan {
-  height: 100%;
-  width: 31%;
-  position: relative;
-  bottom: 314px;
-  right: 153px;
-  object-fit: contain;
+  z-index: 1;
+  width: 20px;
   cursor: pointer;
+  position: absolute;
+  right: 0%;
 }
 
 .bg-dark {
@@ -205,6 +212,7 @@ h1 {
 
 video {
   width: 100%;
+  height: 100%;
 }
 
 canvas {
@@ -217,7 +225,7 @@ canvas {
   display: inline-flex;
   width: 100vw;
   position: relative;
-  justify-content: center;
+  /* justify-content: center; */
   bottom: 19px;
   right: 7px;
   margin: 0px;
@@ -225,11 +233,29 @@ canvas {
   background: #c1494e;
 }
 
+@media only screen and (min-width:666px){
+  .search-bar{
+    width: 77vw;
+  }
+}
+
+@media only screen and (min-width:434px){
+  .search-bar{
+    width: 65vw;
+  }
+}
+
+@media only screen and (max-width:433px){
+  .search-bar{
+    width: 57vw;
+  }
+}
+
 .search-bar {
   background-repeat: no-repeat;
   background-position: 84%;
   background-size: contain;
-  width: 77vw;
+  
   margin: 0px;
   height: 85%;
   left: 8px;
@@ -250,7 +276,7 @@ canvas {
   height: 10vh;
   width: 10vh;
   display: inline-block;
-  margin: auto;
+  /* margin: auto; */
 }
 #camera-button {
   height: 81%;
@@ -312,6 +338,9 @@ canvas {
   width: 80%;
 }
 
+h3, h4, h5, h6{
+  color:white;
+}
 @media only screen and (min-width:500px){
   #product-image-placeholder {
     border: 2px solid #c1494e;
@@ -323,7 +352,11 @@ canvas {
   .product-image-width{
     width: 80%;
   }
-  
+
+  h3, h4, h5, h6{
+    color:white;
+  }
+
 }
 
 @media only screen and (max-width:499px){
@@ -429,21 +462,25 @@ section {
 }
 
 #search-bar-button-image {
-  width: 53%;
-  height: 49%;
-  top: 29px;
+  /* width: 53%; */
+  /* height: 49%; */
+  /* top: 29px; */
   cursor: pointer;
   position: relative;
-  right: 45px;
+  position: absolute;
+  /* right: 45px; */
+  right: 5%;
+  filter: brightness(0) invert(1);
+  top:38%;
 }
 @media only screen and (min-width:589){
-  #search-bar-button-image{
+  /* #search-bar-button-image{
     right:67px;
-  }
+  } */
 }
 .search-image-container {
   height: 100%;
-  width: 10vw;  
+  /* width: 10vw;   */
 }
 
 article {
@@ -549,6 +586,12 @@ article:hover {
 }
 .head-container {
   display: flex;
+}
+
+.boardgame-background{
+  background-image: url("./icons/boardgamestill.jpg");
+  background-size: 100% 100%;
+  opacity: 0.5;
 }
 #penguin-icon {
   right: 1px;

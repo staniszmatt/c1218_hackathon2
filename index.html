@@ -60,20 +60,24 @@
     <!-- Main Page -->
     <div class="index-page">
       <div class="head-container">
-         <div class="desktop-display">
+         <div class="desktop-display boardgame-background">
             <div class="desktop-display-header">
-                  <h4>Welcome To Board Game Scanner</h4>
+                  <h3>Penguin Board Game Scanner</h3>
+                  <h6>Search for board game information, where to buy, and YouTube reviews </h6>
             </div>
+            <!-- <img src="./icons/source.gif" alt=""> -->
             <div class="desktop-display-footer">
-               <h5>Click on Camera or Enter Serial Number to Start </h5>
+               <h5>Click on Camera or Enter Serial to Start </h5>
             </div>
          </div>
         <div class="image-scanner-container">
-          <div class='scanner-image'></div>
-          <img src="/icons/source.gif" alt="">
+            <img class="cancel-scan" src="icons/cancel.png">
+          <div class='scanner-image'>
+          </div>
+          
         </div>
       </div>
-      <main class="scanning-main">
+      <!-- <main class="scanning-main">
         <div class="scanner-buttons-container">
           <div class="scan-bar-container">
             <div class="button-container">
@@ -81,7 +85,7 @@
             </div>
           </div>
         </div>
-      </main>
+      </main> -->
     </div>
     <div class="card product-page product-image-width">
       <img id="product-image-placeholder" src="" class="homeIcon card-img-top">
@@ -134,8 +138,8 @@
         <div class="image-first-container">
           <img id="camera-button" src="icons/camera.png">
         </div>
-        <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
         <div class="search-image-container">
+          <input class="search-bar" id="myInput" type="text" placeholder="Enter Serial Number">
           <img id="search-bar-button-image" src="icons/magnifying-glass.png">
         </div>
       </div>
