@@ -5,9 +5,11 @@
   Google Maps CSS
   Reviews Page
   NavButtons
+  Preloader 
 */
 body {
   background: #f2ecec;
+
 }
 
 .center-desktop-version{
@@ -855,4 +857,37 @@ span:hover{
   height: 50vh;
   display: block;
   align-items: center;
+}
+
+/*PreLoader*/
+.preloader-spinner:active{
+  width:80px;
+  height:80px;
+  border: 2px solid gray;
+  border-top: 3px solid red;
+  border-radius:50%;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top:0;
+  margin: auto;
+  animation: spin 1s infinite linear;
+  display:block;
+}
+
+.preloader-spinner{
+  display:none;
+}
+
+#preloader-wrapper{
+  z-index: 9999;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
 }

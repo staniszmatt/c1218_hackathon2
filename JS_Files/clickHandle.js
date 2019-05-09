@@ -25,6 +25,7 @@ class PBGS_init {
     this.hideModal = this.hideModal.bind(this);
     //
     this.hideDesktopDisplay = this.hideDesktopDisplay.bind(this);
+    this.loaderDisplay = this.loaderDisplay.bind(this);
   }
 
   clickHandler() {
@@ -40,6 +41,8 @@ class PBGS_init {
     this.domInformation.mapIcon.click(this.mapButtonClicked);
     this.domInformation.cancelScanButton.hide();
     this.hideModal();
+    //search bar pressed to display loader
+    this.domInformation.searchBarBtn.click(this.loaderDisplay);
   }
 
   initScanner() { //calls when scan request button is pressed
@@ -115,4 +118,12 @@ class PBGS_init {
   hideDesktopDisplay(){
     this.domInformation.desktopDisplay.hide();
   }
+  loaderDisplay(){
+    let displayLoader = document.querySelector(".searchBtn").classList.remove(".active");
+  }
+  searchBtnClick(){
+    let searchBtn = document.querySelector(".searchBtn");
+    searchBtn.addEventListener("click", loaderDisplay);
+  }
 }
+
