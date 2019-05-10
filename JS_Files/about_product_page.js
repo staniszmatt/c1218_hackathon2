@@ -16,7 +16,7 @@ class Product_page {
     this.domSetupForDisplay = this.domSetupForDisplay.bind(this);
   }
   /**
-   * @param {object} dataToDisplay - passing in the data recived from post request for inormaton 
+   * @param {object} dataToDisplay - passing in the data received from post request for information 
    */
   displayData(dataToDisplay) { //Pull data from object into array
     this.dataToDisplay.title = dataToDisplay.items[0].title;
@@ -42,9 +42,7 @@ class Product_page {
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
     initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
     initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
-    this.startMap.getCurrentLocation();//Maps to get current Location
-    this.startMap.googleMapGameName(this.dataToDisplay.title); //Passing game title over to maps to search for store locations
-    this.startMap.startMap(); //Initializes maps 
+    this.startMap.startMap(); //Initializes maps
   }
   
   getKeyByValue(object, value) {
