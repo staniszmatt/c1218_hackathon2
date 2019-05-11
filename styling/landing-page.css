@@ -1,26 +1,44 @@
 .index-page {
   height: 100vh;
   overflow: hidden;
-
+  background-color: #f2ecec;
 }
 
 .head-container {
   height: 100vh;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-.display-footer{
+.display-header{
   text-align: center;
+}
+
+.display-header>h5 {
+  text-align: left;
+  margin-left: 8px;
 }
 
 .image-scanner-container{
   position: absolute;
-  top: 50px;
+  top: 60px;
+  text-align: center;
 }
 
 .cancel-scan {
-  position: absolute;
+  position: relative;
+  background: red;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 2px black);
 }
+
+.cancel-scan:hover {
+  background-color: rgb(190, 0, 0);
+}
+
+.cancel-scan:active {
+  transform: scale(0.9);
+}
+
 
 .scanner-image {
   height: 100%;
@@ -30,6 +48,7 @@
 
 div.scanner-image > video {
   width: 100vw;
+  filter: drop-shadow(2px 3px 3px black);
 }
 canvas.drawingBuffer {
   display: none;
@@ -43,7 +62,6 @@ canvas.drawingBuffer {
 }
 
 .boardgame-background {
-  background-color: #f2ecec;
   background-image: url(./icons/boardgamestill.jpg);
 }
 
