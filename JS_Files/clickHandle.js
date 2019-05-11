@@ -29,7 +29,6 @@ class PBGS_init {
 
   clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
-    //landing page that is hidden once camera is clicked
     this.domInformation.initScanButton.click(this.hideDesktopDisplay);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.modalButton.click(this.hideModal);
@@ -45,6 +44,8 @@ class PBGS_init {
   initScanner() { //calls when scan request button is pressed
     this.upcScanner.initScanner();
     this.upcScanner.cameraActivated = true;
+    $(".image-scanner-container").show();
+    $(".display-header").hide();
     this.domInformation.cancelScanButton.show();
   }
 
@@ -62,7 +63,8 @@ class PBGS_init {
   cancelScan() {
     this.upcScanner.stopScanning();
     this.domInformation.cancelScanButton.hide();
-    console.log('iminit')
+    $(".image-scanner-container").hide();
+    $(".display-header").show();
   }
 
   modalErrorMessage(errorMessage) {
