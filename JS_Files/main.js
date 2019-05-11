@@ -14,10 +14,10 @@ function startWhenLoaded(){
     modalDisplayText: $(".modal-body"),
     submitBarcodeNumberButton: $("#search-bar-button-image"),
     cancelScanButton: $(".cancel-scan"),
-    homeIcon:$(".home-page-button"),
-    reviewIcon:$(".reviews-page-button"),
-    mapIcon:$(".map-page-button"),
-    youtubeIcon:$(".youtube-page-button"),
+    homeIcon:$(".home"),
+    reviewIcon:$(".product"),
+    mapIcon:$(".map"),
+    youtubeIcon:$(".youtube"),
     indexDisplayPage: $(".index-page"),
     productDisplayPage: $(".product-page"),
     youtubeDisplayPage: $(".youtube-page"),
@@ -33,5 +33,4 @@ function startWhenLoaded(){
   domInformation.googleDisplayPage.hide();
   domInformation.modalBody.hide();
   domInformation.modalShadow.hide();
-  // domInformation.desktopDisplay.hide();
 }
