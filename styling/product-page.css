@@ -1,4 +1,4 @@
-.card {
+.product-page {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -13,44 +13,21 @@
   margin-bottom: 10px;
 }
 
-#product-image-placeholder {
+img#product-image-placeholder {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-div .card-body {
-  width: 100%;
+div.display-p-container > p:first-child {
+  color: #c1494e;
+  font-size: 25px;
+  padding-bottom: 20px;
 }
 
-.info-container {
-  width: 100%;
-}
-
-.display-p-container {
-  width: 100%;
-}
-
-.product-display {
+p.product-display {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   margin: 20px 10px;
-}
-
-.display-p-container p:first-child {
-  color: #c1494e;
-  position: relative;
-  bottom: 58px;
-  font-size: .95rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.card-title{
-  text-align:center;
-  font-family:'Overlock', cursive;
-  font-weight:bold;
-}
-
-span:hover{
-  background:yellow;
+  padding-left: 10px;
 }
