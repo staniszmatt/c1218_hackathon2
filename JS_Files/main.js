@@ -4,7 +4,7 @@ function startWhenLoaded(){
   let domInformation = { //Passes all elements for click handling and editing that is needed. 
     initScanButton: $("#camera-button"),
     submitNumberInput: $(".search-bar"),
-    displayDataElm: $(".info-container1"),
+    displayDataElm: $(".info-container"),
     displayYoutubeElm: $(".youtube-main"),
     youtubeArticleElm: $(".youtube-main .article.item"),
     displayDataImgElm: $("#product-image-placeholder"),

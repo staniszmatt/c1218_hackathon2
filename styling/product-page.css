@@ -1,43 +1,40 @@
-div .product-page {
-  width: 0;
-  height: 85vh;
+.card {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0px auto;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border-radius: .25rem;
+.image-container {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  background: white;
+  box-shadow: 4px 5px 3px grey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#product-image-placeholder {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 div .card-body {
-  height: 40vh;
+  width: 100%;
 }
 
 .info-container {
-  height: 50vh;
-  display: block;
-  align-items: center;
+  width: 100%;
 }
 
 .display-p-container {
-  margin: 9px;
-  font-size: 15px;
-  font-weight: 900;
-  text-align: center;
+  width: 100%;
 }
 
 .product-display {
-  font-size: 0.67rem;
-  color: #c1494e;
-  letter-spacing: 1px;
-  line-height: 1;
-  font-family: 0.75r;
   font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 20px 10px;
 }
 
 .display-p-container p:first-child {
@@ -56,29 +53,4 @@ div .card-body {
 
 span:hover{
   background:yellow;
-}
-
-.image-container {
-  height: 40vh;
-  display: flex;
-  align-items: center;
-}
-
-.display-page-button { 
-  opacity: 0; /* TODO: Remove when button is ready to use*/
-  border-radius: 1px;
-  background: #c1494e;
-  box-shadow: rgba(0,0,0,1) 0 1px 0;
-  color: white;
-  filter: drop-shadow(2px 2px 3px black);
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 4px auto;
-  outline: none;
-  width: 60vw;
-  font-weight: unset;
-  position: relative;
-  top: 7vh;
 }
