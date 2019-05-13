@@ -1,4 +1,4 @@
-$(document).ready(startWhenLoaded)
+$(document).ready(startWhenLoaded);
 let initialization = null;
 function startWhenLoaded(){
   let domInformation = { //Passes all elements for click handling and editing that is needed. 
@@ -33,4 +33,28 @@ function startWhenLoaded(){
   domInformation.googleDisplayPage.hide();
   domInformation.modalBody.hide();
   domInformation.modalShadow.hide();
+
+  phoneSizing();
+}
+
+function phoneSizing() {
+  console.log('Resizing');
+  let $window = $(window);
+  let isMinimized = false;
+
+  resize = () => {
+    if (!isMinimized) {
+      if ($window.width() < 1600){
+        console.log("resize < 1600")
+        $(".nav-bar-container").detach().insertAfter(".google-page");
+        isMinimized = true;
+      } 
+    } 
+    if ($window.width() >= 1600) {
+      console.log("resize >= 1600");
+      $(".nav-bar-container").detach().appendTo(".app-title-container");
+      isMinimized = false;
+    }
+  }
+  $window.resize(resize).trigger('resize');
 }

@@ -214,3 +214,18 @@ canvas.drawingBuffer {
     height: 50vh;
   }
 }
+
+@media (min-width: 1600px) and (min-height: 1000px){
+  .head-container {
+    margin-top: 150px;
+  }
+
+  h3.display-h3 {
+    font-size: 55px;
+    padding: 40px 0px;
+  }
+
+  h5.display-h5 {
+    margin: 50px 40px;
+  }
+}

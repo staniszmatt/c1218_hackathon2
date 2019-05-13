@@ -31,3 +31,21 @@
     height: 65px;
   }
 }
+
+@media (min-width: 1600px) and (min-height: 1000px) {
+  .nav-bar-container {
+    height: 90px;
+    width: 400px;
+    position: unset;
+    box-shadow: unset;
+    margin: auto;
+  }
+
+  .icon-container {
+    margin: auto;
+  }
+
+  div.nav-bar-container>.icon-container:nth-child(3)>img {
+    transform: scale(0.78);
+  }
+}

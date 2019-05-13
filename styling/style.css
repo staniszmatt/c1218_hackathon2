@@ -75,3 +75,22 @@ h1 {
     width: 50px;
   }
 }
+
+@media (min-width: 1600px) and (min-height: 1000px) {
+  .app-title-container {
+    height: 125px;
+    align-items: center;
+  }
+
+  h5.app-title {
+    font-size: 60px;
+    margin: auto;
+  }
+
+  .banner-logo-container {
+    width: unset;
+    height: 80px;
+    margin: auto;
+  }
+
+}
