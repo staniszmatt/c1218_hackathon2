@@ -43,3 +43,35 @@ h1 {
   text-align: center;
   position: relative;
 }
+
+@media (min-width: 760px) and (min-height: 1020px) {
+
+  .app-title-container {
+    height: 60px;
+  }
+
+  h5.app-title {
+    font-size: 40px;
+  }
+
+  .banner-logo-container {
+    height: 50px;
+    width: 50px;
+  }
+
+}
+
+@media (min-width: 1020px) and (min-height: 760px) {
+  .app-title-container {
+    height: 60px;
+  }
+
+  h5.app-title {
+    font-size: 40px;
+  }
+
+  .banner-logo-container {
+    height: 50px;
+    width: 50px;
+  }
+}

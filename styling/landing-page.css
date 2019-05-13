@@ -15,7 +15,8 @@
 
 .display-header>h5 {
   text-align: left;
-  margin-left: 8px;
+  margin: 20px 18px;
+  font-size: 18px;
 }
 
 .image-scanner-container{
@@ -79,7 +80,7 @@ canvas.drawingBuffer {
   background: #c1494e;
   height: 50px;
   position: fixed;
-    bottom: 60px;
+  bottom: 60px;
 }
 
 .search-image-container {
@@ -129,4 +130,87 @@ canvas.drawingBuffer {
   }
 }
 
-@media (min-width: 760px)
+@media (min-width: 760px) and (min-height: 1020px) {
+
+  h3.display-h3 {
+    font-size: 45px;
+    padding: 25px 0px;
+  }
+
+  h5.display-h5 {
+    font-size: 30px;
+    margin-left: unset;
+    margin: 40px 25px;
+  }
+
+  .search-bar-container {
+    bottom: 80px;
+    width: 66vw;
+    height: 80px;
+    border-radius: 5px;
+    margin: 0 15%;
+  }
+
+  .image-first-container {
+    height: 42px;
+    width: 55px;
+  }
+
+  .search-image-container {
+    height: unset;
+    font-size: 25px;
+  }
+
+  .image-scanner-container {
+    position: unset;
+  }
+
+  div.scanner-image > video {
+    width: 66vw;
+  }
+
+  .cancel-scan {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1020px) and (min-height: 760px) {
+
+  h3.display-h3 {
+    font-size: 45px;
+    padding: 25px 0px;
+  }
+
+  h5.display-h5 {
+    font-size: 30px;
+    margin-left: unset;
+    margin: 40px 25px;
+  }
+
+  .search-bar-container {
+    bottom: 80px;
+    width: 66vw;
+    height: 80px;
+    border-radius: 5px;
+    margin: 0 15%;
+  }
+
+  .image-first-container {
+    height: 42px;
+    width: 55px;
+  }
+
+  .search-image-container {
+    height: unset;
+    font-size: 25px;
+  }
+
+  .image-scanner-container {
+    position: unset;
+  }
+
+  div.scanner-image > video{
+    width: unset;
+    height: 50vh;
+  }
+}
