@@ -32,6 +32,8 @@ class StartMap {
 
   startMap() {
     // Create the map.
+    $("#places").empty();
+    $('#map').empty();
     this.map = new google.maps.Map(document.getElementById('map'), {
       center: this.googlePosition,
       zoom: 10
@@ -48,7 +50,7 @@ class StartMap {
         this.googlePosition = pos;
         this.startMap();
         this.infoWindow.setPosition(this.googlePosition);
-        this.infoWindow.setContent('Location found.');
+        this.infoWindow.setContent('Locations found.');
         this.infoWindow.open(this.map);
         this.map.setCenter(this.googlePosition);
         this.map.setZoom(10);
@@ -73,16 +75,15 @@ class StartMap {
       fields: ['name', 'geometry'],
     };
     // Perform a nearby search.
-    this.map.setZoom(10);
+    this.map.setZoom(15);
     this.service.textSearch({
       location: this.googlePosition,
-      radius: 10000,
+      radius: 100,
       type: ['store'],
-      query: this.theTitle + " game" //The title of the board game
+      query: this.theTitle //+ " game" //The title of the board game
     },
       (results, status, pagination) => {
         if (status !== 'OK') return;
-
         this.createMarkers(results);
         this.moreButton.disabled = !pagination.hasNextPage;
         getNextPage = pagination.hasNextPage && function () {
@@ -100,15 +101,16 @@ class StartMap {
   }
   //create markets on map
   createMarkers(places) {
+    console.log("Places ", places);
     var bounds = new google.maps.LatLngBounds();
     var placesList = document.getElementById('places');
     for (var i = 0, place; place = places[i]; i++) {
       var image = {
         url: place.icon,
-        size: new google.maps.Size(71, 71),
+        size: new google.maps.Size(50, 50),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
+        scaledSize: new google.maps.Size(10, 10)
       };
       var marker = new google.maps.Marker({
         map: this.map,
@@ -124,7 +126,7 @@ class StartMap {
       bounds.extend(place.geometry.location);
     }
     this.map.fitBounds(bounds);
-    this.map.setZoom(11);
+    this.map.setZoom(5);
     this.map.getCenter(this.googlePosition);
   }
 }

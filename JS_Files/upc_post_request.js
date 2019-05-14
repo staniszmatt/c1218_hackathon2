@@ -49,7 +49,6 @@ class UPC_post_request{
       this.productData.displayData(returnedData); 
     }
     $(".index-page").hide(); 
-    $(".search-bar-container").hide();
     $(".product-page").show();
   }
   /**

@@ -41,6 +41,7 @@ class Product_page {
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
     initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
+    this.startMap.googleMapGameName(this.dataToDisplay.title);
     initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
     this.startMap.startMap(); //Initializes maps
   }
