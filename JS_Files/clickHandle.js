@@ -23,9 +23,13 @@ class PBGS_init {
     this.showSearchBar = this.showSearchBar.bind(this);
     this.hideSearchBar = this.hideSearchBar.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    //
+    this.hideDesktopDisplay = this.hideDesktopDisplay.bind(this);
   }
+
   clickHandler() {
     this.domInformation.initScanButton.click(this.initScanner);
+    this.domInformation.initScanButton.click(this.hideDesktopDisplay);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
     this.domInformation.modalButton.click(this.hideModal);
     this.domInformation.cancelScanButton.click(this.cancelScan);
@@ -36,64 +40,81 @@ class PBGS_init {
     this.domInformation.cancelScanButton.hide();
     this.hideModal();
   }
+
   initScanner() { //calls when scan request button is pressed
-    console.log("Clicked InitScanner");
     this.upcScanner.initScanner();
     this.upcScanner.cameraActivated = true;
+    $(".image-scanner-container").show();
+    $(".display-header").hide();
     this.domInformation.cancelScanButton.show();
   }
+
   submitBarcode(){ //calls with submitted by hand. 
-    console.log("Clicked Submitt");//TODO: Go back to home screen if errors
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     if(this.barcodeInputValue === ""){
-      this.modalErrors.show("Input a number!");
+      this.modalErrors.show("INPUT A NUMBER!");
     }
     else{
       this.upcScanner.processedCallBack(this.barcodeInputValue);
     }
     this.upcScanner.stopScanning();
   }
+
   cancelScan() {
     this.upcScanner.stopScanning();
     this.domInformation.cancelScanButton.hide();
+    $(".image-scanner-container").hide();
+    $(".display-header").show();
   }
+
   modalErrorMessage(errorMessage) {
     this.modalErrors.show(errorMessage)
   }
-  hideModal() {  //TODO: 
+
+  hideModal() {  
     this.modalErrors.hideModal();
   }
+
   hideAllPages() {
     this.domInformation.indexDisplayPage.hide();
     this.domInformation.productDisplayPage.hide();
     this.domInformation.youtubeDisplayPage.hide();
     this.domInformation.googleDisplayPage.hide();
   }
+
   displayPage(pageToShow) {
     this.hideAllPages();
     pageToShow.show();
   }
+
   indexButtonClicked() {
     this.displayPage(this.domInformation.indexDisplayPage);
     this.showSearchBar(this.domInformation.searchBarContainer);
   }
+
   youTubeButtonClicked() {
     this.displayPage(this.domInformation.youtubeDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
   }
+
   reviewsButtonClicked() {
     this.displayPage(this.domInformation.productDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
   }
+
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
-    
   }
+
   showSearchBar(){
     this.domInformation.searchBarContainer.show();
   }
+  
   hideSearchBar(){
     this.domInformation.searchBarContainer.hide();
+  }
+  hideDesktopDisplay(){
+    this.domInformation.desktopDisplay.hide();
   }
 }

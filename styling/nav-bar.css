@@ -1,0 +1,51 @@
+.nav-bar-container {
+  position: fixed;
+  background: #ddddd9;
+  bottom: 0;
+  box-shadow: 3px 3px 10px black;
+  width: 100%;
+  display: flex;
+  height: 50px;
+}
+
+.icon-container {
+  filter: drop-shadow(1px 1px 1px grey);
+  margin: 5px 0;
+}
+
+.nav-icon {
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+  object-fit: contain;
+}
+
+.nav-icon:hover{
+  transition:all 0.5s;
+  filter: drop-shadow(1px 1px 1px black);
+  transform:scale(1.1);
+}
+
+@media (min-width: 760px) and (min-height: 1020px) {
+  .nav-bar-container {
+    height: 65px;
+  }
+}
+
+@media (min-width: 1600px) and (min-height: 1000px) {
+  .nav-bar-container {
+    height: 90px;
+    width: 400px;
+    position: unset;
+    box-shadow: unset;
+    margin: auto;
+  }
+
+  .icon-container {
+    margin: auto;
+  }
+
+  div.nav-bar-container>.icon-container:nth-child(3)>img {
+    transform: scale(0.78);
+  }
+}
