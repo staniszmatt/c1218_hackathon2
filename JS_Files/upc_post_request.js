@@ -38,8 +38,7 @@ class UPC_post_request{
    * We check for errors if it was scanned but has no data
    * @see {@link postData()}
    */
-  handleData(returnedData){  
-    console.log("Return Game Data ", returnedData); 
+  handleData(returnedData){   
     this.returnedScanData = returnedData;
     if (returnedData['total'] === 0){
       this.errorHandler();

@@ -27,7 +27,11 @@ class StartMap {
   }
 
   googleMapGameName(gameName) {
-    this.theTitle = gameName
+    if (!gameName){
+      this.errorHandler("No Title Found For Locations!");
+    } else {
+      this.theTitle = gameName;
+    }
   }
 
   startMap() {
@@ -75,10 +79,10 @@ class StartMap {
       fields: ['name', 'geometry'],
     };
     // Perform a nearby search.
-    this.map.setZoom(15);
+    this.map.setZoom(10);
     this.service.textSearch({
       location: this.googlePosition,
-      radius: 100,
+      radius: 1000,
       type: ['store'],
       query: this.theTitle //+ " game" //The title of the board game
     },
@@ -101,16 +105,15 @@ class StartMap {
   }
   //create markets on map
   createMarkers(places) {
-    console.log("Places ", places);
     var bounds = new google.maps.LatLngBounds();
     var placesList = document.getElementById('places');
     for (var i = 0, place; place = places[i]; i++) {
       var image = {
         url: place.icon,
-        size: new google.maps.Size(50, 50),
+        size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(10, 10)
+        scaledSize: new google.maps.Size(25, 25)
       };
       var marker = new google.maps.Marker({
         map: this.map,
@@ -126,7 +129,7 @@ class StartMap {
       bounds.extend(place.geometry.location);
     }
     this.map.fitBounds(bounds);
-    this.map.setZoom(5);
+    this.map.setZoom(15);
     this.map.getCenter(this.googlePosition);
   }
 }
