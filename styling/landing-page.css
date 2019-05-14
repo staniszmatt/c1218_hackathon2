@@ -4,18 +4,29 @@
 }
 
 .head-container {
-  height: 100vh;
   margin-top: 60px;
 }
 
 .display-header{
   text-align: center;
+  background-image: url(../icons/boardgamestill.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  background-color: rgba(0, 0, 0, 0.548);
+  height: 100vh;
+}
+
+h3.display-h3 {
+  color: white;
 }
 
 .display-header>h5 {
   text-align: left;
   margin: 20px 18px;
   font-size: 18px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.609);
 }
 
 .image-scanner-container{
@@ -61,7 +72,7 @@ canvas.drawingBuffer {
   object-fit: contain;
 }
 
-.boardgame-background {
+.board-game-background {
   background-image: url(./icons/boardgamestill.jpg);
 }
 
@@ -131,6 +142,10 @@ canvas.drawingBuffer {
 
 @media (min-width: 760px) and (min-height: 1020px) {
 
+  .head-container {
+    margin-top: 80px;
+  }
+
   h3.display-h3 {
     font-size: 45px;
     padding: 25px 0px;
@@ -174,6 +189,10 @@ canvas.drawingBuffer {
 }
 
 @media (min-width: 1020px) and (min-height: 760px) {
+
+  .head-container {
+    margin-top: 80px;
+  }
 
   h3.display-h3 {
     font-size: 45px;
@@ -225,6 +244,6 @@ canvas.drawingBuffer {
   }
 
   h5.display-h5 {
-    margin: 50px 40px;
+    margin: 50px 20vh;
   }
 }
