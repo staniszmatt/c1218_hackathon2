@@ -21,8 +21,8 @@ class Product_page {
   displayData(dataToDisplay) { //Pull data from object into array
     this.dataToDisplay.title = dataToDisplay.items[0].title;
     this.dataToDisplay.upc = dataToDisplay.items[0].upc;
-    this.dataToDisplay.highestPrice = dataToDisplay.items[0].highest_recorded_price;
-    this.dataToDisplay.lowestPrice = dataToDisplay.items[0].lowest_recorded_price;
+    this.dataToDisplay.highestPrice = "$ " + dataToDisplay.items[0].highest_recorded_price.toFixed(2);
+    this.dataToDisplay.lowestPrice = "$ " + dataToDisplay.items[0].lowest_recorded_price.toFixed(2);
     this.dataToDisplay.brand = dataToDisplay.items[0].brand;
     this.images = dataToDisplay.items[0].images;
     this.domSetupForDisplay();
