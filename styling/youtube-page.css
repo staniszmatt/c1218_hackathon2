@@ -1,30 +1,27 @@
 .youtube-page {
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+}
+
+.no-vidoes-found {
+  font-size: 50px;
+  color: red;
 }
 
 .youtube-header-container {
-  display: block;
-  background: white;
-  top: 0;
-  width: 100%;
-  height: 10%;
+  width: 120px;
+  padding-left: 20px;
 }
 
 .youtube-logo {
-  height: 96%;
-  bottom: 45px;
-  width: 30%;
-  margin: 5px 14px;
-  position: relative;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
 section {
-  top: 50px;
-  left: 0;
   text-align: center;
-  width: 100%;
-  background-color: #fff;
 }
 
 #video {
@@ -32,16 +29,11 @@ section {
 }
 
 .youtube-container{
-  overflow:scroll;
-  width: 100%;
-  background-color: #fff;
-  margin: 0 auto;
   text-align: center;
 }
 
 .container {
   width: 100%;
-  background-color: #fff;
   margin: 0 auto;
   text-align: center;
 }
@@ -86,4 +78,27 @@ border-radius: 8px;
 
 .details { 
 padding: 0px 1px;
+}
+
+@media (min-width: 760px) and (min-height: 1020px) {
+  .youtube-page {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1020px) and (min-height: 760px) {
+  .youtube-page {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1600px) and (min-height: 1000px) {
+  .youtube-page {
+    padding-top: 180px;
+    height: 100vh;
+  }
+
+  .youtube-header-containe {
+    width: 175px;
+  }
 }

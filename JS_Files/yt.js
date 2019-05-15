@@ -35,33 +35,6 @@ class YouTube_page {
     $('#video').html(
       `<iframe width="350" height="250" id="youtube-video" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
   }
-  /**
-  * @param {string} id-data passed in from object to retrieve the current video
-  */
-  resultsLoop(data) {
-    this.mainVid(data.items[0].id.videoId);
-    $.each(data.items, function (i, item) {
-      if (i != 0) {
-        let thumb = item.snippet.thumbnails.medium.url;
-        let title = item.snippet.title;
-        let desc = item.snippet.description.substring(0, 100);
-        let vid = item.id.videoId;
-        $('.youtube-main').append(`
-          <article class="item" data-key="${vid}">
-              <img src="${thumb}" alt="" class="thumb">
-              <div class="details">
-                  <h4>${title}</h4>
-                  <p>${desc}</p>
-              </div>
-          </article>
-        `);
-      }
-    });
-    $('youtube-main article.item').on('click', (event) => {
-      let id = $(event.currentTarget).attr('data-key');
-      this.mainVid(id);
-    });
-  }
 
   loadVids() {
     $.ajax(this.options);
@@ -77,25 +50,30 @@ class YouTube_page {
   * @param {string} id-data passed in from object to retrieve the current video
   */
   resultsLoop(data) {
-    initialization.domInformation.displayYoutubeElm.empty();
-    this.mainVid(data.items[0].id.videoId);
-    $.each(data.items, function (i, item) {
-      if (i != 0) {
-        let thumb = item.snippet.thumbnails.medium.url;
-        let title = item.snippet.title;
-        let desc = item.snippet.description.substring(0, 100);
-        let vid = item.id.videoId;
-        initialization.domInformation.displayYoutubeElm.append(`
-          <article class="item" data-key="${vid}">
-          <img src="${thumb}" alt="" class="thumb">
-          <div class="details">
-          <h4>${title}</h4>
-          <p>${desc}</p>
-          </div>
-          </article>
-        `);
-      }
-    });
+    $("#video").empty();
+    if (data.items.length === 0) {
+      $("#video").append("<div>").text("Sorry, No Videos Found!").addClass("no-vidoes-found");
+    } else {
+      this.mainVid(data.items[0].id.videoId);
+      $.each(data.items, function (i, item) {
+        if (i != 0) {
+          let thumb = item.snippet.thumbnails.medium.url;
+          let title = item.snippet.title;
+          let desc = item.snippet.description.substring(0, 100);
+          let vid = item.id.videoId;
+          initialization.domInformation.displayYoutubeElm.append(`
+            <article class="item" data-key="${vid}">
+            <img src="${thumb}" alt="" class="thumb">
+            <div class="details">
+            <h4>${title}</h4>
+            <p>${desc}</p>
+            </div>
+            </article>
+          `);
+        }
+      });
+    }
+
     initialization.domInformation.youtubeArticleElm.on('click', (event) => {
       let id = $(event.currentTarget).attr('data-key');
       this.mainVid(id);

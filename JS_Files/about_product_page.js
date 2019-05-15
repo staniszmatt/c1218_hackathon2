@@ -24,7 +24,11 @@ class Product_page {
     this.dataToDisplay.highestPrice = "$ " + dataToDisplay.items[0].highest_recorded_price.toFixed(2);
     this.dataToDisplay.lowestPrice = "$ " + dataToDisplay.items[0].lowest_recorded_price.toFixed(2);
     this.dataToDisplay.brand = dataToDisplay.items[0].brand;
-    this.images = dataToDisplay.items[0].images;
+    if (dataToDisplay.items[0].images.length === 0){
+      this.images = ["./icons/no-image-found.jpg"];
+    } else {
+      this.images = dataToDisplay.items[0].images;
+    }
     this.domSetupForDisplay();
   }
 
@@ -41,6 +45,7 @@ class Product_page {
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
     initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
+    this.startMap.googleMapGameName(this.dataToDisplay.title);
     initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
     this.startMap.startMap(); //Initializes maps
   }
