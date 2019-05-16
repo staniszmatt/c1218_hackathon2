@@ -2,10 +2,6 @@
   height: 100%;
 }
 
-/* .map-conatiner { */
-  /* TODO: no styling applied yet */
-/* } */
-
 img.map-Icon{
   width:40%;
 }
@@ -38,7 +34,8 @@ img.map-Icon{
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   padding: 0px 10px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 #right-panel h2 {
@@ -63,7 +60,7 @@ img.map-Icon{
 
 /* TODO: May need to separate out with classes */
 
-ul {
+div.right-panel > ul {
   list-style-type: none;
   padding: 0;
   margin-bottom: 5px;
@@ -81,9 +78,25 @@ li:nth-child(even) {
 }
 
 #more {
-  width: 100%;
-  margin: 0px 0 0 0;
-  background-color: blanchedalmond;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(193, 73, 78);
+  border-radius: 5px;
+  border-color: rgb(193, 73, 78);
+  box-shadow: 3px 3px 3px black;
+  padding: 10px 10px;
+  margin: auto;
+  display: block;
+}
+
+#more:hover {
+  background-color: rgb(156, 58, 62);
+  border-color: rgb(156, 58, 62);
+}
+
+#more:active {
+  transition: all 0.2s;
+  transform: scale(0.9);
 }
 
 #google-search {
@@ -101,4 +114,75 @@ li:nth-child(even) {
 .search-icon {
   width: 12%;
   margin-top: 12px;
+}
+
+@media (min-width: 370px) and (min-height: 730px) {
+  #map {
+    height: 55vh;
+  }
+}
+
+@media (min-width: 760px) and (min-height: 1020px) {
+  #map {
+    height: 55vh;
+    margin-top: 60px;
+  }
+
+  #right-panel {
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: 1020px) and (min-height: 760px) {
+  #map {
+    height: 55vh;
+    margin-top: 60px;
+  }
+
+  #right-panel {
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: 1600px) and (min-height: 1000px) {
+  .google-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #map {
+    margin-top: 125px;
+    height: initial;
+    width: 70%;
+  }
+
+  #right-panel {
+    margin-top: 125px;
+    height: 100%;
+    margin-bottom: unset;
+    padding-bottom: 150px;
+    overflow: auto;
+  }
+
+  #right-panel h2 {
+    font-size: 50px;
+  }
+
+  div.right-panel > ul {
+    padding: 20px;
+  }
+
+  div.right-panel > ul {
+    padding: 10px;
+  }
+
+  li {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  #more {
+    box-shadow: 5px 5px 15px black;
+    font-size: 30px;
+  }
 }
