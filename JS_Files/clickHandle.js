@@ -58,6 +58,7 @@ class PBGS_init {
       this.upcScanner.processedCallBack(this.barcodeInputValue);
     }
     this.upcScanner.stopScanning();
+    this.cancelScan();
   }
 
   cancelScan() {
@@ -90,21 +91,25 @@ class PBGS_init {
   indexButtonClicked() {
     this.displayPage(this.domInformation.indexDisplayPage);
     this.showSearchBar(this.domInformation.searchBarContainer);
+    this.cancelScan();
   }
 
   youTubeButtonClicked() {
     this.displayPage(this.domInformation.youtubeDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
+    this.cancelScan();
   }
 
   reviewsButtonClicked() {
     this.displayPage(this.domInformation.productDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
+    this.cancelScan();
   }
 
   mapButtonClicked() {
     this.displayPage(this.domInformation.googleDisplayPage);
     this.hideSearchBar(this.domInformation.searchBarContainer);
+    this.cancelScan();
   }
 
   showSearchBar(){

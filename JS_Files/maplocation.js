@@ -27,11 +27,17 @@ class StartMap {
   }
 
   googleMapGameName(gameName) {
-    this.theTitle = gameName
+    if (!gameName){
+      this.errorHandler("No Title Found For Locations!");
+    } else {
+      this.theTitle = gameName;
+    }
   }
 
   startMap() {
     // Create the map.
+    $("#places").empty();
+    $('#map').empty();
     this.map = new google.maps.Map(document.getElementById('map'), {
       center: this.googlePosition,
       zoom: 10
@@ -48,7 +54,7 @@ class StartMap {
         this.googlePosition = pos;
         this.startMap();
         this.infoWindow.setPosition(this.googlePosition);
-        this.infoWindow.setContent('Location found.');
+        this.infoWindow.setContent('Locations found.');
         this.infoWindow.open(this.map);
         this.map.setCenter(this.googlePosition);
         this.map.setZoom(10);
@@ -76,13 +82,12 @@ class StartMap {
     this.map.setZoom(10);
     this.service.textSearch({
       location: this.googlePosition,
-      radius: 10000,
+      radius: 1000,
       type: ['store'],
-      query: this.theTitle + " game" //The title of the board game
+      query: this.theTitle //+ " game" //The title of the board game
     },
       (results, status, pagination) => {
         if (status !== 'OK') return;
-
         this.createMarkers(results);
         this.moreButton.disabled = !pagination.hasNextPage;
         getNextPage = pagination.hasNextPage && function () {
@@ -124,7 +129,7 @@ class StartMap {
       bounds.extend(place.geometry.location);
     }
     this.map.fitBounds(bounds);
-    this.map.setZoom(11);
+    this.map.setZoom(15);
     this.map.getCenter(this.googlePosition);
   }
 }

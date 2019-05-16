@@ -11,6 +11,13 @@
 .icon-container {
   filter: drop-shadow(1px 1px 1px grey);
   margin: 5px 0;
+  transition: all 0.2s;
+}
+
+.col-3.icon-container.text-center:nth-child(3):hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+  filter: drop-shadow(1px 1px 2px black)
 }
 
 .nav-icon {
@@ -21,12 +28,18 @@
 }
 
 .nav-icon:hover{
-  transition:all 0.5s;
+  transition:all 0.2s;
   filter: drop-shadow(1px 1px 1px black);
   transform:scale(1.1);
 }
 
 @media (min-width: 760px) and (min-height: 1020px) {
+  .nav-bar-container {
+    height: 65px;
+  }
+}
+
+@media (min-width: 1020px) and (min-height: 760px) {
   .nav-bar-container {
     height: 65px;
   }
@@ -46,6 +59,6 @@
   }
 
   div.nav-bar-container>.icon-container:nth-child(3)>img {
-    transform: scale(0.78);
+    transform: scale(0.69);
   }
 }
