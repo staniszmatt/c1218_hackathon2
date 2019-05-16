@@ -1,7 +1,5 @@
 .google-page {
-  height: 80%;
-  background-color: chartreuse;
-  display: block; 
+  height: 100%;
 }
 
 /* .map-conatiner { */
@@ -13,12 +11,9 @@ img.map-Icon{
 }
 
 #map {
-  position: absolute !important; 
-  z-index: 3;
-  height: 80%;
-  border: 2px black solid;
+  height: 50vh;
   width: 100%;
-  top: 10%;
+  margin-top: 50px;
 }
 
 #map > div {
@@ -40,9 +35,17 @@ img.map-Icon{
 
 /* Optional: Makes the sample page fill the window. */
 #right-panel {
-  font-family: 'Roboto', 'sans-serif';
-  line-height: 20px;
-  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  padding: 0px 10px;
+  margin-bottom: 60px;
+}
+
+#right-panel h2 {
+  font-size: 24px;
+  text-align: center;
+  padding: 5px;
+  margin: unset;
 }
 
 #right-panel select,
@@ -58,38 +61,23 @@ img.map-Icon{
   font-size: 12px;
 }
 
-#right-panel {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  left: 5px;
-  bottom: 20%;
-  height: 30%;
-  width: 35%;
-  z-index: 5;
-  border: 1px solid #999;
-  background: #fff;
-}
 /* TODO: May need to separate out with classes */
 
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  height: 80%;
-  width: 100%;
-  overflow-y: scroll;
-  display: inline-block;
+  margin-bottom: 5px;
 }
 
 li {
-  background-color: #f1f1f1;
+  background-color: #fcfcfc;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 8px;
+  font-size: 16px;
 }
 
-li:nth-child(odd) {
-  background-color: #fcfcfc;
+li:nth-child(even) {
+  background-color: #f1f1f1;
 }
 
 #more {
