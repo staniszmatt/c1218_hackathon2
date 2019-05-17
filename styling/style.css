@@ -79,7 +79,7 @@ h1 {
   }
 }
 
-@media (min-width: 1600px) and (min-height: 1000px) {
+@media (min-width: 1600px) and (min-height: 761px) {
   .app-title-container {
     height: 125px;
     align-items: center;
