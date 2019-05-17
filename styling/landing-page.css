@@ -249,7 +249,7 @@ canvas.drawingBuffer {
   }
 }
 
-@media (min-width: 1600px) and (min-height: 1000px){
+@media (min-width: 1600px) and (min-height: 761px){
   .head-container {
     margin-top: 125px;
   }

@@ -119,7 +119,7 @@ p.product-display {
   }
 }
 
-@media (min-width: 1600px) and (min-height: 1000px) {
+@media (min-width: 1600px) and (min-height: 761px) {
   .image-container {
     height: 800px;
     width: 800px;

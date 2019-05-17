@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: 1600px) and (min-height: 1000px) {
+@media (min-width: 1600px) and (min-height: 761px) {
   .nav-bar-container {
     height: 90px;
     width: 400px;

@@ -8,13 +8,6 @@
   opacity: .4;
 }
 
-/* .modal { */
-  /* 
-  TODO: No styling applied yet
-  Double check, may be part of Bootstrap 4 Classes
-  */
-/* } */
-
 #modal-body {
     position: fixed;
     left: 50%;
