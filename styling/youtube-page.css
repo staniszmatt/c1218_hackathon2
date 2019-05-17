@@ -88,7 +88,7 @@ padding: 0px 1px;
   }
 }
 
-@media (min-width: 1600px) and (min-height: 761px) {
+@media (min-width: 1600px) and (min-height: 1000px) {
   .youtube-page {
     padding-top: 180px;
     height: 100vh;
