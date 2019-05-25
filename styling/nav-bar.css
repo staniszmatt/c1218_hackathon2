@@ -26,6 +26,8 @@
   width: 100%;
   transition: all 0.2s;
   object-fit: contain;
+  cursor: pointer;
+
 }
 
 .nav-icon:hover{
