@@ -37,11 +37,6 @@ class PBGS_init {
     this.domInformation.reviewIcon.click(this.reviewsButtonClicked);
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
-    // this.domInformation.youtubeArticleElm.click((event) => {
-    //   console.log("event youtube click", event);
-    //   let id = $(event.currentTarget).attr('data-key');
-    //   this.youTubeSetup.mainVid(id);
-    // });
     this.domInformation.cancelScanButton.hide();
     this.hideModal();
   }

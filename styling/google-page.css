@@ -89,6 +89,10 @@ li:nth-child(even) {
   display: block;
 }
 
+button.no-more {
+  opacity: 0.4;
+}
+
 #more:hover {
   background-color: rgb(156, 58, 62);
   border-color: rgb(156, 58, 62);

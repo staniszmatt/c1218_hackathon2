@@ -92,6 +92,11 @@ class StartMap {
         if (status !== 'OK') return;
         this.createMarkers(results);
         this.moreButton.disabled = !pagination.hasNextPage;
+        if (this.moreButton.disabled) {
+          $("#more").text("No More Results").addClass("no-more");
+        } else {
+          $("#more").text("More Results").removeClass("no-more");
+        }
         getNextPage = pagination.hasNextPage && function () {
           pagination.nextPage();
         };
@@ -133,7 +138,6 @@ class StartMap {
         // infoWindow.setContent('marker content')
         infoWindow.open(map, marker);
       });
-     
       var li = document.createElement('li');
       // var pageBreak = document.createElement('br');
       li.textContent = place.name + " - " + place.formatted_address;
