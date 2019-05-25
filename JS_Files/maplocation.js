@@ -24,6 +24,8 @@ class StartMap {
       // Browser doesn't support Geolocation
       handleLocationError(false, this.infoWindow, this.map.getCenter());
     }
+
+    console.log('this is get current location')
   }
 
   googleMapGameName(gameName) {
@@ -40,10 +42,10 @@ class StartMap {
     $('#map').empty();
     this.map = new google.maps.Map(document.getElementById('map'), {
       center: this.googlePosition,
-      zoom: 10
+      zoom: 8
     });
     this.map.setCenter(this.googlePosition);
-    this.infoWindow = new google.maps.InfoWindow();
+    // this.infoWindow = new google.maps.InfoWindow();
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -53,11 +55,11 @@ class StartMap {
         };
         this.googlePosition = pos;
         this.startMap();
-        this.infoWindow.setPosition(this.googlePosition);
-        this.infoWindow.setContent('Locations found.');
-        this.infoWindow.open(this.map);
+        // this.infoWindow.setPosition(this.googlePosition);
+        // this.infoWindow.setContent('Locations found.');
+        // this.infoWindow.open(this.map);
         this.map.setCenter(this.googlePosition);
-        this.map.setZoom(10);
+        this.map.setZoom(8);
       }),
         function () {
           handleLocationError(true, this.infoWindow, this.map.getCenter());
@@ -79,7 +81,7 @@ class StartMap {
       fields: ['name', 'geometry'],
     };
     // Perform a nearby search.
-    this.map.setZoom(10);
+    this.map.setZoom(8);
     this.service.textSearch({
       location: this.googlePosition,
       radius: 1000,
@@ -102,12 +104,14 @@ class StartMap {
         this.map.setCenter(results[0].geometry.location);
       }
     });
+
   }
   //create markets on map
   createMarkers(places) {
     var bounds = new google.maps.LatLngBounds();
     var placesList = document.getElementById('places');
-    for (var i = 0, place; place = places[i]; i++) {
+    for (var i = 0; i < places.length; i++) {
+      var place = places[i];
       var image = {
         url: place.icon,
         size: new google.maps.Size(71, 71),
@@ -115,12 +119,21 @@ class StartMap {
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
-      var marker = new google.maps.Marker({
+      const marker = new google.maps.Marker({
         map: this.map,
         icon: image,
         title: place.name,
-        position: place.geometry.location
+        position: place.geometry.location,
+        address: place.formatted_address
+        
       });
+      var infoWindow = new google.maps.InfoWindow();
+      marker.addListener('click', function() {
+        infoWindow.setContent("<p>" + marker.title + "<br/>" + marker.address + "</p>" )
+        // infoWindow.setContent('marker content')
+        infoWindow.open(map, marker);
+      });
+     
       var li = document.createElement('li');
       // var pageBreak = document.createElement('br');
       li.textContent = place.name + " - " + place.formatted_address;
@@ -129,7 +142,7 @@ class StartMap {
       bounds.extend(place.geometry.location);
     }
     this.map.fitBounds(bounds);
-    this.map.setZoom(15);
+    this.map.setZoom(8);
     this.map.getCenter(this.googlePosition);
   }
 }
