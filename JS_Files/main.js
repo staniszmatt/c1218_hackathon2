@@ -6,7 +6,7 @@ function startWhenLoaded(){
     submitNumberInput: $(".search-bar"),
     displayDataElm: $(".info-container"),
     displayYoutubeElm: $(".youtube-main"),
-    youtubeArticleElm: $(".youtube-main .article.item"),
+    youtubeArticleElm: $(".youtube-main"),
     displayDataImgElm: $("#product-image-placeholder"),
     modalButton: $('.btn-modal'),
     modalShadow: $("#modal-shadow"),
