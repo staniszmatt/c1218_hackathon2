@@ -16,6 +16,7 @@ class YouTube_page {
     }
     this.loadAndReady = this.loadAndReady.bind(this);
     this.resultsLoop = this.resultsLoop.bind(this);
+    this.mainVid = this.mainVid.bind(this);
   };
   /**
    * @param {string} query-search parameters for ajax calls 
@@ -28,20 +29,9 @@ class YouTube_page {
   loadVids() {
     $.ajax(this.options);
   }
-    /**
+  /**
    * @param {string} id-data passed in from object to retrieve the current video
    */
-  mainVid(id) {
-    $('#video').html(
-      `<iframe width="350" height="250" id="youtube-video" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
-  }
-
-  loadVids() {
-    $.ajax(this.options);
-  }
-  /**
-  * @param {string} id-data passed in from object to retrieve the current video
-  */
   mainVid(id) {
     $('#video').html(
       `<iframe width="350" height="250" id="youtube-video" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
@@ -55,7 +45,10 @@ class YouTube_page {
       $("#video").append("<div>").text("Sorry, No Videos Found!").addClass("no-vidoes-found");
     } else {
       this.mainVid(data.items[0].id.videoId);
+      console.log("Data", data)
       $.each(data.items, function (i, item) {
+        console.log("i ", i);
+        console.log("item ", item)
         if (i != 0) {
           let thumb = item.snippet.thumbnails.medium.url;
           let title = item.snippet.title;
@@ -74,9 +67,9 @@ class YouTube_page {
       });
     }
 
-    initialization.domInformation.youtubeArticleElm.on('click', (event) => {
-      let id = $(event.currentTarget).attr('data-key');
-      this.mainVid(id);
+    initialization.domInformation.youtubeArticleElm.on("click", ".item", (event) => {
+      console.log("event youtube click", event);
+      this.mainVid(event.currentTarget.dataset.key);
     });
     // Hiding display after information is loaded. 
     initialization.cancelScan();

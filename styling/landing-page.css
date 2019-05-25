@@ -125,9 +125,20 @@ canvas.drawingBuffer {
   text-align: center;
 }
 
+@media (max-width: 410px) and (max-height: 409px) {
+  .index-page {
+    overflow: visible;
+  }
+  
+  .board-game-background {
+    height: 560px;
+  }
+}
+
 @media (min-width: 410px) and (max-height: 410px){
   .index-page {
     margin-bottom: 100px;
+    scroll-behavior: unset;
   }
 
   .search-bar-container {
