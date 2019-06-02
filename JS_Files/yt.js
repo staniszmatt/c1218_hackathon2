@@ -22,6 +22,7 @@ class YouTube_page {
    * @param {string} query-search parameters for ajax calls 
    */
   loadAndReady(query) {
+    
     this.options.data.q = query;
     this.loadVids();
   }
@@ -41,6 +42,7 @@ class YouTube_page {
   */
   resultsLoop(data) {
     $("#video").empty();
+    $('article').empty();
     if (data.items.length === 0) {
       $("#video").append("<div>").text("Sorry, No Videos Found!").addClass("no-vidoes-found");
     } else {
