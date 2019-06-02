@@ -77,6 +77,12 @@ li:nth-child(even) {
   background-color: #f1f1f1;
 }
 
+li:hover{
+  background-color: #446c87;
+  color: white;
+  cursor: pointer;
+}
+
 #more {
   font-size: 20px;
   color: white;
