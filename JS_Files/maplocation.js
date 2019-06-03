@@ -122,7 +122,7 @@ class StartMap {
       // console.log('this is each place', place)
       var image = {
         url: place.icon,
-        size: new google.maps.Size(71, 71),
+        size: new google.maps.Size(100, 100),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
@@ -157,7 +157,7 @@ class StartMap {
       bounds.extend(place.geometry.location);
     }
     this.map.fitBounds(bounds);
-    this.map.setZoom(8);
+    this.map.setZoom(12);
     this.map.getCenter(this.googlePosition);
   }
 
