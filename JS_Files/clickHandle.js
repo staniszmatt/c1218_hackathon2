@@ -31,6 +31,7 @@ class PBGS_init {
     this.domInformation.initScanButton.click(this.initScanner);
     this.domInformation.initScanButton.click(this.hideDesktopDisplay);
     this.domInformation.submitBarcodeNumberButton.click(this.submitBarcode);
+    this.domInformation.submitNumberInput.keypress(this.submitBarcode)
     this.domInformation.modalButton.click(this.hideModal);
     this.domInformation.cancelScanButton.click(this.cancelScan);
     this.domInformation.homeIcon.click(this.indexButtonClicked);
@@ -49,9 +50,10 @@ class PBGS_init {
     this.domInformation.cancelScanButton.show();
   }
 
-  submitBarcode(){ //calls with submitted by hand. 
+  submitBarcode(keypress){ //calls with submitted by hand. 
+    if (keypress.keyCode !== 13) return;
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
-    if(this.barcodeInputValue === ""){
+    if(this.barcodeInputValue === "" || isNaN(this.barcodeInputValue)){
       this.modalErrors.show("INPUT A NUMBER!");
     }
     else{
