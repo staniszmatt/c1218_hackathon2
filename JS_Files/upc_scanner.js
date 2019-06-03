@@ -52,6 +52,7 @@ class UPC_Scanner {
     } else {
       this.barcodeNumber = returnData.codeResult.code;//"610370565025"
       this.upc_post_request.setScanedData(this.barcodeNumber)
+      $(".spinner").toggle("display");
     }
     this.stopScanning();
   }

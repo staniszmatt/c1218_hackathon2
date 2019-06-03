@@ -51,13 +51,14 @@ class PBGS_init {
   }
 
   submitBarcode(keypress){ //calls with submitted by hand. 
-    if (keypress.keyCode !== 13) return;
+    if (keypress.keyCode !== 13 && keypress.type !== "click") return;
     this.barcodeInputValue = this.domInformation.submitNumberInput.val();
     if(this.barcodeInputValue === "" || isNaN(this.barcodeInputValue)){
       this.modalErrors.show("INPUT A NUMBER!");
     }
     else{
       this.upcScanner.processedCallBack(this.barcodeInputValue);
+      $(".spinner").toggle("display");
     }
     this.upcScanner.stopScanning();
     this.cancelScan();

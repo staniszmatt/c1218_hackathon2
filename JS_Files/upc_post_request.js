@@ -49,6 +49,7 @@ class UPC_post_request{
     }
     $(".index-page").hide(); 
     $(".product-page").show();
+    $(".spinner").toggle("display");
   }
   /**
   * @param {Object} errorData - if error, returns error data.
