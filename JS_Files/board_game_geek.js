@@ -1,6 +1,6 @@
 // $(document).ready(loadAndReady)
 
-// var URL = ' http://www.boardgamegeek.com/xmlapi/boardgame/35424,2860';
+// var URL = ' https://www.boardgamegeek.com/xmlapi/boardgame/35424,2860';
 
 
 // var options = {
