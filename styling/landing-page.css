@@ -219,6 +219,17 @@ canvas.drawingBuffer {
   }
 }
 
+@media (min-width: 600px) {
+  div.scanner-image > video {
+    width: 50vw;
+  }
+
+  .image-scanner-container {
+    position: fixed;
+    width: 100%;
+  }
+}
+
 @media (min-width: 760px) and (min-height: 1020px) {
 
   .head-container {
