@@ -25,7 +25,7 @@ class Product_page {
     this.dataToDisplay.lowestPrice = "$ " + dataToDisplay.items[0].lowest_recorded_price.toFixed(2);
     this.dataToDisplay.brand = dataToDisplay.items[0].brand;
     if (dataToDisplay.items[0].images.length === 0){
-      this.images = ["./icons/no-image-found.jpg"];
+      this.images = ["./images/no-image-found.jpg"];
     } else {
       this.images = dataToDisplay.items[0].images[0];
       if (this.images.slice(0, 5) === "http:"){
