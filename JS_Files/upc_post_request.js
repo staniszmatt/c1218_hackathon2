@@ -42,7 +42,8 @@ class UPC_post_request{
     this.returnedScanData = returnedData;
     if (returnedData['total'] === 0){
       this.errorHandler();
-      //initialize camera
+      
+      return;
     }
     else{
       this.productData.displayData(returnedData); 
@@ -57,5 +58,6 @@ class UPC_post_request{
   */
   errorHandler(){  
     initialization.modalErrors.show("INVALID UPC");
+    $(".spinner").toggle("display");
   }
 }
