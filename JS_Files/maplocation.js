@@ -2,11 +2,11 @@ class StartMap {
   constructor() {
     this.moreButton = this.map = this.infoWindow = this.service = this.googlePosition = null;
     this.theTitle = "";
+    this.places = null; 
     //bindings
     this.googleMapGameName = this.googleMapGameName.bind(this);
     this.startMap = this.startMap.bind(this);
     this.createMarkers = this.createMarkers.bind(this);
-    this.centerToMarker = this.centerToMarker.bind(this);
   }
 
   googleMapGameName(gameName) {
@@ -89,6 +89,7 @@ class StartMap {
   }
   //create markets on map
   createMarkers(places) {
+    this.places = {};
     var bounds = new google.maps.LatLngBounds();
     var placesList = document.getElementById('places');
     for (var i = 0; i < places.length; i++) {
@@ -108,6 +109,7 @@ class StartMap {
         address: place.formatted_address
         
       });
+      this.places[i] = marker;
       var infoWindow = new google.maps.InfoWindow({
         pixelOffset: new google.maps.Size(-25, 0),
       });
@@ -117,8 +119,15 @@ class StartMap {
         this.map.setCenter(marker.position)
       });
       var li = document.createElement('li');
+      $(li).attr("id", i);
       li.textContent = place.name + " - " + place.formatted_address;
-      li.addEventListener("click", this.centerToMarker);
+      li.addEventListener("click", (event)=> {
+        console.log("event", event);
+        let marker = this.places[$(event.target).attr("id")];
+        infoWindow.setContent("<p>" + marker.title + "<br/>" + marker.address + "</p>")
+        infoWindow.open(map, marker);
+        this.map.setCenter(marker.position);
+      });
       placesList.appendChild(li);
       // document.getElementById('placesList').appendChild(pageBreak);
       bounds.extend(place.geometry.location);
@@ -126,10 +135,6 @@ class StartMap {
     this.map.fitBounds(bounds);
     this.map.setZoom(12);
     this.map.getCenter(this.googlePosition);
-  }
-  centerToMarker(){
-    console.log('this is places.list', this.place)
-    console.log('im in it')
   }
 }
 
