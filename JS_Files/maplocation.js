@@ -2,14 +2,17 @@ class StartMap {
   constructor() {
     this.moreButton = this.map = this.infoWindow = this.service = this.googlePosition = null;
     this.theTitle = "";
+    this.places = {}; 
+    this.markerCounter = 0;
     //bindings
     this.googleMapGameName = this.googleMapGameName.bind(this);
     this.startMap = this.startMap.bind(this);
     this.createMarkers = this.createMarkers.bind(this);
-    this.centerToMarker = this.centerToMarker.bind(this);
   }
 
   googleMapGameName(gameName) {
+    this.markerCounter = 0;
+    this.places = {};
     if (!gameName){
       this.errorHandler("No Title Found For Locations!");
     } else {
@@ -39,10 +42,10 @@ class StartMap {
         this.service = new google.maps.places.PlacesService(this.map);
         var getNextPage = null;
         this.moreButton = document.getElementById('more');
-        this.moreButton.onclick = function () {
+        this.moreButton.addEventListener("click", () => {
           this.moreButton.disabled = true;
           if (getNextPage) getNextPage();
-        };
+        });
         var request = {
           query: this.theTitle,
           fields: ['name', 'geometry'],
@@ -108,6 +111,7 @@ class StartMap {
         address: place.formatted_address
         
       });
+      this.places[this.markerCounter] = marker;
       var infoWindow = new google.maps.InfoWindow({
         pixelOffset: new google.maps.Size(-25, 0),
       });
@@ -117,8 +121,15 @@ class StartMap {
         this.map.setCenter(marker.position)
       });
       var li = document.createElement('li');
+      $(li).attr("id", this.markerCounter);
+      this.markerCounter++;
       li.textContent = place.name + " - " + place.formatted_address;
-      li.addEventListener("click", this.centerToMarker);
+      li.addEventListener("click", (event) => {
+        let marker = this.places[$(event.target).attr("id")];
+        infoWindow.setContent("<p>" + marker.title + "<br/>" + marker.address + "</p>")
+        infoWindow.open(map, marker);
+        this.map.setCenter(marker.position);
+      });
       placesList.appendChild(li);
       // document.getElementById('placesList').appendChild(pageBreak);
       bounds.extend(place.geometry.location);
@@ -126,10 +137,6 @@ class StartMap {
     this.map.fitBounds(bounds);
     this.map.setZoom(12);
     this.map.getCenter(this.googlePosition);
-  }
-  centerToMarker(){
-    console.log('this is places.list', this.place)
-    console.log('im in it')
   }
 }
 
