@@ -121,8 +121,7 @@ class StartMap {
       var li = document.createElement('li');
       $(li).attr("id", i);
       li.textContent = place.name + " - " + place.formatted_address;
-      li.addEventListener("click", (event)=> {
-        console.log("event", event);
+      li.addEventListener("click", (event) => {
         let marker = this.places[$(event.target).attr("id")];
         infoWindow.setContent("<p>" + marker.title + "<br/>" + marker.address + "</p>")
         infoWindow.open(map, marker);
