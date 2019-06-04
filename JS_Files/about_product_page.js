@@ -27,7 +27,10 @@ class Product_page {
     if (dataToDisplay.items[0].images.length === 0){
       this.images = ["./icons/no-image-found.jpg"];
     } else {
-      this.images = dataToDisplay.items[0].images;
+      this.images = dataToDisplay.items[0].images[0];
+      if (this.images.slice(0, 5) === "http:"){
+        this.images = this.images.replace(/http:/gi, "https:");
+      } 
     }
     this.domSetupForDisplay();
   }
@@ -44,7 +47,7 @@ class Product_page {
       this.displayElmToAppend.append(tempPelm);
     }
     initialization.domInformation.displayDataElm.append(this.displayElmToAppend);
-    initialization.domInformation.displayDataImgElm.attr("src", this.images[0]);
+    initialization.domInformation.displayDataImgElm.attr("src", this.images);
     this.startMap.googleMapGameName(this.dataToDisplay.title);
     initialization.youTubeSetup.loadAndReady(this.dataToDisplay.title);
   }
