@@ -2,7 +2,8 @@ class StartMap {
   constructor() {
     this.moreButton = this.map = this.infoWindow = this.service = this.googlePosition = null;
     this.theTitle = "";
-    this.places = null; 
+    this.places = {}; 
+    this.markerCounter = 0;
     //bindings
     this.googleMapGameName = this.googleMapGameName.bind(this);
     this.startMap = this.startMap.bind(this);
@@ -10,6 +11,8 @@ class StartMap {
   }
 
   googleMapGameName(gameName) {
+    this.markerCounter = 0;
+    this.places = {};
     if (!gameName){
       this.errorHandler("No Title Found For Locations!");
     } else {
@@ -89,7 +92,6 @@ class StartMap {
   }
   //create markets on map
   createMarkers(places) {
-    this.places = {};
     var bounds = new google.maps.LatLngBounds();
     var placesList = document.getElementById('places');
     for (var i = 0; i < places.length; i++) {
@@ -109,7 +111,7 @@ class StartMap {
         address: place.formatted_address
         
       });
-      this.places[i] = marker;
+      this.places[this.markerCounter] = marker;
       var infoWindow = new google.maps.InfoWindow({
         pixelOffset: new google.maps.Size(-25, 0),
       });
@@ -119,7 +121,8 @@ class StartMap {
         this.map.setCenter(marker.position)
       });
       var li = document.createElement('li');
-      $(li).attr("id", i);
+      $(li).attr("id", this.markerCounter);
+      this.markerCounter++;
       li.textContent = place.name + " - " + place.formatted_address;
       li.addEventListener("click", (event) => {
         let marker = this.places[$(event.target).attr("id")];
