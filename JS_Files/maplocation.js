@@ -39,10 +39,10 @@ class StartMap {
         this.service = new google.maps.places.PlacesService(this.map);
         var getNextPage = null;
         this.moreButton = document.getElementById('more');
-        this.moreButton.onclick = function () {
+        this.moreButton.addEventListener("click", () => {
           this.moreButton.disabled = true;
           if (getNextPage) getNextPage();
-        };
+        });
         var request = {
           query: this.theTitle,
           fields: ['name', 'geometry'],
