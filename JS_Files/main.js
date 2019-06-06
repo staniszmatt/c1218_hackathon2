@@ -23,7 +23,8 @@ function startWhenLoaded(){
     youtubeDisplayPage: $(".youtube-page"),
     googleDisplayPage: $(".google-page"),
     searchBarContainer:$(".search-bar-container"),
-    desktopDisplay:$(".desktop-display")
+    desktopDisplay:$(".desktop-display"),
+    submitZip: $(".submit-zipcode")
   }
   initialization = new PBGS_init(domInformation); //TODO: Move this and next line into the user interface class
   initialization.clickHandler();

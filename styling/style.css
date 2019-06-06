@@ -33,6 +33,10 @@ h5.app-title {
   margin: auto;
 }
 
+.home {
+  cursor: pointer;
+}
+
 #penguin-icon {
   height: 100%;
   width: 100%;

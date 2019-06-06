@@ -9,6 +9,7 @@ class StartMap {
     this.startMap = this.startMap.bind(this);
     this.createMarkers = this.createMarkers.bind(this);
     this.locationStatusCheck = this.locationStatusCheck.bind(this);
+    this.mapping = this.mapping.bind(this);
   }
 
   googleMapGameName(gameName) {
@@ -36,61 +37,11 @@ class StartMap {
     })
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        var pos = {
+        this.googlePosition = {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
-        this.googlePosition = pos;
-        if (!this.googlePosition) {
-          return; 
-        } 
-        this.map = new google.maps.Map(document.getElementById('map'), {
-          center: this.googlePosition,
-          zoom: 8
-        });
-        this.map.setCenter(this.googlePosition);
-        this.service = new google.maps.places.PlacesService(this.map);
-        var getNextPage = null;
-        this.moreButton = document.getElementById('more');
-        this.moreButton.addEventListener("click", () => {
-          this.moreButton.disabled = true;
-          if (getNextPage) getNextPage();
-        });
-        var request = {
-          query: this.theTitle,
-          fields: ['name', 'geometry'],
-        };
-        // Perform a nearby search.
-        this.map.setZoom(8);
-        this.service.textSearch({
-          location: this.googlePosition,
-          radius: 1000,
-          type: ['store'],
-          query: this.theTitle //+ " game" //The title of the board game
-        },
-          (results, status, pagination) => {
-            if (status !== 'OK') return;
-            this.createMarkers(results);
-            this.moreButton.disabled = !pagination.hasNextPage;
-            if (this.moreButton.disabled) {
-              $("#more").text("No More Results").addClass("no-more");
-            } else {
-              $("#more").text("More Results").removeClass("no-more");
-            }
-            getNextPage = pagination.hasNextPage && function () {
-              pagination.nextPage();
-            };
-          });
-        this.service.findPlaceFromQuery(request, function (results, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-              createMarker(results[i]);
-            }
-            this.map.setCenter(results[0].geometry.location);
-          }
-        });
-        this.map.setCenter(this.googlePosition);
-        this.map.setZoom(8);
+        this.mapping()
       }),
         function () {
           handleLocationError(true, this.infoWindow, this.map.getCenter());
@@ -158,6 +109,78 @@ class StartMap {
     } else {
       $(".location-error").toggle("display");
     }
+  }
+
+  zipCodeMap(zipCode) {
+    let geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': zipCode}, (results, status) => {
+      console.log("results", results);
+      console.log("status ", status);
+      if (status == google.maps.GeocoderStatus.OK) {
+        //Got result, center the map and put it out there
+        this.googlePosition = {
+          lat: results[0].geometry.location.lat(),
+          lng: results[0].geometry.location.lng()
+        };
+        this.mapping();
+        $(".location-error").toggle("display");
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      };
+    });
+  }
+
+  mapping(){
+    if (!this.googlePosition) {
+      return; 
+    } 
+    this.map = new google.maps.Map(document.getElementById('map'), {
+      center: this.googlePosition,
+      zoom: 8
+    });
+    this.map.setCenter(this.googlePosition);
+    this.service = new google.maps.places.PlacesService(this.map);
+    var getNextPage = null;
+    this.moreButton = document.getElementById('more');
+    this.moreButton.addEventListener("click", () => {
+      this.moreButton.disabled = true;
+      if (getNextPage) getNextPage();
+    });
+    var request = {
+      query: this.theTitle,
+      fields: ['name', 'geometry'],
+    };
+    // Perform a nearby search.
+    this.map.setZoom(8);
+    this.service.textSearch({
+      location: this.googlePosition,
+      radius: 1000,
+      type: ['store'],
+      query: this.theTitle //+ " game" //The title of the board game
+    },
+      (results, status, pagination) => {
+        if (status !== 'OK') return;
+        this.createMarkers(results);
+        this.moreButton.disabled = !pagination.hasNextPage;
+        if (this.moreButton.disabled) {
+          $("#more").text("No More Results").addClass("no-more");
+        } else {
+          $("#more").text("More Results").removeClass("no-more");
+        }
+        getNextPage = pagination.hasNextPage && function () {
+          pagination.nextPage();
+        };
+      });
+    this.service.findPlaceFromQuery(request, function (results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createMarker(results[i]);
+        }
+        this.map.setCenter(results[0].geometry.location);
+      }
+    });
+    this.map.setCenter(this.googlePosition);
+    this.map.setZoom(8);
   }
 }
 
