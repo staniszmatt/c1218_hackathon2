@@ -37,7 +37,7 @@ class StartMap {
     })
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        var pos = {
+        this.googlePosition = {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
@@ -112,22 +112,25 @@ class StartMap {
   }
 
   zipCodeMap(zipCode) {
-    geocoder.geocode( { 'address': zipCode}, function(results, status) {
+    let geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': zipCode}, (results, status) => {
+      console.log("results", results);
+      console.log("status ", status);
       if (status == google.maps.GeocoderStatus.OK) {
         //Got result, center the map and put it out there
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-        });
+        this.googlePosition = {
+          lat: results[0].geometry.location.lat(),
+          lng: results[0].geometry.location.lng()
+        };
+        this.mapping();
+        $(".location-error").toggle("display");
       } else {
         alert("Geocode was not successful for the following reason: " + status);
-      }
+      };
     });
   }
 
   mapping(){
-    this.googlePosition = pos;
     if (!this.googlePosition) {
       return; 
     } 
