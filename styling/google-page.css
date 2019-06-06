@@ -24,6 +24,20 @@ img.map-Icon{
   width: 100%;
 }
 
+.location-error {
+  position: fixed;
+  top:  60px;
+  width: 100vw;
+  text-align: center;
+  display: none;
+}
+
+.location-error > p {
+  font-size: 28px;
+  margin: 5% 0%;
+  color: red;
+}
+
 .square {
   height: 100%;
   background-color: blue;
@@ -58,9 +72,7 @@ img.map-Icon{
   font-size: 12px;
 }
 
-/* TODO: May need to separate out with classes */
-
-div.right-panel > ul {
+ul#places {
   list-style-type: none;
   padding: 0;
   margin-bottom: 5px;
