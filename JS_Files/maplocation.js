@@ -8,6 +8,7 @@ class StartMap {
     this.googleMapGameName = this.googleMapGameName.bind(this);
     this.startMap = this.startMap.bind(this);
     this.createMarkers = this.createMarkers.bind(this);
+    this.locationStatusCheck = this.locationStatusCheck.bind(this);
   }
 
   googleMapGameName(gameName) {
@@ -26,13 +27,13 @@ class StartMap {
     $('#map').empty();
     // this.infoWindow = new google.maps.InfoWindow();
     // Try HTML5 geolocation.
-    navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
-      if(PermissionStatus.state === 'granted'){
-        $(".location-error").css("display", "none"); //Make sure to hide if location enabled and re-scanned
-      }else{
-        $(".location-error").toggle("display");
-      }
-  })
+    navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then((PermissionStatus) => {
+      console.log("Navagation Check ", PermissionStatus);
+      this.locationStatusCheck(PermissionStatus.state); //Check if enabled
+      PermissionStatus.onchange = () => { //If requested for access, check if allowed or denied
+        this.locationStatusCheck(event.target.state);
+      };
+    })
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         var pos = {
@@ -146,6 +147,17 @@ class StartMap {
     this.map.fitBounds(bounds);
     this.map.setZoom(12);
     this.map.getCenter(this.googlePosition);
+  }
+
+  locationStatusCheck (state) {
+    console.log("Location State Check ", state);
+    if(state === 'granted'){
+      $(".location-error").css("display", "none"); 
+    } else if (state === "prompt") {
+      return; 
+    } else {
+      $(".location-error").toggle("display");
+    }
   }
 }
 
