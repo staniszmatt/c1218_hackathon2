@@ -24,6 +24,20 @@ img.map-Icon{
   width: 100%;
 }
 
+.location-error {
+  position: fixed;
+  top:  60px;
+  width: 100vw;
+  text-align: center;
+  display: none;
+}
+
+.location-error > p {
+  font-size: 28px;
+  margin: 5% 0%;
+  color: red;
+}
+
 .square {
   height: 100%;
   background-color: blue;
@@ -58,9 +72,7 @@ img.map-Icon{
   font-size: 12px;
 }
 
-/* TODO: May need to separate out with classes */
-
-div.right-panel > ul {
+ul#places {
   list-style-type: none;
   padding: 0;
   margin-bottom: 5px;
@@ -110,7 +122,7 @@ button.no-more {
 }
 
 #google-search {
-  background-image: url(./icons/search_bar.PNG);
+  background-image: url(./images/search_bar.PNG);
   background-repeat: no-repeat;
   background-position: 101%;
   background-size: contain;
@@ -130,12 +142,20 @@ button.no-more {
   #map {
     height: 55vh;
   }
+
+  .location-error > p {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 760px) and (min-height: 1020px) {
   #map {
     height: 55vh;
     margin-top: 60px;
+  }
+
+  .location-error > p {
+    font-size: 40px;
   }
 
   #right-panel {
@@ -147,6 +167,10 @@ button.no-more {
   #map {
     height: 55vh;
     margin-top: 60px;
+  }
+
+  .location-error > p {
+    font-size: 40px;
   }
 
   #right-panel {
@@ -164,6 +188,10 @@ button.no-more {
     margin-top: 125px;
     height: initial;
     width: 70%;
+  }
+
+  .location-error > p {
+    font-size: 40px;
   }
 
   #right-panel {

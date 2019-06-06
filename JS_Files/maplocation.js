@@ -26,6 +26,13 @@ class StartMap {
     $('#map').empty();
     // this.infoWindow = new google.maps.InfoWindow();
     // Try HTML5 geolocation.
+    navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
+      if(PermissionStatus.state === 'granted'){
+        $(".location-error").css("display", "none"); //Make sure to hide if location enabled and re-scanned
+      }else{
+        $(".location-error").toggle("display");
+      }
+  })
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         var pos = {
@@ -33,7 +40,9 @@ class StartMap {
           lng: position.coords.longitude
         };
         this.googlePosition = pos;
-        if (!this.googlePosition) return; 
+        if (!this.googlePosition) {
+          return; 
+        } 
         this.map = new google.maps.Map(document.getElementById('map'), {
           center: this.googlePosition,
           zoom: 8

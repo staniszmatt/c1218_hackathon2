@@ -44,7 +44,7 @@ section {
 }
 
 .youtube-search-bar {
-  background-image: url(./icons/search_bar.PNG);
+  background-image: url(./images/search_bar.PNG);
   background-repeat: no-repeat;
   background-position: 101%;
   background-size: contain;
