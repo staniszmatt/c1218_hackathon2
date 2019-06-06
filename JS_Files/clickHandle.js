@@ -39,7 +39,13 @@ class PBGS_init {
     this.domInformation.youtubeIcon.click(this.youTubeButtonClicked);
     this.domInformation.mapIcon.click(this.mapButtonClicked);
     this.domInformation.cancelScanButton.hide();
+    this.domInformation.submitZip.click(this.callMapsFunction);
     this.hideModal();
+  }
+
+  callMapsFunction(){
+    let zipCode = $(".zipcode").val();
+    initialization.upcScanner.upc_post_request.productData.startMap.zipCodeMap(zipCode)
   }
 
   initScanner() { //calls when scan request button is pressed

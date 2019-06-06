@@ -30,12 +30,35 @@ img.map-Icon{
   width: 100vw;
   text-align: center;
   display: none;
+  background-color: #ddddd9;
+  height: 100vh;
 }
 
 .location-error > p {
-  font-size: 28px;
-  margin: 5% 0%;
+  font-size: 18px;
+  margin: 8px 0;
   color: red;
+}
+
+input.zipcode {
+  font-size: 18px;
+  text-align: center;
+  width: 100px;
+  border-radius: 5px;
+}
+
+button.submit-zipcode {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(193, 73, 78);
+  border-radius: 5px;
+  border-color: rgb(193, 73, 78);
+  box-shadow: 3px 3px 3px black;
+  padding: 0px 10px;
 }
 
 .square {
@@ -158,6 +181,15 @@ button.no-more {
     font-size: 40px;
   }
 
+  input.zipcode {
+    font-size: 30px;
+    width: 120px;
+  }
+
+  button.submit-zipcode {
+    font-size: 30px;
+  }
+
   #right-panel {
     margin-bottom: 65px;
   }
@@ -171,6 +203,15 @@ button.no-more {
 
   .location-error > p {
     font-size: 40px;
+  }
+
+  input.zipcode {
+    font-size: 30px;
+    width: 120px;
+  }
+
+  button.submit-zipcode {
+    font-size: 30px;
   }
 
   #right-panel {
