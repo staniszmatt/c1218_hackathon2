@@ -142,12 +142,20 @@ button.no-more {
   #map {
     height: 55vh;
   }
+
+  .location-error > p {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 760px) and (min-height: 1020px) {
   #map {
     height: 55vh;
     margin-top: 60px;
+  }
+
+  .location-error > p {
+    font-size: 40px;
   }
 
   #right-panel {
@@ -159,6 +167,10 @@ button.no-more {
   #map {
     height: 55vh;
     margin-top: 60px;
+  }
+
+  .location-error > p {
+    font-size: 40px;
   }
 
   #right-panel {
@@ -176,6 +188,10 @@ button.no-more {
     margin-top: 125px;
     height: initial;
     width: 70%;
+  }
+
+  .location-error > p {
+    font-size: 40px;
   }
 
   #right-panel {
