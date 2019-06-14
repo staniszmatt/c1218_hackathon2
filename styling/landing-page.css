@@ -1,3 +1,4 @@
+
 .index-page {
   height: 100vh;
   overflow: hidden;
@@ -25,7 +26,7 @@ h3.display-h3 {
 }
 
 .display-header>h5 {
-  text-align: left;
+  text-align: center;
   margin: 20px 18px;
   font-size: 18px;
   color: white;
